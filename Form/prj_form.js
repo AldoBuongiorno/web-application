@@ -1,16 +1,13 @@
 window.onscroll = function() {
     scrollFunction();
 };
+
 document.addEventListener('DOMContentLoaded', function () {
     var forms = document.querySelectorAll('form');
     var submitButton = document.getElementById('submitButton');
     enableButton(forms, submitButton);
     raccogliDatiForm();
 });
-
-
-
-
 
 function enableButton(forms, submitButton){
     forms.forEach(function(form) {
