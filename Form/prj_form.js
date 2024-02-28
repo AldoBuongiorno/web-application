@@ -1,3 +1,6 @@
+window.onscroll = function() {
+    scrollFunction();
+};
 document.addEventListener('DOMContentLoaded', function () {
     var forms = document.querySelectorAll('form');
     var submitButton = document.getElementById('submitButton');
@@ -58,4 +61,8 @@ function raccogliDatiForm() {
             &${new URLSearchParams(new FormData(document.forms["form3"])).toString()}
             &${new URLSearchParams(new FormData(document.forms["form4"])).toString()}`);        //Da analizzare
     });
+
+
+
+    
 }

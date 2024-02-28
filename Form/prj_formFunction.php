@@ -1,40 +1,41 @@
 
 <?php
     function pickItinerary($selectedPeriod, $selectedBudget, $selectedDuration, $selectedType){
+        function pickItinerary($selectedPeriod, $selectedBudget, $selectedDuration, $selectedType){
 
-        $id = "";
-
-        if($selectedPeriod === "Estate")
-            $id = "E";
-        else if($selectedPeriod === "Inverno")
-            $id = "I";
-
-        if($selectedBudget === "Alto")
-            $id = $id . "A";
-        else if($selectedBudget === "Medio")
-            $id = $id . "M";  
-        else if($selectedBudget === "Basso")
-            $id = $id . "B";
-
-        if($selectedDuration === "5")
-            $id = $id . "05";
-        else if($selectedDuration === "7")
-            $id = $id . "07";
-        else if($selectedDuration === "10")
-            $id = $id . "10";
-        else if($selectedDuration === "15")
-            $id = $id . "15";
-
-        if($selectedType === "Cultura") 
-            $id = $id . "C";  
-        else if($selectedType === "Divertimento") 
-            $id = $id . "D";  
-        else if($selectedType === "Paesaggistico") 
-            $id = $id . "P";  
-        
-        return $id;
+            $id = "";
+    
+            if($selectedPeriod === "Estate")
+                $id = "E";
+            else if($selectedPeriod === "Inverno")
+                $id = "I";
+    
+            if($selectedBudget === "Alto")
+                $id = $id . "A";
+            else if($selectedBudget === "Medio")
+                $id = $id . "M";  
+            else if($selectedBudget === "Basso")
+                $id = $id . "B";
+    
+            if($selectedDuration === "5")
+                $id = $id . "5";
+            else if($selectedDuration === "7")
+                $id = $id . "7";
+            else if($selectedDuration === "10")
+                $id = $id . "10";
+            else if($selectedDuration === "15")
+                $id = $id . "15";
+    
+            if($selectedType === "Cultura") 
+                $id = $id . "C";  
+            else if($selectedType === "Divertimento") 
+                $id = $id . "D";  
+            else if($selectedType === "Paesaggistico") 
+                $id = $id . "P";  
+            
+            return $id;
+        }
     }
-
 
     function insertID($id, $username) {
 
@@ -62,7 +63,6 @@
         else{                                                       //sono presenti altri ID 
             $array = explode("---", $idString);
             $array = array_filter($array);                          // rimuove gli elementi vuoti dall'array
-                    // array[0] = 
 
             foreach($array as $part){
                 if($part == $id){
@@ -105,25 +105,24 @@
 
         }
     }
-
+    
+    //Correct
     function getID($username, $db){
-        $sql = "SELECT journeys FROM \"user\" WHERE username=$1";
-        /* $sql = "SELECT username FROM \"user\" WHERE username=$username"; */    //sqlInjection da fare
+        $sql = "SELECT journeys FROM \"user\" WHERE username=$1";    //sqlInjection da fare
         $prep = pg_prepare($db, "sqlJourneys", $sql);
         $ret = pg_execute($db, "sqlJourneys", array($username));
 
 
         if (!$ret) {
             echo ("<script LANGUAGE='JavaScript'>
-                        window.alert('Errore QUERY');
+                        window.alert('Errore QUERY' . pg_last_error($2)  );
                     </script>");
             return false;
         } else {
-            if ($row = pg_fetch_assoc($ret)) {
+            if ($row = pg_fetch_assoc($ret)) 
                 return $row;
-            } else {
+            else 
                 return false;
-            }
         }
     }
 ?>
