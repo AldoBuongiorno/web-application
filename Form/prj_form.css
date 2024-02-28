@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+*{font-family: 'Montserrat', sans-serif;}
+
+html {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*Header Christian*/
+header {
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    color: white;
+}
+
+header h2{
+    padding-top: 0px;
+}
+
+.viewport{
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.title{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    z-index: 2;
+}
+
+.navigationbar {
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    background-color: gray;
+    z-index: 3;
+}
+
+.navigationbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    text-decoration: none;
+    height: 100%;
+}
+
+.navigationbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navigationbar ul{
+    list-style-type: none;
+    
+}
+
+ul{
+    margin: 0;
+}
+ /*Fine*/
+
+
+.img1, .img2, .img3, .img4 {
+    height:100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 10%;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.img1{
+    background-image: url('../Images/Sfondo.jpg');
+}
+
+.img2{
+    background-image: url('../Images/img2.jpg');
+}
+
+.img3{
+    background-image: url('../Images/img3.jpg');
+}
+
+.img4{
+    /*overflow-y: auto;*/
+    background-image: url('../Images/img4.jpg');
+}
+
+.container {
+    text-align: center;
+}
+
+.container.right{
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 50px 20px 50px;
+    margin: 10% auto 100px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),  0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;                                                                            
+    width: 400px;
+}
+
+.option {
+    margin: 50px 0 0;
+}
+
+
+@media only screen and (max-width: 650px) {
+    .container.right{
+        background-color: #fff;
+        border-radius: 30px;
+        padding: 2% 20px 2%;
+        margin: 2% auto 2%;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),  0 10px 10px rgba(0, 0, 0, 0.22);
+        position: relative;
+        overflow: visible;                                                                            
+        width: 50%;
+        /* height: 100%; */
+        z-index: 100;
+    }
+
+    .img1, .img2, .img3, .img4 {
+        height:100%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 30%;
+        padding-top: 5%;
+        overflow: hidden;
+    }
+
+    .option {
+        margin: 0 0 0;
+        position: relative;
+    }
+    
+    label {
+        margin-left: 10%;
+        margin-bottom: 5%;
+        padding: 1px 0;
+    }
+
+    [type=radio] {
+        border: 0;
+        height: 0.0625rem;
+        width: 0.0625rem;
+        position: relative;
+    }
+}
+
+[type=radio] {
+    border: 0;
+    height: 0.0625rem;
+    width: 0.0625rem;
+    position: absolute;
+}
+
+
+label {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    border-radius: 15px;
+    border: 1px solid rgb(18, 34, 255);
+    background-color: rgb(0, 0, 0);
+    margin-left: 10%;
+    margin-bottom: 15px;
+    padding: 6px 0;
+    font-weight: bold;
+    position: relative;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    transition: transform ease-in;
+    cursor: pointer;
+}
+
+input/*[type='radio']*/:checked + label {
+    background: rgb(255, 149, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: scale(1.15);
+    -webkit-text-stroke: .6px #fff;
+}
+
+/*input[type='checkbox']:checked + label {
+    background: rgb(76, 245, 194);
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-text-stroke: .6px #fff;
+}*/
+
+input/*[type='radio']*/:checked + label .alphabet{
+    background: #000000;
+    color: #fff;
+}
+
+label:hover .alphabet {
+    background: #000;
+    color: #fff;
+}
+
+label .alphabet {
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: .4rem .5rem .4rem;
+    width: 2.3rem;
+    margin: 0 1.3rem 0 .7rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 149, 0);
+    color: #FFFFFF;
+}
+
+label:active{
+    transform: scale(0.95);
+}
+
+#title img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buttons {
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+}
+
+.button {
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+/*button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	border-radius: 15px;
+	border: 1px solid rgb(18, 34, 255);
+	background-color: rgb(18, 34, 255);
+	color: #FFFFFF;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+    transition: transform ease-in;
+    cursor: pointer;
+    margin-left: 45%;
+    margin-top: 10px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: default; 
+}
+
+button:hover {
+    background-color: rgb(0, 12, 183); 
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}*/
+
+button {
+    text-decoration: none;
+	border-radius: 15px;
+	border: 3px solid white;
+	background-color: var(--light-1);
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 1px;
+    transition: transform ease-in;
+    cursor: pointer;
+    padding: 8px 16px;
+    width: fit-content;
+    margin: auto;
+    display: block;
+    text-transform: uppercase;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: default; 
+}
+
+button:hover{
+    background-color: #ddd;
+    color: black; 
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+button:focus{
+	outline: none;
+}
+
+.numeroDomanda {
+    text-align: center;
+	font-weight: bold;
+    margin: 0;
+    font-size: large;
+}
+
+.domanda {
+    text-align: center;
+	font-style: italic;
+    font-size: medium;  
+}
+
+/*@Christian*/
+.p{
+    color: white;
+    font-size: x-large;
+    display: inline-block;
+    padding:1%;
+    text-align: center;
+    border-right: 1px solid white;
+    text-decoration: none;
+}
+
+/*Footer di Christian*/
+footer{
+    display: flex;
+    background-color: #717171;
+    /*margin-top: 50px;*/
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.chi_siamo, .inspiration, .mete{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 33.33%;
+    height: 200px; /* Imposta un'altezza fissa */
+}
+
+.titolo_foto{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.chi_siamo img{
+    display:inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.chi_siamo span, .inspiration span {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.testo{
+    margin-top: 10px;
+    margin-bottom: 250px;
+}
+
+.testo a:hover{
+    color: #bc2a8d;
+}
+
+.titolo{
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+}
+
+.titolo b{
+    height: 25px;
+}
+
+.testo a{
+    text-decoration: none;
+    text-emphasis: none;
+    color: black;
+}
+
+.mete-container{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 250px;
+}
+
+.mete-container a{
+    text-decoration: none;
+    color: black;
+}
+
+.mete-container a:hover{
+    color: blue;
+}
+
+.column{
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+}

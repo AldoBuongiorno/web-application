@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;                                                                          
+} 
+
+body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	margin: -20px 0 50px;
+}
+
+.title a {
+    text-decoration: none;
+	color: rgb(247, 247, 247);
+	text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;			 
+    font-size: 25px;
+    text-align: center;
+	font-weight: bold;
+}
+
+
+.containerLogin { 
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),  0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;                                                                                 
+    width: 400px;
+    height: 460px;
+  }
+
+.containerSignup{
+	background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),  0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;                                                                                 
+    width: 400px;
+    height: 590px;
+  }
+
+.containerSignup h1{
+    text-align: center;
+	font-weight: bold;
+    padding: 0px;
+    margin-top: 22px;
+}
+
+.containerLogin h1{
+    text-align: center;
+	font-weight: bold;
+    margin-top:50px;
+}
+
+p {
+	font-size:13px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+#switchLogin{
+    padding:30px;
+}
+
+#switchBtn{
+    margin: 10px;
+}
+
+span {
+	font-size: 12px;
+}
+
+#signupErrorSpan{
+	font-size: 12px;
+	color: red;
+	text-align: center;
+	margin-top: 0px;
+	font-weight: bold;
+	display: block; 
+}
+
+#loginErrorSpan{
+	font-size: 12px;
+	color: red;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	display: block; 
+}
+
+
+
+button {
+	border-radius: 15px;
+	border: 1px solid rgb(18, 34, 255);
+	background-color: rgb(18, 34, 255);
+	color: #FFFFFF;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: rgb(0, 12, 183); 
+}
+
+button:focus {
+	outline: none;
+}
+
+#signupBtn{
+	margin-top: 20px;
+}
+
+#switchSignup{
+    margin: 8px;
+    background-image: url('Images/loginImages/loginAvatar.png');
+    background-color: rgb(255, 255, 255);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+input {
+    border-radius: 10px;
+	background-color: #eeeeeee4;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+ 
+
