@@ -47,19 +47,15 @@ function raccogliDatiForm() {
             if (xhr.status >= 200 && xhr.status < 300) {
             // Successo
                 console.log('Dati inviati con successo');
-                /* document.write(xhr.responseText) ;*/
+                /* document.write(xhr.responseText); */
             } else {
                 // Errore
                 console.error('Si è verificato un errore durante l\'invio dei dati');
             }
         };
-        xhr.send(`${new URLSearchParams(new FormData(document.forms["form1"])).toString()}
+            xhr.send(`${new URLSearchParams(new FormData(document.forms["form1"])).toString()}
             &${new URLSearchParams(new FormData(document.forms["form2"])).toString()}
             &${new URLSearchParams(new FormData(document.forms["form3"])).toString()}
             &${new URLSearchParams(new FormData(document.forms["form4"])).toString()}`);        //Da analizzare
     });
-
-
-
-    
 }

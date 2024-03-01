@@ -9,7 +9,7 @@
                 ?>
                 <a href="../Home/prj_home.php" id="logo"><img src="../Images/imgHome/LogoSito.png" alt="LogoSito" height="75px" width="75px"></a>
                 <div id="navbar-dx">
-                    <a href="./prj_home.php">HOME</a>
+                    <a href="../Home/prj_home.php">HOME</a>
                     <a href="../Form/prj_form.php">NUOVO VIAGGIO</a>
                     <a href="../User/prj_login.php">ACCEDI</a>
                     <a href="../User/prj_signup.php">REGISTRATI</a>
@@ -20,9 +20,9 @@
                 ?>
                 <a href="../Home/prj_home.php" id="logo"><img src="../Images/imgHome/LogoSito.png" alt="logosito" height="100px" width="100px"></a>
                 <div id="navbar-dx">
-                    <a href="./prj_home.php">HOME</a>
+                    <a href="../Home/prj_home.php">HOME</a>
                     <a href="../Form/prj_form.php">NUOVO VIAGGIO</a>
-                    <a href="../User/prj_login.php">I MIEI VIAGGI</a>
+                    <a href="../Routes/prj_routes.php">I MIEI VIAGGI</a>
                     <a href="./prj_logout.php">LOG OUT</a>
                 </div> 
                 <?php

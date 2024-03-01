@@ -46,7 +46,7 @@
                     $passwordLogin =  $_POST['passwordLogin'];
                     $hash = get_pwd($usernameLogin);
             
-                    if( ! usernameExists($usernameLogin)){
+                    if(!usernameExists($usernameLogin)){
                         echo (" <script LANGUAGE='JavaScript'>  
                                 let message = document.getElementById('loginErrorSpan');
                                 message.innerHTML = '$usernameLogin non risulta registrato';
@@ -57,7 +57,7 @@
                             $_SESSION['username']=$usernameLogin;
                             $_SESSION['authorized']=true;
                             echo ("<script LANGUAGE='JavaScript'>
-                                window.location.href = '../Form/prj_form.php';
+                                window.location.href = '../Home/prj_home.php';
                                 </script>"); 
                     }
                     else {

@@ -14,6 +14,10 @@
     </head>
 
     <body>
+    <!--Variabili utili al javascript-->
+    <script  type="text/javascript" >
+        let section, p;      
+    </script>
 
     <?php session_start()?>
     <?php 
@@ -24,7 +28,6 @@
 
         if(isset($_SESSION['authorized'])){
             $username = $_SESSION['username'];
-            
             $journeys = getJourneys($username, $db);
 
 
@@ -52,38 +55,45 @@
                 $displayImages[$i] = $imagesFiltered[$i] [rand(0, count($imagesFiltered[$i])-1)]; 
             }
 
-            //ottiene un array ($locationDisplay) con le location delle stringhe per ogni itinerario nel carrello
+            //ottiene un array ($displayLocation) con le location delle stringhe per ogni itinerario nel carrello
             $i = 0;
             foreach($locationsFiltered as $subArray){
-                $locationDisplay[$i] = implode(",  ", $subArray);
+                $displayLocation[$i] = implode(",  ", $subArray);
                 $i++;
             }
-            echo ('
-                    <script  src="prj_routes.js" type="text/javascript">
-                        console.log("Ciao Frocio");
-                    </script>
-           ' );
             
             //aggiunge gli elementi nel carrello
+            for($i = 0; $i < count($displayLocation); $i++){  
+                ?> 
+                    <script  type="text/javascript" >
+                        document.addEventListener('DOMContentLoaded', function () {
 
-            for($i = 0; $i < count($locationDisplay); $i++){  ?> 
-                    <script  src="prj_routes.js" type="text/javascript" defer>
-                        putElements('<?php echo $locationDisplay[$i]; ?>', '<?php echo $displayImages[$i]; ?>', <?php echo $i + 1; ?>);
+                        section = document.getElementById("viaggio" +  "<?php echo $i + 1; ?>");
+                        p = document.getElementById("p" + "<?php echo $i + 1; ?>");
+
+                        section.style.display = "block";
+                        p.innerHTML = "<?php echo $displayLocation[$i]; ?>";
+                        section.style.backgroundImage = "url('" + "<?php echo $displayImages[$i]; ?>" + "')";
+                        
+                        });    
                     </script>
-                 <?php   
-            }  
-            
-            /* for($i = 0; $i < count($locationDisplay); $i++){
-                echo(
-                    "<script src='prj_routes.js'>
-                     document.addEventListner('DOMContentLoaded', function(){
-                        console.log( '" . $locationDisplay[$i] . "');
-                        putElements('" . $locationDisplay[$i] . "', '" . $displayImages[$i] . "', '" . $i+1 . "' );
-                     });
-                     </script>"
-                    );
-            }  */
-            
+                <?php   
+            }
+
+            //aggiunge l'ultimo sfondo di padding (id=img6)
+            ?> 
+                <script  type="text/javascript" >
+                    document.addEventListener('DOMContentLoaded', function () {
+                    section = document.getElementById("viaggio6");
+                    section.style.height = "5%";
+                    section.style.backgroundImage = "url('" + "<?php echo $displayImages[$i-1]; ?>" + "')";  
+                    });    
+                </script> 
+            <?php  
+
+            echo "AAAA";
+
+                
 
         }
 
@@ -122,7 +132,7 @@
                     <div class="text_itinerary">
                         <div class="itinerary" id="itinerario1">
                             <div class="numero_itinerario">
-                                <a href="google.com"><p><strong>1º Itinerario: </strong></p></a>
+                              <p><strong>1º Itinerario: </strong></p></a>
                             </div>
                             <div class="testo_itinerario">
                                 <p id="p1"></p>
@@ -130,9 +140,11 @@
                         </div>
                     </div>
                     <div class="pulsante">
-                        <button class="delete-button" onclick="eliminaItinerario(this)">
-                            <img src="../Images/deletebutton.png" alt="Pulsante cancella itinerario" height="50" width="50">
-                        </button>
+                        <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>"> 
+                            <button name="btn1" type="submit" class="delete" onclick="eliminaItinerario('<?php echo $journey; ?>')">
+                                <img src="../Images/deletebutton.png" alt="Pulsante cancella itinerario" height="50" width="50">
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -149,7 +161,7 @@
                     <div class="text_itinerary">
                         <div class="itinerary" id="itinerario2">
                             <div class="numero_itinerario">
-                                <a href="google.com"><p><strong>2º Itinerario: </strong></p></a>
+                              <p><strong>2º Itinerario: </strong></p></a>
                             </div>
                             <div class="testo_itinerario">
                                 <p id="p2"></p>
@@ -157,13 +169,16 @@
                         </div>
                     </div>
                     <div class="pulsante">
-                        <button class="delete-button" onclick="eliminaItinerario(this)">
-                            <img src="../Images/deletebutton.png" alt="Pulsante cancella itinerario" height="50" width="50">
-                        </button>
+                        <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>"> 
+                            <button name="btn2" type="submit" class="delete" onclick="eliminaItinerario(this)">
+                                <img src="../Images/deletebutton.png" alt="Pulsante cancella itinerario" height="50" width="50">
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </section>         
+        </section>  
+
         <!--TERZO ITINERARIO-->
         <section id="viaggio3" class="img3">
             <div class="container right" id="container3">
@@ -174,7 +189,7 @@
                     <div class="text_itinerary">
                         <div class="itinerary" id="itinerario3">
                             <div class="numero_itinerario">
-                                <a href="google.com"><p><strong>3º Itinerario: </strong></p></a>
+                              <p><strong>3º Itinerario: </strong></p></a>
                             </div>
                             <div class="testo_itinerario">
                                 <p id="p3"></p>
@@ -182,9 +197,11 @@
                         </div>
                     </div>
                     <div class="pulsante">
-                        <button class="delete-button" onclick="eliminaItinerario(this)">
-                            <img src="../Images/deletebutton.png" alt="Pulsante cancella itinerario" height="50" width="50">
-                        </button>
+                        <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>"> 
+                            <button name="btn3" type="submit" class="delete" onclick="eliminaItinerario(this)">
+                                <img src="../Images/deletebutton.png" alt="Pulsante cancella itinerario" height="50" width="50">
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -200,7 +217,7 @@
                     <div class="text_itinerary">
                         <div class="itinerary" id="itinerario4">
                             <div class="numero_itinerario">
-                                <a href="google.com"><p><strong>4º Itinerario: </strong></p></a>
+                              <p><strong>4º Itinerario: </strong></p></a>
                             </div>
                             <div class="testo_itinerario">
                                 <p id="p4"></p>
@@ -208,9 +225,11 @@
                         </div>
                     </div>
                     <div class="pulsante">
-                        <button class="delete-button" onclick="eliminaItinerario(this)">
-                            <img src="../Images/deletebutton.png" alt="Pulsante cancella itinerario" height="50" width="50">
-                        </button>
+                        <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>"> 
+                            <button name="btn4" type="submit" class="delete" onclick="eliminaItinerario(this)">
+                                <img src="../Images/deletebutton.png" alt="Pulsante cancella itinerario" height="50" width="50">
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -226,7 +245,7 @@
                     <div class="text_itinerary">
                         <div class="itinerary" id="itinerario5">
                             <div class="numero_itinerario">
-                                <a href="google.com"><p><strong>5º Itinerario: </strong></p></a>
+                              <p><strong>5º Itinerario: </strong></p></a>
                             </div>
                             <div class="testo_itinerario">
                                 <p id="p5"></p>
@@ -234,9 +253,11 @@
                         </div>
                     </div>
                     <div class="pulsante">
-                        <button class="delete-button" onclick="eliminaItinerario(this)">
-                            <img src="../Images/deletebutton.png" alt="Pulsante cancella itinerario" height="50" width="50">
-                        </button>
+                        <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>"> 
+                            <button name="btn5" type="submit" class="delete" onclick="eliminaItinerario(this)">
+                                <img src="../Images/deletebutton.png" alt="Pulsante cancella itinerario" height="50" width="50">
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -244,12 +265,9 @@
         
         <!--IMMAGINE PER PADDING-->
         <section id="viaggio6" class="img6">
-        </section>       
-        
-
-    
-        
-        
+        </section>   
     </body>
+
+
 
 </html>

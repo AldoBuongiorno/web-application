@@ -103,6 +103,8 @@ hr {
     padding: 5px; /* Spazio intorno al contenuto all'interno del bordo */
 }
 
+
+
 .map{
     width:55%;
 }
@@ -314,6 +316,23 @@ iframe {
   }
 
 
+  #meta1, #meta2, #meta3, #meta4, #meta5{
+    display: none;
+  } 
 
+  #link1, #link2, #link3, #link4, #link5{
+    display: none;
+  }
 
+  #flag1, #flag2, #flag3, #flag4, #flag5{
+    display: none;
+  }
+
+    #img, #img, #img3, #img4, #img5{
+    display: none;
+  }  
+
+  /* #descriptionText{
+    display:none;
+  } */
 

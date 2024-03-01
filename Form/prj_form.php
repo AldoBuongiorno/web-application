@@ -11,7 +11,7 @@
         <meta name="keywords" content="Itinerario, Viaggio, Meta, Economico"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta author="Gruppo 27"/>
-        <?php require("./prj_formFunction.php");?>
+        <?php require("prj_formFunction.php");?>
 
         <title>Compila il Form!</title>
     </head>
@@ -19,9 +19,10 @@
     <body>
     <?php require("../Home/prj_header.php");?>
         <?php
+
         //  Verifico se sono presenti i dati inviati dal form.
         if (isset($_POST["periodo"]) && isset($_POST["budget"]) && isset($_POST["durata"]) && isset($_POST["tipologia"])) {
-
+            
             //  Salvo i valori dei campi del form in variabili PHP, 
             //  eseguendo l'escaping dei caratteri riservati di HTML
             //  ed eliminando gli spazi a destra e a sinistra della stringa.
@@ -31,14 +32,14 @@
             $selectedType = htmlspecialchars(trim($_POST["tipologia"]));
         
             $id = pickItinerary($selectedPeriod, $selectedBudget, $selectedDuration, $selectedType);
+            $_SESSION['id']=$id;
             
+
             if(isset($_SESSION['authorized'])){
                 $username = $_SESSION['username'];
                 insertID($id, $username); 
-            } 
-
-
-
+            }
+            /* session_write_close(); */
         }
     ?>
 
@@ -54,6 +55,7 @@
                 <p class="domanda">In che periodo dell'anno vorresti viaggiare?</p>
             <div>
                 <form name="form1" id="formSelection1" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+                   <!--  <input type="hidden" name="id" value="" /> -->
                     <div class="option">
                         <input type="radio" id="estate" name="periodo" value="Estate"/>
                         <label for="estate">
@@ -149,7 +151,7 @@
                 </div>
             </form>
         </div>
-        <button type="submit" id="submitButton" disabled onclick="window.location.href = 'prj_routes.php';">Invia</button>   
+        <button type="submit" id="submitButton" disabled onclick="window.location.href = '../Summary/prj_summary.php';">Invia</button>  
     </section>
 
     <?php require("../Home/prj_footer.php");?>

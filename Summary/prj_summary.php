@@ -9,42 +9,114 @@
     <?php require("prj_summaryFunctions.php");?>
 
 </head>
+
+<!--Variabili utili al javascript-->
+<!-- <script  type="text/javascript" >
+        /* let meta; */      
+</script> -->
+
 <body>
-    <?php session_start()?>
-
+    <?php require("../Home/prj_header.php");?>
     <?php 
-
-   /*  if(isset($_SESSION['authorized'])){
-        //Se l'utente è loggato vbiddogna vedere soltanto logout al posto di accedi/ registrati nella nav bar
-
-        $id = getID();
-
-    }
-    //altrimenti se l'utente non è loggato verifichiamo prima se l'id è stato passato correttamente alla pagina dal form
-    else if(isset($_SESSION['id'])){
         
-        $id = $_SESSION['id'];
+        //Connection String
 
-    } */
+        /* var_dump($_SESSION); */
+        
+        if (isset($_SESSION['id'])) {
 
-    //get locations
-    $id = "EA15P";
-/*     $location = getLocation($id);
-    print_r($location); */
+            $connection_string ="host='localhost' dbname='Gruppo27' user='www' password='tw2024'";
+            $db = pg_connect($connection_string) or die('Impossibile connettersi al database: ' . pg_last_error());
 
-    //get info
+            $id = $_SESSION['id'];
+            //Recupero le informazioni dal database
+            $infos = getInfo($id, $db);
+
+            $locationsRaw = $infos["locations"];
+            $imagesRaw = $infos["imageLocation"];
+            $descriptionRaw = $infos["description"];
+            $geoLocationRaw = $infos["geoLocation"];
+            $flagLocationRaw = $infos["flagLocation"];
+
+            //Filtro i dati acquisiti
+            $locationsFiltered = explode("---", $locationsRaw);
+            $locationsFiltered = array_filter($locationsFiltered);
+            
+            $imagesFiltered = explode("---", $imagesRaw);
+            $imagesFiltered = array_filter($imagesFiltered);
+
+            $descriptionFiltered = explode("---", $descriptionRaw);
+            $descriptionFiltered = array_filter($descriptionFiltered);
+
+            /* var_dump($descriptionFiltered); */
+
+            $geoLocationFiltered = explode("---", $geoLocationRaw);
+            $geoLocationFiltered = array_filter($geoLocationFiltered);
+
+            $flagLocation = explode("---", $flagLocationRaw);
+            $flagLocation = array_filter($flagLocation);
+            
+            /* ?>
+                <script  type="text/javascript">
+                    description = document.getElementById("descriptionText");
+                    descritpion.textContent = "<?php echo $descriptionFiltered[0]; ?>".toString();
+                    descritpion.style.display = "block";
+                </script>
+            <?php */
+
+            for($i = 0; $i < count($locationsFiltered); $i++){  
+                ?> 
+                    <script  type="text/javascript">
+                        document.addEventListener('DOMContentLoaded', function () {
+                            /* document.getElementsByClassName("prev").addEventListener('click', function(){
+                                plusSlides(-1);
+                            });
+
+                            document.getElementsByClassName("next").addEventListener('click', function(){
+                                plusSlides(1);
+                            });*/
+                            meta = document.getElementById("meta" + "<?php echo $i + 1; ?>");
+                            geo = document.getElementById("link" + "<?php echo $i + 1; ?>");
+                            flag = document.getElementById("flag" + "<?php echo $i + 1; ?>");
+                            img = document.getElementById ("img" + "<?php echo $i + 1; ?>");
+                            
+                            
+                            geo.innerHTML = "<?php echo $locationsFiltered[$i]; ?>";
+                            geo.href = "<?php echo $geoLocationFiltered[$i]; ?>";
+                            meta.style.display = "block";
+                            geo.style.display = "block";
+
+                            flag.src = "<?php echo $flagLocation[$i]; ?>";
+                            flag.style.display = "block";
+
+                            img.src = "<?php echo $imagesFiltered[$i]; ?>";
+                            img.style.display = "block";
+                        });    
+                    </script>
+                <?php   
+            }
+            
+        } else {
+            echo "La variabile di sessione 'id' non è stata impostata.";
+        }
+
+        
+            
 
 
    
     ?>
-    <header>
-        <div class="title">
-            <h1>TRAIN TRAVEL ADVISOR</h1>
-            <h2>Compila il form, al resto ci pensiamo noi!</h2>
-        </div>
-    </header>
 
 
+    <div class="navigationbarr">
+        <ul>
+            <li><a href="prj_home.html">HOME</a></li>
+            <li><a href="prj_form.html">NUOVO VIAGGIO</a></li>
+            <li style="float: right"><a href="prj_signup.php" >REGISTRATI</a></li>
+            <li style="float: right"><a href="prj_login.php" >ACCEDI</a></li>
+        </ul>
+    </div>
+    
     <div class="navigationbarr">
         <ul>
             <li><a href="prj_home.html">HOME</a></li>
@@ -64,11 +136,11 @@
         <div class="info">
             <div class = "outcome">
                 <ul id="countriesList">
-                    <li id="meta1"> <a href="https://www.example.com">Visita il sito di esempio</a></li>
-                    <li id="meta2">1° tappa. LUSSEMBURGO: Mullerthal</li>
-                    <li id="meta3">1° tappa. LUSSEMBURGO: Mullerthal</li>
-                    <li id="meta4">1° tappa. LUSSEMBURGO: Mullerthal </li>
-                    <li id="meta5">1° tappa. LUSSEMBURGO: Mullerthal</li>
+                    <li id="meta1"><a id = "link1" href = ""></a></li>
+                    <li id="meta2"><a id = "link2" href = ""></a></li>
+                    <li id="meta3"><a id = "link3" href = ""></a></li>
+                    <li id="meta4"><a id = "link4" href = ""></a></li>
+                    <li id="meta5"><a id = "link5" href = ""></a></li>
                 </ul>
             </div>
             <div class="map"> 
@@ -78,25 +150,15 @@
             
         <div class="journey">    
             <div class="flags">
-                <img id="flag1" src="Images/flags/naziflag.png"  width="16.475%vh" height="10.98%vh">
-                <img id="flag2" src="Images/flags/naziflag.png"  width="16.475%vh" height="10.98%vh">
-                <img id="flag3" src="Images/flags/naziflag.png"  width="16.475%vh" height="10.98%vh">
-                <img id="flag4" src="Images/flags/naziflag.png"  width="16.475%vh" height="10.98%vh">
-                <img id="flag5" src="Images/flags/naziflag.png"  width="16.475%vh" height="10.98%vh">
+                <img id="flag1" src=""  width="16.475%vh" height="10.98%vh">
+                <img id="flag2" src=""  width="16.475%vh" height="10.98%vh">
+                <img id="flag3" src=""  width="16.475%vh" height="10.98%vh">
+                <img id="flag4" src=""  width="16.475%vh" height="10.98%vh">
+                <img id="flag5" src=""  width="16.475%vh" height="10.98%vh">
             </div>
             <div class="description"> 
                 <p id="descriptionText">
-                    Inizia la tua avventura nel cuore del Lussemburgo, presso Mullerthal, con i suoi suggestivi sentieri tra gole e foreste incantate. Percorrendo i sentieri tortuosi e immersi nel verde, ti troverai circondato da una natura incontaminata e da panorami mozzafiato. I boschi di Mullerthal offrono un'esperienza unica, dove la tranquillità e la bellezza della natura si fondono armoniosamente.
-                    <br><br>
-                    Successivamente, immergiti nella natura delle Ardenne in Belgio, dove le foreste lussureggianti e i villaggi pittoreschi ti faranno sentire in un mondo fiabesco. Percorrendo le strade tortuose delle Ardenne, potrai esplorare antichi castelli, ammirare paesaggi idilliaci e assaporare la cucina tradizionale belga nei caratteristici ristoranti locali.
-                    <br><br>
-                    Prosegui il tuo viaggio verso la Francia per scoprire l'incantevole isola di Mont Saint-Michel, patrimonio mondiale dell'UNESCO. Camminando lungo le strette viuzze in pietra e salendo verso l'abbazia medievale, sarai avvolto dall'atmosfera magica e misteriosa di questo luogo unico al mondo. Ammira il panorama mozzafiato sulla baia circostante e lasciati trasportare dalla storia e dalla bellezza di questo gioiello dell'architettura medievale.
-                    <br><br>
-                    Da qui, dirigiti verso il pittoresco Loch Lomond in Gran Bretagna, il più grande lago scozzese. Circondato da maestosi picchi montuosi e verdi colline, il Loch Lomond offre paesaggi spettacolari e un'atmosfera tranquilla. Goditi una passeggiata lungo le rive del lago, esplora le isole al suo interno o partecipa a un'escursione nei dintorni per immergerti completamente nella bellezza naturale di questo luogo incantevole.
-                    <br><br>
-                    Infine, concludi il viaggio ammirando le maestose Scogliere di Moher in Irlanda, che si affacciano sull'Oceano Atlantico. Queste scogliere vertiginose e imponenti offrono uno spettacolo mozzafiato, con le loro pareti di roccia che si ergono per oltre 200 metri sopra il mare. Ammira il panorama panoramico sulla costa irlandese e lasciati catturare dalla bellezza selvaggia e incontaminata di questo luogo magico.
-                    <br><br>
-                    Sarà un itinerario completo che ti farà scoprire la bellezza e la varietà dell'Europa. Buon viaggio
+                    <?php echo $descriptionFiltered[0]; ?>
                 </p>
             </div>
         </div>
@@ -109,31 +171,31 @@
             <!-- INSERIRE CAPTION E NUMBER TEXT IN MANIERA DINAMICA -->
             <div class="mySlides fade">
             <div class="numbertext">1 / 5</div>
-            <img src="Images/journeyImages/tivoliGardens.jpg" style="width:100%">
+            <img id = "img1" src="" style="width:100%">
             <div class="text">Caption Text</div>
             </div>
         
             <div class="mySlides fade">
             <div class="numbertext">2 / 5</div>
-            <img src="Images/journeyImages/uvac.jpg" style="width:100%">
+            <img id = "img2" src="" style="width:100%">
             <div class="text">Caption Two</div>
             </div>
         
             <div class="mySlides fade">
             <div class="numbertext">3 / 5</div>
-            <img src="Images/journeyImages/varsavia.jpg"  style="width:100%">
+            <img id = "img3" src=""  style="width:100%">
             <div class="text">Caption Three</div>
             </div>
 
             <div class="mySlides fade">
             <div class="numbertext">4 / 5</div>
-            <img src="Images/journeyImages/vienna1.jpg"  style="width:100%">
+            <img id = "img4" src=""  style="width:100%">
             <div class="text">Caption Four</div>
             </div>
 
             <div class="mySlides fade">
             <div class="numbertext">5 / 5</div>
-            <img src="Images/journeyImages/vilnus.jpg"  style="width:100%">
+            <img id = "img5" src=""  style="width:100%">
             <div class="text">Caption Five</div>
             </div>
         

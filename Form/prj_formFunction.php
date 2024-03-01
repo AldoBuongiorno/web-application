@@ -1,40 +1,39 @@
 
 <?php
     function pickItinerary($selectedPeriod, $selectedBudget, $selectedDuration, $selectedType){
-        function pickItinerary($selectedPeriod, $selectedBudget, $selectedDuration, $selectedType){
 
-            $id = "";
-    
-            if($selectedPeriod === "Estate")
-                $id = "E";
-            else if($selectedPeriod === "Inverno")
-                $id = "I";
-    
-            if($selectedBudget === "Alto")
-                $id = $id . "A";
-            else if($selectedBudget === "Medio")
-                $id = $id . "M";  
-            else if($selectedBudget === "Basso")
-                $id = $id . "B";
-    
-            if($selectedDuration === "5")
-                $id = $id . "5";
-            else if($selectedDuration === "7")
-                $id = $id . "7";
-            else if($selectedDuration === "10")
-                $id = $id . "10";
-            else if($selectedDuration === "15")
-                $id = $id . "15";
-    
-            if($selectedType === "Cultura") 
-                $id = $id . "C";  
-            else if($selectedType === "Divertimento") 
-                $id = $id . "D";  
-            else if($selectedType === "Paesaggistico") 
-                $id = $id . "P";  
-            
-            return $id;
-        }
+        $id = "";
+
+        if($selectedPeriod === "Estate")
+            $id = "E";
+        else if($selectedPeriod === "Inverno")
+            $id = "I";
+
+        if($selectedBudget === "Alto")
+            $id = $id . "A";
+        else if($selectedBudget === "Medio")
+            $id = $id . "M";  
+        else if($selectedBudget === "Basso")
+            $id = $id . "B";
+
+        if($selectedDuration === "5")
+            $id = $id . "05";
+        else if($selectedDuration === "7")
+            $id = $id . "07";
+        else if($selectedDuration === "10")
+            $id = $id . "10";
+        else if($selectedDuration === "15")
+            $id = $id . "15";
+
+        if($selectedType === "Cultura") 
+            $id = $id . "C";  
+        else if($selectedType === "Divertimento") 
+            $id = $id . "D";  
+        else if($selectedType === "Paesaggistico") 
+            $id = $id . "P";  
+        
+        return $id;
+        
     }
 
     function insertID($id, $username) {

@@ -21,7 +21,7 @@
             ?>
             <h1>Benvenuto <?php echo($_SESSION['username'])?></h1>
             <h2>Compila subito il form e scopri qual è il viaggio perfetto per te</h2>
-            <a href="../FORM/prj_form.html" style="text-decoration: none;">
+            <a href="../Form/prj_form.php" style="text-decoration: none;">
                 <button>COMPILA ORA!</button>
             </a>
         </div>
@@ -30,7 +30,7 @@
             ?>
             <h1>Benvenuto</h1>
             <h2>Compila subito il form e scopri qual è il viaggio perfetto per te</h2>
-            <a href="../FORM/prj_form.html" style="text-decoration: none;">
+            <a href="../Form/prj_form.php" style="text-decoration: none;">
                 <button>COMPILA ORA!</button>
             </a>
         </div>
@@ -42,27 +42,27 @@
     <div class="travel-adv">
         <img class="icon" src="../Images/imgHome/baggage.jpg" alt="iconZaino">
         <div class="zaino50L">
-            <a href="https://www.decathlon.it/p/zaino-viaggio-travel-100-50-litri-nero/_/R-p-6561?mc=8735043"><img src="../Images/imgHome/zaino2.jpg" class="zoom" alt="zaino50L"></a>
+            <a href="https://www.decathlon.it/p/zaino-viaggio-travel-100-50-litri-nero/_/R-p-6561?mc=8735043" target="_blank"><img src="../Images/imgHome/zaino2.jpg" class="zoom" alt="zaino50L"></a>
             <p>L'interrail è un viaggio estremamente emozionante e avventuroso, se viene fatto con le giuste attrezzature e il giusto equipagiamento, infatti il nostro team ti consiglia di viaggiare leggeri!<br>
                 Esisto una miriade di attrezzature adatte, e proprio per questo, ci si può ritrovare spaesati dalla moltitudine di scelte che il mercato ci presenta d'avanti. 
                 Ma anche <br>in questo caso il nostro team viene in tuo soccorso!!!<br><br><br>Per un viaggio di 3 settimane circa, ti consigliamo di visitare 
-                <a href="https://www.decathlon.it/p/zaino-viaggio-travel-100-50-litri-nero/_/R-p-6561?mc=8735043">questo link</a>, che ti riporterà direttamente allo 
+                <a href="https://www.decathlon.it/p/zaino-viaggio-travel-100-50-litri-nero/_/R-p-6561?mc=8735043"target="_blank">questo link</a>, che ti riporterà direttamente allo 
                 zaino migliore per la tua avventura!
             </p>
         </div>
         <div class="zaino30L">
-            <a href="https://www.amazon.it/SKYSPER-Ultraleggero-Ripiegabile-Riflettenti-ISHE30-Grigio/dp/B0BKG7HK4L/ref=sr_1_5?dib=eyJ2IjoiMSJ9.4uSEQ7zdR1yLHdpAc0Cs1uphzz7ckmrQSSKqzLsmGrRk_WqznZj4g9azxmDB77LB1Cl7nHTT2O2rnsBJ3yun_8EMfrWbhBEhW3HXWF6lmQ7QnbqknxCvl5jzAIzH2yTZLDUzNCbBpCVfPWnqy5O0oQ-50Z5KfR5_2stl0e2WM9YSiWepbIGPjXyiV4mMUWqYFEWt8poVNT8OQsLZL3WqwaJbd1ZVZSe81nkvFPgjuWInT8VUOQA3mhQ5oxMI8ajADzIhf8kauXk1HgvTMKtBFPHVVxEV1x0RMiAjYpXuu8k.w2QM8xy0fgUdOTX8PXrp2xVdS2h5JnfRbkLKKBktHoM&dib_tag=se&keywords=zaino%2Bda%2Btrekking%2B30%2Blitri&qid=1708507106&sr=8-5&th=1"><img class="zoom2" src="../Images/imgHome/zaino30L.png" alt="zaino30L"></a>
-            <p>Non sempre è necessario uno zaino ultra capiente, in questo caso, visita <a href="https://www.amazon.it/SKYSPER-Ultraleggero-Ripiegabile-Riflettenti-ISHE30-Grigio/dp/B0BKG7HK4L/ref=sr_1_5?dib=eyJ2IjoiMSJ9.4uSEQ7zdR1yLHdpAc0Cs1uphzz7ckmrQSSKqzLsmGrRk_WqznZj4g9azxmDB77LB1Cl7nHTT2O2rnsBJ3yun_8EMfrWbhBEhW3HXWF6lmQ7QnbqknxCvl5jzAIzH2yTZLDUzNCbBpCVfPWnqy5O0oQ-50Z5KfR5_2stl0e2WM9YSiWepbIGPjXyiV4mMUWqYFEWt8poVNT8OQsLZL3WqwaJbd1ZVZSe81nkvFPgjuWInT8VUOQA3mhQ5oxMI8ajADzIhf8kauXk1HgvTMKtBFPHVVxEV1x0RMiAjYpXuu8k.w2QM8xy0fgUdOTX8PXrp2xVdS2h5JnfRbkLKKBktHoM&dib_tag=se&keywords=zaino%2Bda%2Btrekking%2B30%2Blitri&qid=1708507106&sr=8-5&th=1">questo link</a>, o clicca comodamente sull'immagine per andare direttamente al sito</p>
+            <a href="https://www.amazon.it/SKYSPER-Ultraleggero-Ripiegabile-Riflettenti-ISHE30-Grigio/dp/B0BKG7HK4L/ref=sr_1_5?dib=eyJ2IjoiMSJ9.4uSEQ7zdR1yLHdpAc0Cs1uphzz7ckmrQSSKqzLsmGrRk_WqznZj4g9azxmDB77LB1Cl7nHTT2O2rnsBJ3yun_8EMfrWbhBEhW3HXWF6lmQ7QnbqknxCvl5jzAIzH2yTZLDUzNCbBpCVfPWnqy5O0oQ-50Z5KfR5_2stl0e2WM9YSiWepbIGPjXyiV4mMUWqYFEWt8poVNT8OQsLZL3WqwaJbd1ZVZSe81nkvFPgjuWInT8VUOQA3mhQ5oxMI8ajADzIhf8kauXk1HgvTMKtBFPHVVxEV1x0RMiAjYpXuu8k.w2QM8xy0fgUdOTX8PXrp2xVdS2h5JnfRbkLKKBktHoM&dib_tag=se&keywords=zaino%2Bda%2Btrekking%2B30%2Blitri&qid=1708507106&sr=8-5&th=1" target="_blank"><img class="zoom2" src="../Images/imgHome/zaino30L.png" alt="zaino30L"></a>
+            <p>Non sempre è necessario uno zaino ultra capiente, in questo caso, visita <a href="https://www.amazon.it/SKYSPER-Ultraleggero-Ripiegabile-Riflettenti-ISHE30-Grigio/dp/B0BKG7HK4L/ref=sr_1_5?dib=eyJ2IjoiMSJ9.4uSEQ7zdR1yLHdpAc0Cs1uphzz7ckmrQSSKqzLsmGrRk_WqznZj4g9azxmDB77LB1Cl7nHTT2O2rnsBJ3yun_8EMfrWbhBEhW3HXWF6lmQ7QnbqknxCvl5jzAIzH2yTZLDUzNCbBpCVfPWnqy5O0oQ-50Z5KfR5_2stl0e2WM9YSiWepbIGPjXyiV4mMUWqYFEWt8poVNT8OQsLZL3WqwaJbd1ZVZSe81nkvFPgjuWInT8VUOQA3mhQ5oxMI8ajADzIhf8kauXk1HgvTMKtBFPHVVxEV1x0RMiAjYpXuu8k.w2QM8xy0fgUdOTX8PXrp2xVdS2h5JnfRbkLKKBktHoM&dib_tag=se&keywords=zaino%2Bda%2Btrekking%2B30%2Blitri&qid=1708507106&sr=8-5&th=1" target="_blank">questo link</a>, o clicca comodamente sull'immagine per andare direttamente al sito</p>
         </div>
         <img class="icon" src="../Images/imgHome/casual-t-shirt-.png" style="padding-bottom: 100px;" alt="iconTSHIRT">
         <div class="scarpe">
-            <a href="https://www.zalando.it/reebok-work-n-cushion-scarpe-da-camminata-vector-navypure-grey-3ftwr-white-re542a0qj-k11.html"><img src="../Images/imgHome/scarpe.png" class="zoom3" alt="scarpe"></a>
+            <a href="https://www.zalando.it/reebok-work-n-cushion-scarpe-da-camminata-vector-navypure-grey-3ftwr-white-re542a0qj-k11.html" target="_blank"><img src="../Images/imgHome/scarpe.png" class="zoom3" alt="scarpe"></a>
             <p>Altro aspetto da non sottovalutare sono gli indumenti, risulteranno fondamentali per affrontare il viaggio in tutta comodità, qualsiasi sia il periodo in cui viaggerai:
             <br><br>Di seguito ti forniamo delle ottime scarpe rapporto qualità prezzo per sostenere al meglio le tue lunghe camminate, senza risentirne a livello muscolare! 
             </p>
         </div>
         <div class="giubbotto">
-            <a href=""><img src="../Images/imgHome/giacca.png" class="zoom4" alt="giubbotto"></a>
+            <a href="https://www.decathlon.it/p/mp/therm-ic/giacca-da-uomo-riscaldata-e-tecnica-con-batteria-powerbank-powerjacket-speed/_/R-p-e75d70a8-9578-48ba-9652-6a86e1d978ff?mc=e75d70a8-9578-48ba-9652-6a86e1d978ff_c1.c61&c=nero_rosso" target="_blank"><img src="../Images/imgHome/giacca.png" class="zoom4" alt="giubbotto"></a>
             <p>Se deciderai di partire in inverno un indumento che non può mancare sarà il giubbotto, quest'ultimo dovrà avere determinate caratteristiche, come la resistenza al freddo. Il nostro team ti propone la seguente scelta:</p>
         </div>
         <img class="icon" src="../Images/imgHome/valuta-icon.png" alt="iconValuta">
@@ -167,7 +167,7 @@
         <div class="mySlides fade">
             <div class="slide-container">
                 <div class="numbertext">1 / 6</div>
-                <a href="https://www.interrail.eu/it">
+                <a href="https://www.interrail.eu/it" target="_blank">
                     <img src="../Images/imgHome/interrail_logo.jpg.png" alt="interrailLogo">
                 </a>
                 <div class="textEU">Interrail Eurail è il sito ufficiale per acquistare il pass europeo,<br> in modo da viaggiare in tutta calma e sicurezza</div>
@@ -177,7 +177,7 @@
         <div class="mySlides fade">
             <div class="slide-container">
                 <div class="numbertext">2 / 6</div>
-                <a href="https://www.trivago.it/">
+                <a href="https://www.trivago.it/" target="_blank">
                     <img class="trivago" src="../Images/imgHome/trivago.jpg" alt="TrivagoLogo">
                 </a>
                 <div class="textTR">Trivago è uno dei migliori siti per la prenotazione di hotel e appartamenti in cui soggiornare, durante il tuo viaggio</div>
@@ -187,7 +187,7 @@
         <div class="mySlides fade">
             <div class="slide-container">
                 <div class="numbertext">3 / 6</div>
-                <a href="https://www.airbnb.it/">
+                <a href="https://www.airbnb.it/" target="_blank">
                     <img src="../Images/imgHome/airbnb_logo.jpg" alt="airbnbLogo">
                 </a>
                 <div class="textBNB">Airbnb offre l'opzione alternativa a Trivago, soprattutto se si punta a risparmiare qualche euro a discapito della comodità</div>
@@ -196,7 +196,7 @@
         <div class="mySlides fade">
             <div class="slide-container">
                 <div class="numbertext">4 / 6</div>
-                <a href="https://www.trenitalia.com/it.html">
+                <a href="https://www.trenitalia.com/it.html" target="_blank">
                     <img src="../Images/imgHome/trenITA.jpg" alt="TreniITAlogo">
                 </a>
                 <div class="textTRIT">Trenitalia, ferrovie dello stato italiano. Sito fondamentale per controllare l'orario dei treni da usufruire, partendo ovviamente dall'Italia</div>
@@ -205,7 +205,7 @@
         <div class="mySlides fade">
             <div class="slide-container">
                 <div class="numbertext">5 / 6</div>
-                <a href="https://www.thetrainline.com/it/treni/europa">
+                <a href="https://www.thetrainline.com/it/treni/europa" target="_blank">
                     <img src="../Images/imgHome/trainline_logo.jpg" alt="TrainlineLogo">
                 </a>
                 <div class="textTRLine">Trainline, uno dei siti migliori per gli orari dei treni in tutta europa</div>
@@ -214,7 +214,7 @@
         <div class="mySlides fade">
             <div class="slide-container">
                 <div class="numbertext">6 / 6</div>
-                <a href="https://www.tripadvisor.it/">
+                <a href="https://www.tripadvisor.it/" target="_blank">
                     <img class="" src="../Images/imgHome/TripAd_logo.jpg" alt="TripADVlogo">
                 </a>
                 <div class="textADV">Tripadvisor, sito in cui potrete trovare recensioni accurate su ogni paese e regione</div>
