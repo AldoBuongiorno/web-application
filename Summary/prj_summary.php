@@ -11,9 +11,9 @@
 </head>
 
 <!--Variabili utili al javascript-->
-<!-- <script  type="text/javascript" >
-        /* let meta; */      
-</script> -->
+<script  type="text/javascript" >
+    let container;   
+</script>
 
 <body>
     <?php require("../Home/prj_header.php");?>
@@ -41,6 +41,8 @@
             //Filtro i dati acquisiti
             $locationsFiltered = explode("---", $locationsRaw);
             $locationsFiltered = array_filter($locationsFiltered);
+            var_dump($locationsFiltered);
+            echo count($locationsFiltered);
             
             $imagesFiltered = explode("---", $imagesRaw);
             $imagesFiltered = array_filter($imagesFiltered);
@@ -48,38 +50,42 @@
             $descriptionFiltered = explode("---", $descriptionRaw);
             $descriptionFiltered = array_filter($descriptionFiltered);
 
-            /* var_dump($descriptionFiltered); */
-
             $geoLocationFiltered = explode("---", $geoLocationRaw);
             $geoLocationFiltered = array_filter($geoLocationFiltered);
 
             $flagLocation = explode("---", $flagLocationRaw);
             $flagLocation = array_filter($flagLocation);
             
-            /* ?>
-                <script  type="text/javascript">
-                    description = document.getElementById("descriptionText");
-                    descritpion.textContent = "<?php echo $descriptionFiltered[0]; ?>".toString();
-                    descritpion.style.display = "block";
-                </script>
-            <?php */
 
             for($i = 0; $i < count($locationsFiltered); $i++){  
                 ?> 
                     <script  type="text/javascript">
                         document.addEventListener('DOMContentLoaded', function () {
-                            /* document.getElementsByClassName("prev").addEventListener('click', function(){
-                                plusSlides(-1);
-                            });
-
-                            document.getElementsByClassName("next").addEventListener('click', function(){
+                            console.log("<?php echo $i ?>");
+                            /* document.getElementsByClassName("next").addEventListener('click', function(){
                                 plusSlides(1);
                             });*/
                             meta = document.getElementById("meta" + "<?php echo $i + 1; ?>");
                             geo = document.getElementById("link" + "<?php echo $i + 1; ?>");
                             flag = document.getElementById("flag" + "<?php echo $i + 1; ?>");
-                            img = document.getElementById ("img" + "<?php echo $i + 1; ?>");
+                            dot = document.getElementById("dot" + "<?php echo $i + 1; ?>");
+                            container = document.getElementsByClassName ("slideshow-container")[0]; 
                             
+                            slide = document.createElement("div");
+                            slide.className = "mySlides fade";
+                            img = document.createElement("img");
+                            img.src = "<?php echo $imagesFiltered[$i]; ?>";
+                            img.style.width = "100%";
+
+                            // Aggiungiamo un ID unico all'immagine
+                            img.id = "img" + "<?php echo $i + 1; ?>";
+
+                            // Aggiungiamo l'immagine al blocco di slide
+                            slide.appendChild(img);
+
+                            // Aggiungiamo il blocco di slide al contenitore degli slide
+                            container.appendChild(slide);
+                            dot.style.display = "inline-block";
                             
                             geo.innerHTML = "<?php echo $locationsFiltered[$i]; ?>";
                             geo.href = "<?php echo $geoLocationFiltered[$i]; ?>";
@@ -89,12 +95,18 @@
                             flag.src = "<?php echo $flagLocation[$i]; ?>";
                             flag.style.display = "block";
 
-                            img.src = "<?php echo $imagesFiltered[$i]; ?>";
-                            img.style.display = "block";
                         });    
                     </script>
                 <?php   
             }
+
+            ?>
+                <script  type="text/javascript">
+                    document.addEventListener('DOMContentLoaded', function() {
+                        currentSlide(1); 
+                    });
+                </script>
+            <?php 
             
         } else {
             echo "La variabile di sessione 'id' non è stata impostata.";
@@ -106,28 +118,6 @@
 
    
     ?>
-
-
-    <div class="navigationbarr">
-        <ul>
-            <li><a href="prj_home.html">HOME</a></li>
-            <li><a href="prj_form.html">NUOVO VIAGGIO</a></li>
-            <li style="float: right"><a href="prj_signup.php" >REGISTRATI</a></li>
-            <li style="float: right"><a href="prj_login.php" >ACCEDI</a></li>
-        </ul>
-    </div>
-    
-    <div class="navigationbarr">
-        <ul>
-            <li><a href="prj_home.html">HOME</a></li>
-            <li><a href="prj_form.html">NUOVO VIAGGIO</a></li>
-            <li style="float: right"><a href="prj_signup.php" >REGISTRATI</a></li>
-            <li style="float: right"><a href="prj_login.php" >ACCEDI</a></li>
-        </ul>
-    </div>
-
-
-
 
     <div class="mainContainer">
         
@@ -147,6 +137,8 @@
                 <iframe src="https://www.google.com/maps/d/embed?mid=1rz5t987I69YzmOAKnI-H0M7fHZ4&ehbc=2E312F" width="100%" height="100%"></iframe>
             </div>
         </div>
+
+        <div id = "cityInfo" ></div>
             
         <div class="journey">    
             <div class="flags">
@@ -167,38 +159,7 @@
         <!-- LINK MAPPE DA INCLUDERE https://www.eurail.com/content/dam/pdfs/Eurail_Maps_2024.pdf-->
         <!-- Slideshow container -->
         <div class="slideshow-container">
-
             <!-- INSERIRE CAPTION E NUMBER TEXT IN MANIERA DINAMICA -->
-            <div class="mySlides fade">
-            <div class="numbertext">1 / 5</div>
-            <img id = "img1" src="" style="width:100%">
-            <div class="text">Caption Text</div>
-            </div>
-        
-            <div class="mySlides fade">
-            <div class="numbertext">2 / 5</div>
-            <img id = "img2" src="" style="width:100%">
-            <div class="text">Caption Two</div>
-            </div>
-        
-            <div class="mySlides fade">
-            <div class="numbertext">3 / 5</div>
-            <img id = "img3" src=""  style="width:100%">
-            <div class="text">Caption Three</div>
-            </div>
-
-            <div class="mySlides fade">
-            <div class="numbertext">4 / 5</div>
-            <img id = "img4" src=""  style="width:100%">
-            <div class="text">Caption Four</div>
-            </div>
-
-            <div class="mySlides fade">
-            <div class="numbertext">5 / 5</div>
-            <img id = "img5" src=""  style="width:100%">
-            <div class="text">Caption Five</div>
-            </div>
-        
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
@@ -214,8 +175,7 @@
         </div>
 
         
-        <div id = "cityInfo" >
-        </div>
+        
 
     </div>
   

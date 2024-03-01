@@ -1,3 +1,5 @@
+//Chiamata per le geolocalizzazione
+document.addEventListener("DOMContentLoaded", getLocation);
 
 // Chiamata alla funzione currentSlide all'avvio della pagina
 document.addEventListener('DOMContentLoaded', function() {
@@ -31,14 +33,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-
-
-
-
-document.addEventListener("DOMContentLoaded", getLocation);
-
-
-
 function getLocation() {
 	if (navigator.geolocation) {
 	  navigator.geolocation.getCurrentPosition(showPosition);
@@ -71,10 +65,9 @@ function showPosition(position) {
 	Http.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
       var myObj = JSON.parse(this.responseText);
-      console.log(myObj);   //Stampa di prova
     
       x.innerHTML="Posizione utente : " + myObj.city;
-      console.log("Posizione utente : " + myObj.city);
+      /* console.log("Posizione utente : " + myObj.city); */
     }
 	}
 
