@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="prj_summary.css">
     <script src="prj_summary.js" type="text/javascript"> </script>
+    <script src="../Home/prj_home.js" type="text/javascript" defer></script>
     <title>Train Travel Advisor</title>
     <?php require("prj_summaryFunctions.php");?>
 
 </head>
 
 <!--Variabili utili al javascript-->
-<script  type="text/javascript" >
+<!-- <script  type="text/javascript" >
     let container;   
-</script>
+</script> -->
 
 <body>
     <?php require("../Home/prj_header.php");?>
@@ -24,6 +25,17 @@
         /* var_dump($_SESSION); */
         
         if (isset($_SESSION['id'])) {
+
+            //Dovrebbe mostrare il messaggio nel caso di un numero massimo di itinerari raggiunti
+            if($_SESSION['maxReached'] === true){ ?>
+                <script  type="text/javascript">
+                    cart = document.getElementsByClassName("fullCart");
+                    option = document.getElementsByClassName("info");
+                    option.style.marginTop = "20%";
+                    cart.style.display = "block";
+                </script>
+                <?php
+            }
 
             $connection_string ="host='localhost' dbname='Gruppo27' user='www' password='tw2024'";
             $db = pg_connect($connection_string) or die('Impossibile connettersi al database: ' . pg_last_error());
@@ -41,35 +53,35 @@
             //Filtro i dati acquisiti
             $locationsFiltered = explode("---", $locationsRaw);
             $locationsFiltered = array_filter($locationsFiltered);
-            var_dump($locationsFiltered);
-            echo count($locationsFiltered);
+            $locationsFiltered = array_map('trim', $locationsFiltered);
             
             $imagesFiltered = explode("---", $imagesRaw);
             $imagesFiltered = array_filter($imagesFiltered);
+            $imagesFiltered = array_map('trim', $imagesFiltered);
 
             $descriptionFiltered = explode("---", $descriptionRaw);
             $descriptionFiltered = array_filter($descriptionFiltered);
+            $descriptionFiltered = array_map('trim', $descriptionFiltered);
 
             $geoLocationFiltered = explode("---", $geoLocationRaw);
             $geoLocationFiltered = array_filter($geoLocationFiltered);
+            $geoLocationFiltered = array_map('trim', $geoLocationFiltered);
 
             $flagLocation = explode("---", $flagLocationRaw);
             $flagLocation = array_filter($flagLocation);
+            $flagLocation = array_map('trim', $flagLocation);
             
 
-            for($i = 0; $i < count($locationsFiltered); $i++){  
+            for($i = 0; $i < count($locationsFiltered); $i++){
                 ?> 
                     <script  type="text/javascript">
                         document.addEventListener('DOMContentLoaded', function () {
-                            console.log("<?php echo $i ?>");
-                            /* document.getElementsByClassName("next").addEventListener('click', function(){
-                                plusSlides(1);
-                            });*/
+
                             meta = document.getElementById("meta" + "<?php echo $i + 1; ?>");
                             geo = document.getElementById("link" + "<?php echo $i + 1; ?>");
                             flag = document.getElementById("flag" + "<?php echo $i + 1; ?>");
                             dot = document.getElementById("dot" + "<?php echo $i + 1; ?>");
-                            container = document.getElementsByClassName ("slideshow-container")[0]; 
+                            container = document.getElementsByClassName ("slideshows-container")[0]; 
                             
                             slide = document.createElement("div");
                             slide.className = "mySlides fade";
@@ -111,26 +123,21 @@
         } else {
             echo "La variabile di sessione 'id' non è stata impostata.";
         }
-
-        
-            
-
-
-   
     ?>
 
     <div class="mainContainer">
         
        <!--  <div class="welcome">In base alle tue scelte ti consigliamo questo viaggio attraverso l'Europa</div>    -->
+        <div class = "fullCart">Ti ricordiamo che il tuo carrello ha raggiunto il limite massimo di itinerari disponibili. Il seguente non verrà salvato. Eliminane prima uno se vuoi memorizzarlo</div>
         
         <div class="info">
             <div class = "outcome">
                 <ul id="countriesList">
-                    <li id="meta1"><a id = "link1" href = ""></a></li>
-                    <li id="meta2"><a id = "link2" href = ""></a></li>
-                    <li id="meta3"><a id = "link3" href = ""></a></li>
-                    <li id="meta4"><a id = "link4" href = ""></a></li>
-                    <li id="meta5"><a id = "link5" href = ""></a></li>
+                    <li id="meta1"><a id = "link1" href = "" target = "_blank"></a></li>
+                    <li id="meta2"><a id = "link2" href = "" target = "_blank"></a></li>
+                    <li id="meta3"><a id = "link3" href = "" target = "_blank"></a></li>
+                    <li id="meta4"><a id = "link4" href = "" target = "_blank"></a></li>
+                    <li id="meta5"><a id = "link5" href = "" target = "_blank"></a></li>
                 </ul>
             </div>
             <div class="map"> 
@@ -138,7 +145,7 @@
             </div>
         </div>
 
-        <div id = "cityInfo" ></div>
+        <div id = "cityInfo" style="float: right;"></div>
             
         <div class="journey">    
             <div class="flags">
@@ -158,7 +165,7 @@
         
         <!-- LINK MAPPE DA INCLUDERE https://www.eurail.com/content/dam/pdfs/Eurail_Maps_2024.pdf-->
         <!-- Slideshow container -->
-        <div class="slideshow-container">
+        <div class="slideshows-container">
             <!-- INSERIRE CAPTION E NUMBER TEXT IN MANIERA DINAMICA -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
