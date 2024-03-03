@@ -44,7 +44,7 @@
         $idArray = getID($username, $db);                           //idArray contiene l'array associativo con journeys -> "ID1---ID2--..."
         $idString = $idArray["journeys"];
 
-        if ($idString == null) {                                    //iseriamo direttamente l'id se non ce ne sono altri presenti
+        if ($idString == null) {                                    //inseriamo direttamente l'id se non ce ne sono altri presenti
             $id = $id . "---";                                      //formatto l'id prima di inserirlo
             $sql = "UPDATE \"user\" SET journeys=$1 WHERE username=$2";
             $prep = pg_prepare($db, "sqlUpdateID", $sql);            
@@ -56,6 +56,8 @@
             return false; 
             }
             else{
+                $_SESSION['duplicate'] = false;
+                $_SESSION['maxReached'] = false;
                 return true;
             }     
         }          
@@ -68,9 +70,11 @@
                 //l'utente ottiene un'itinerario già presente nel carrello -> verrà visualizzato nel summary un messaggio che gli comunica questa informazione
                 if($part == $id){
                     $_SESSION['duplicate'] = true;               
+                    $_SESSION['maxReached'] = false;
                     return false;
                 } 
             } 
+
             //in questo caso l'id non è presente quindi si provvede ad inserirlo 
             //salvo id in una variabile
             $idDuplicate = $id;                                      
@@ -82,6 +86,7 @@
                     return false;
                 }
                 if($i == 0){
+                    $_SESSION['duplicate'] = false;
                     $id = $part;
                     $i++;
                 }

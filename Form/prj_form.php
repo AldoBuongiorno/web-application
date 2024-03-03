@@ -137,11 +137,11 @@
             $id = pickItinerary($selectedPeriod, $selectedBudget, $selectedDuration, $selectedType);
             $_SESSION['id']=$id;
             
-
             if(isset($_SESSION['authorized'])){
                 $username = $_SESSION['username'];
                 insertID($id, $username); 
             }
+            
             echo ("<script LANGUAGE='JavaScript'>
                         window.location.href = '../Summary/prj_summary.php';
                     </script>");

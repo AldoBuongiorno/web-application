@@ -22,7 +22,7 @@
         
         //Connection String
 
-        /* var_dump($_SESSION); */
+        var_dump($_SESSION);
         
         if (isset($_SESSION['id'])) {
 
