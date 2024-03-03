@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    font-size: calc(1.5px + 1vw);   
 } 
 
 
@@ -23,19 +24,19 @@
 }
 
 .img1{
-    background-image: url('../Images/imgForm/img2.jpg');
+    background-image: url('../Images/img2.jpg');
 }
 
 .img2{
-    background-image: url('../Images/imgForm/Sfondo.jpg');
+    background-image: url('../Images/Sfondo.jpg');
 }
 
 .img3{
-    background-image: url('../Images/imgForm/img3.jpg');
+    background-image: url('../Images/img3.jpg');
 }
 
 .img4{
-    background-image: url('../Images/imgForm/img4.jpg');
+    background-image: url('../Images/img4.jpg');
 }
 
 .container {

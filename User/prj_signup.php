@@ -31,7 +31,7 @@
                     <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Conferma Password" <?php if (array_key_exists('passwordConfirm',$_POST)) { echo "value='", htmlspecialchars($_POST['passwordConfirm']), "'"; } ?>/><br>
                     <span id="signupErrorSpan"></span>
                     <button type="submit" name="signupBtn" id="signupBtn">REGISTRATI</button>
-                    <button id="switchSignup" type="button" onclick="window.location.href = 'prj_login.php';"><Login></button>                    
+                    <button id="switchSignup" type="button" onclick="window.location.href = 'prj_login.php';">Login</button>                    
                 </form>
             </div> 
 

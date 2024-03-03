@@ -62,19 +62,23 @@
         else{                                                       //sono presenti altri ID 
             $array = explode("---", $idString);
             $array = array_filter($array);                          // rimuove gli elementi vuoti dall'array
+                    // array[0] = 
 
             foreach($array as $part){
+                //l'utente ottiene un'itinerario già presente nel carrello -> verrà visualizzato nel summary un messaggio che gli comunica questa informazione
                 if($part == $id){
-                    echo "Il viaggio è gia presente";               //inserire un sistema di notifica migliore con stampa messaggio da qualche parte
+                    $_SESSION['duplicate'] = true;               
                     return false;
                 } 
             } 
             //in questo caso l'id non è presente quindi si provvede ad inserirlo 
-            $idDuplicate = $id;                                      //salvo id in una variabile
+            //salvo id in una variabile
+            $idDuplicate = $id;                                      
             $i = 0;                           
             foreach($array as $part){
+                //numero massimo di itinerari raggiunti per l'utente -> l'itinerario corrente non verrà aggiunto al carrelo ma verrà comunque reindirizzato nel summary con l'itinerario scelto
                 if($i == 4){
-                    echo "Numero massimo di itinerari raggiunto. Non è possibile aggiungerne nuovi senza prima eliminarne uno";
+                    $_SESSION['maxReached'] = true;
                     return false;
                 }
                 if($i == 0){
