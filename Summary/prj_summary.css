@@ -5,7 +5,7 @@ body{
     padding: 0;
     font-family: 'Monserrat', sans-serif;
     background-color: #f2f2f2;
-    font-size: calc(2px + 1vw);
+    font-size: calc(6px + 1vw);
 }
 
 
@@ -113,15 +113,15 @@ a {
 }
 
 .journey{
-    margin-top: 150px;
+    margin-top: 9.77vw;
     margin-right: 0px;
-    margin-bottom: 100px;
+    margin-bottom: 6.51vw;
 }
 
 .description {
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-top: 50px;
+    margin-left: 9.77vw;
+    margin-right: 9.77vw;
+    margin-top: 3.26vw;
     text-align: justify;
     display:flex;
     flex-direction: column;
@@ -134,9 +134,9 @@ a {
     display:flex;
     justify-content: center; 
     align-items: center;
-    margin-right: 40px;
-    margin-left: 40px;
-    margin-bottom:10px;
+    margin-right: 2.60vw;
+    margin-left: 2.60vw;
+    margin-bottom:0.65vw;
 }
 
 .flags img{
@@ -166,11 +166,10 @@ a {
 .slideshows-container {
     position: relative;
     margin: auto;
-    width: 95vw;
-    height: 110vh;          
+    width: 75%;
+    height: 75%;          
 }
 
-/* Hide the images by default */
 .mySlides {
     display: none;
     width: 100%;
@@ -254,19 +253,10 @@ a {
     border-radius: 20px;
 }
 
-.fullCart{
+.fullCart, .duplicateElement{
     text-align: center;
     display: none;
-    font-size: 20px;
-    margin-top: 8%;
-    font-weight: bold;
-    color: rgb(208, 69, 69);
-}
-
-.duplicateElement{
-    text-align: center;
-    display: none;
-    font-size: 20px;
+    font-size: calc(6px + 1vw);
     margin-top: 8%;
     font-weight: bold;
     color: rgb(208, 69, 69);
