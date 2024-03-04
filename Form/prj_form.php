@@ -145,14 +145,9 @@
             echo ("<script LANGUAGE='JavaScript'>
                         window.location.href = '../Summary/prj_summary.php';
                     </script>");
-            exit();
-            
+            exit();    
         }
     ?>
-
-
     <?php require("../Home/prj_footer.php");?>
-    
 </body>
-
 </html>

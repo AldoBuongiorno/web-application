@@ -17,12 +17,6 @@
     <?php 
         
         //Connection String
-
-        /* var_dump($_SESSION); */
-
-        $_SESSION['id'] = "EA15P";
-        $_SESSION['maxReached'] = false;
-        $_SESSION['duplicate'] = true;
         
         if (isset($_SESSION['id'])) {
 
