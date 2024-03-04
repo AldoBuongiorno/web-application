@@ -16,7 +16,7 @@
         <body>
 
             <div class="title">
-                <a href="prj_home.php"><h1>TRAIN TRAVEL</h1> </a>                  
+                <a href="prj_home.php"><h1>TRAIN TRAVEL ADVISOR</h1> </a>                  
             </div>
 
             <div class="containerLogin form-container" id="container">
@@ -46,7 +46,7 @@
                     $passwordLogin =  $_POST['passwordLogin'];
                     $hash = get_pwd($usernameLogin);
             
-                    if(!usernameExists($usernameLogin)){
+                    if( ! usernameExists($usernameLogin)){
                         echo (" <script LANGUAGE='JavaScript'>  
                                 let message = document.getElementById('loginErrorSpan');
                                 message.innerHTML = '$usernameLogin non risulta registrato';
@@ -57,7 +57,7 @@
                             $_SESSION['username']=$usernameLogin;
                             $_SESSION['authorized']=true;
                             echo ("<script LANGUAGE='JavaScript'>
-                                window.location.href = '../Home/prj_home.php';
+                                window.location.href = '../Form/prj_form.php';
                                 </script>"); 
                     }
                     else {

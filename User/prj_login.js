@@ -1,23 +1,23 @@
 function generateBackground() {
 
     const backgrounds = [];
-    backgrounds[0] = "url('../Images/loginImages/train0.jpg')";
-    backgrounds[1] = "url('../Images/loginImages/train1.jpg')";
-    backgrounds[2] = "url('../Images/loginImages/train2.jpg')";
-    backgrounds[3] = "url('../Images/loginImages/train3.jpg')";
-    backgrounds[4] = "url('../Images/loginImages/train4.jpg')";
-    backgrounds[5] = "url('../Images/loginImages/train5.jpg')";
-    backgrounds[6] = "url('../Images/loginImages/train6.jpg')";
-    backgrounds[7] = "url('../Images/loginImages/train7.jpg')";
-    backgrounds[8] = "url('../Images/loginImages/train8.jpg')";
-    backgrounds[9] = "url('../Images/loginImages/train9.jpg')";
-    backgrounds[10] = "url('../Images/loginImages/train10.jpg')";
-    backgrounds[11] = "url('../Images/loginImages/train11.jpg')";
-    backgrounds[12] = "url('../Images/loginImages/train12.jpg')";
-    backgrounds[13] = "url('../Images/loginImages/train13.jpg')";
-    backgrounds[14] = "url('../Images/loginImages/train14.jpg')";
-    backgrounds[15] = "url('../Images/loginImages/train15.jpg')";
-    backgrounds[16] = "url('../Images/loginImages/train16.jpg')";
+    backgrounds[0] = "url('../Images/imgLogin/train0.jpg')";
+    backgrounds[1] = "url('../Images/imgLogin/train1.jpg')";
+    backgrounds[2] = "url('../Images/imgLogin/train2.jpg')";
+    backgrounds[3] = "url('../Images/imgLogin/train3.jpg')";
+    backgrounds[4] = "url('../Images/imgLogin/train4.jpg')";
+    backgrounds[5] = "url('../Images/imgLogin/train5.jpg')";
+    backgrounds[6] = "url('../Images/imgLogin/train6.jpg')";
+    backgrounds[7] = "url('../Images/imgLogin/train7.jpg')";
+    backgrounds[8] = "url('../Images/imgLogin/train8.jpg')";
+    backgrounds[9] = "url('../Images/imgLogin/train9.jpg')";
+    backgrounds[10] = "url('../Images/imgLogin/train10.jpg')";
+    backgrounds[11] = "url('../Images/imgLogin/train11.jpg')";
+    backgrounds[12] = "url('../Images/imgLogin/train12.jpg')";
+    backgrounds[13] = "url('../Images/imgLogin/train13.jpg')";
+    backgrounds[14] = "url('../Images/imgLogin/train14.jpg')";
+    backgrounds[15] = "url('../Images/imgLogin/train15.jpg')";
+    backgrounds[16] = "url('../Images/imgLogin/train16.jpg')";
     let index = getRandomInt(17);
 
     return backgrounds[index];

@@ -15,6 +15,7 @@ body {
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	margin: -20px 0 50px;
+	overflow-x: hidden;
 }
 
 .title a {
@@ -126,7 +127,7 @@ button:focus {
 
 #switchSignup{
     margin: 8px;
-    background-image: url('Images/loginImages/loginAvatar.png');
+    background-image: url('../Images/imgLogin/loginAvatar.png');
     background-color: rgb(255, 255, 255);
     background-position: center;
     background-repeat: no-repeat;

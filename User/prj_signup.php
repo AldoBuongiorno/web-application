@@ -4,7 +4,7 @@
             <link rel="stylesheet" href="prj_login.css" type="text/css"/>
             <script src="prj_login.js" type="text/javascript">  </script>
             <meta charset="UTF-8"/>
-            <meta title="Login"/>
+            <meta title="Signup"/>
             <meta name="description" content="signupPage "/>
             <meta name="keywords" content="signup"/>
             <meta author="Gruppo 27"/>
@@ -16,7 +16,7 @@
         <body>
 
             <div class="title">
-                <a href="prj_home.php"><h1>TRAIN TRAVEL</h1> </a>                  
+                <a href="prj_home.php"><h1>TRAIN TRAVEL ADVISOR</h1> </a>                  
             </div>
 
             <div class="containerSignup form-container" id="container">
@@ -31,7 +31,7 @@
                     <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Conferma Password" <?php if (array_key_exists('passwordConfirm',$_POST)) { echo "value='", htmlspecialchars($_POST['passwordConfirm']), "'"; } ?>/><br>
                     <span id="signupErrorSpan"></span>
                     <button type="submit" name="signupBtn" id="signupBtn">REGISTRATI</button>
-                    <button id="switchSignup" type="button" onclick="window.location.href = 'prj_login.php';">Login</button>                    
+                    <button id="switchSignup" type="button" onclick="window.location.href = 'prj_login.php';"><Login></button>                    
                 </form>
             </div> 
 
