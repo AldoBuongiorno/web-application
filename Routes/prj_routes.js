@@ -1,4 +1,4 @@
-function eliminaItinerario(button) {
+/* function eliminaItinerario(button) {
     document.getElementById('btn' + i).addEventListener('click', function(){
         var delete = new 
     });
@@ -22,4 +22,4 @@ function eliminaItinerario(button) {
     if (itinerariRimasti.length === 0) {
         window.location.href = "prj_form.php";
     }
-}
+} */
