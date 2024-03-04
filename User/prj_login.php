@@ -16,7 +16,7 @@
         <body>
 
             <div class="title">
-                <a href="prj_home.php"><h1>TRAIN TRAVEL ADVISOR</h1> </a>                  
+                <a href="../Home/prj_home.php"><h1>TRAIN TRAVEL</h1> </a>                  
             </div>
 
             <div class="containerLogin form-container" id="container">
