@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="prj_summary.css">
     <script src="prj_summary.js" type="text/javascript"> </script>
     <script src="../Home/prj_home.js" type="text/javascript" defer></script>
     <title>Train Travel Advisor</title>
-    <?php require("prj_summaryFunctions.php");?>
-
+    <?php require("prj_summaryFunctions.php");?> 
 </head>
 
-<!--Variabili utili al javascript-->
-<!-- <script  type="text/javascript" >
-    let container;   
-</script> -->
 
 <body>
     <?php require("../Home/prj_header.php");?>
@@ -22,17 +18,28 @@
         
         //Connection String
 
-        var_dump($_SESSION);
+        /* var_dump($_SESSION); */
+
+        $_SESSION['id'] = "EA15P";
+        $_SESSION['maxReached'] = false;
+        $_SESSION['duplicate'] = true;
         
         if (isset($_SESSION['id'])) {
 
             //Dovrebbe mostrare il messaggio nel caso di un numero massimo di itinerari raggiunti
-            if($_SESSION['maxReached'] === true){ ?>
-                <script  type="text/javascript">
-                    cart = document.getElementsByClassName("fullCart");
-                    option = document.getElementsByClassName("info");
-                    option.style.marginTop = "20%";
-                    cart.style.display = "block";
+            if($_SESSION['maxReached'] == true){ ?>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        document.getElementById("full").style.display = "block";
+                    });
+                </script>
+                <?php
+            }
+            if($_SESSION['duplicate'] == true){ ?>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        document.getElementById("dup").style.display = "block";
+                    });
                 </script>
                 <?php
             }
@@ -128,16 +135,21 @@
     <div class="mainContainer">
         
        <!--  <div class="welcome">In base alle tue scelte ti consigliamo questo viaggio attraverso l'Europa</div>    -->
-        <div class = "fullCart">Ti ricordiamo che il tuo carrello ha raggiunto il limite massimo di itinerari disponibili. Il seguente non verrà salvato. Eliminane prima uno se vuoi memorizzarlo</div>
+        <div class="fullCart" id="full">
+            Ti ricordiamo che il tuo carrello ha raggiunto il limite massimo di itinerari disponibili. Il seguente item non verrà salvato. Eliminane prima uno se vuoi salvarlo.
+        </div>
+        <div class="diplicateElement" id="dup">
+           Questo itinerario fa già parte della tua collezione di viaggi.
+        </div>
         
         <div class="info">
             <div class = "outcome">
                 <ul id="countriesList">
-                    <li id="meta1"><a id = "link1" href = "" target = "_blank"></a></li>
-                    <li id="meta2"><a id = "link2" href = "" target = "_blank"></a></li>
-                    <li id="meta3"><a id = "link3" href = "" target = "_blank"></a></li>
-                    <li id="meta4"><a id = "link4" href = "" target = "_blank"></a></li>
-                    <li id="meta5"><a id = "link5" href = "" target = "_blank"></a></li>
+                    <li id="meta1"><a id = "link1" href = "" target = "_blank" style="text-decoration: none;"></a></li>
+                    <li id="meta2"><a id = "link2" href = "" target = "_blank" style="text-decoration: none;"></a></li>
+                    <li id="meta3"><a id = "link3" href = "" target = "_blank" style="text-decoration: none;"></a></li>
+                    <li id="meta4"><a id = "link4" href = "" target = "_blank" style="text-decoration: none;"></a></li>
+                    <li id="meta5"><a id = "link5" href = "" target = "_blank" style="text-decoration: none;"></a></li>
                 </ul>
             </div>
             <div class="map"> 
@@ -145,7 +157,7 @@
             </div>
         </div>
 
-        <div id = "cityInfo" style="float: right;"></div>
+        <div class="geoInfo" id="cityInfo" style="float: right;"></div>
             
         <div class="journey">    
             <div class="flags">
@@ -166,13 +178,14 @@
         <!-- LINK MAPPE DA INCLUDERE https://www.eurail.com/content/dam/pdfs/Eurail_Maps_2024.pdf-->
         <!-- Slideshow container -->
         <div class="slideshows-container">
+            <!-- INSERIRE CAPTION E NUMBER TEXT IN MANIERA DINAMICA -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <br>
         
         <!-- The dots/circles -->
-        <div style="text-align:center">
+        <div class="dotMenu" style="text-align:center">
             <span id= "dot1" class="dot" onclick="currentSlide(1)"></span>
             <span id= "dot2" class="dot" onclick="currentSlide(2)"></span>
             <span id= "dot3" class="dot" onclick="currentSlide(3)"></span>
@@ -180,10 +193,9 @@
             <span id= "dot5" class="dot" onclick="currentSlide(5)"></span>
         </div>
 
-        
-        
-
     </div>
+
+    <?php require("../Home/prj_footer.php");?>
   
 
     

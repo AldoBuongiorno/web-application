@@ -5,6 +5,7 @@ body{
     padding: 0;
     font-family: 'Monserrat', sans-serif;
     background-color: #f2f2f2;
+    font-size: calc(1.5px + 1vw);
 }
 
 
@@ -28,12 +29,21 @@ hr {
 }
 
 .info{
-    margin-top:10%;
+    margin-top:5%;
     text-align: left;
     display: flex;
     margin-bottom: 0;
     min-height: 450px;
 } 
+
+.geoInfo{
+    line-height: 140%;
+    letter-spacing: 0.5px;
+    text-shadow: 0.2px 0.2px 0.5px #000000;
+    font-weight: bold;
+    color:#717171;
+    margin-top: 2%;
+}
 
 .outcome{
     width: 45%;
@@ -62,6 +72,10 @@ iframe {
 	display: block; 
 }
 
+a {
+    color: inherit;     /*Fa in modo che il link non sia sempre blu*/ 
+}
+
  #countriesList{
     padding-left: 20px;
     padding-right: 20px;
@@ -72,9 +86,11 @@ iframe {
 #countriesList li {
     position: relative;
     text-align: center;
+    font-weight: bold;
     list-style-type: none;
     margin-bottom: 15px;
-    color: whitesmoke;
+    color: rgb(18, 34, 255);
+    font-weight: bold;
     padding: 20px 17px;
     border-radius: 15px;
     transition: all 0.3s ease;
@@ -82,44 +98,18 @@ iframe {
     transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1); 
 }
 
-#countriesList ::before {
-    content: ""; 
-    position: absolute; 
-    top: 0;
-    left: -10px; 
-    width: 5px;
-    height: 100%; 
-    background-color: #000000; 
-    border-radius: 30px;
-  }
-
 #countriesList li:hover {
-    color: black;
-    border-color: #717171;
-    background-color: rgba(202, 182, 182, 0.635);
+    color: white;
+    font-weight: bold;
+    background-color:rgb(18, 34, 255);
+    border: 2px solid black; 
     transform: perspective(0px) rotateX(0deg) rotateY(0deg) scale(1.06); 
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
 }
 
-#meta1{
-    background-color: rgb(236, 193, 96);
-}
-
-#meta2{
-    background-color: rgb(224, 148, 87);
-}
-
-#meta3{
-    background-color: rgb(218, 129, 54);
-}
-
-#meta4{
-    background-color: rgb(210, 92, 64);
-}
-
-#meta5{
-    background-color: rgb(202, 36, 48);
+#meta1, #meta2, #meta3, #meta4, #meta5{
+    background-color: white;
+    border: 2.5px solid rgb(18, 34, 255);
 }
 
 .journey{
@@ -174,10 +164,10 @@ iframe {
 
 /* Slideshow container */
 .slideshows-container {
-    width: 60%;
-    height: 50%;
     position: relative;
     margin: auto;
+    width: 90vw;
+    height: 70hv;           /*************************************************************************************************/ 
 }
 
 /* Hide the images by default */
@@ -185,6 +175,7 @@ iframe {
     display: none;
     width: 100%;
     height: 100%;
+    margin-bottom: 5px;     /*margine inferiore tra immagine e dots*/
 }
 
 /* Next & previous buttons */
@@ -212,26 +203,9 @@ iframe {
     background-color: rgba(0,0,0,0.8);
 }
 
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center; 
+.dotMenu{
+    margin-bottom: 100px;
 }
-
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
 .dot{
     cursor: pointer;
     height: 10px;
@@ -275,11 +249,23 @@ iframe {
 }
 
 .slideshows-container img{
-    max-width: 100%;
+    width: 100%;
     height: 100%;
-    
+    border-radius: 20px;
 }
 
 .fullCart{
     display: none;
+    margin-top: 15%;
+    margin-left: 1%;
+    font-weight: bold;
+    color: rgb(208, 69, 69);
+}
+
+.diplicateElement{
+    display: none;
+    margin-top: 15%;
+    margin-left: 1%;
+    font-weight: bold;
+    color: rgb(208, 69, 69);
 }

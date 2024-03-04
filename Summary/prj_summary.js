@@ -73,7 +73,7 @@ function showPosition(position) {
 		if (this.readyState == 4 && this.status == 200) {
       var myObj = JSON.parse(this.responseText);
     
-      x.innerHTML="Posizione utente : " + myObj.city;
+      x.innerHTML="POSIZIONE UTENTE: " + myObj.city;
       /* console.log("Posizione utente : " + myObj.city); */
     }
 	}
