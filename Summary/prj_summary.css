@@ -92,7 +92,7 @@ a {
     color: rgb(18, 34, 255);
     font-weight: bold;
     padding: 20px 17px;
-    border-radius: 15px;
+    border-radius: 20px;
     transition: all 0.3s ease;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1); 

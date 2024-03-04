@@ -38,6 +38,9 @@
 
     function insertID($id, $username) {
 
+        $_SESSION['maxReached'] = false;
+        $_SESSION['maxReached'] = false;
+
         $connection_string ="host='localhost' dbname='Gruppo27' user='www' password='tw2024'";
         $db = pg_connect($connection_string) or die('Impossibile connettersi al database: ' . pg_last_error());
 
@@ -64,13 +67,11 @@
         else{                                                       //sono presenti altri ID 
             $array = explode("---", $idString);
             $array = array_filter($array);                          // rimuove gli elementi vuoti dall'array
-                    // array[0] = 
 
             foreach($array as $part){
                 //l'utente ottiene un'itinerario già presente nel carrello -> verrà visualizzato nel summary un messaggio che gli comunica questa informazione
                 if($part == $id){
-                    $_SESSION['duplicate'] = true;               
-                    $_SESSION['maxReached'] = false;
+                    $_SESSION['duplicate'] = true;        
                     return false;
                 } 
             } 
@@ -86,7 +87,6 @@
                     return false;
                 }
                 if($i == 0){
-                    $_SESSION['duplicate'] = false;
                     $id = $part;
                     $i++;
                 }
