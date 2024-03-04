@@ -141,7 +141,9 @@
                 $username = $_SESSION['username'];
                 insertID($id, $username); 
             }
-            
+            $_SESSION['duplicate'] = false;
+            $_SESSION['maxReached'] = false;
+
             echo ("<script LANGUAGE='JavaScript'>
                         window.location.href = '../Summary/prj_summary.php';
                     </script>");
