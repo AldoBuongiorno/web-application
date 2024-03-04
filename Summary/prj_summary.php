@@ -132,7 +132,7 @@
         <div class="fullCart" id="full">
             Ti ricordiamo che il tuo carrello ha raggiunto il limite massimo di itinerari disponibili. Il seguente item non verrà salvato. Eliminane prima uno se vuoi salvarlo.
         </div>
-        <div class="diplicateElement" id="dup">
+        <div class="duplicateElement" id="dup">
            Questo itinerario fa già parte della tua collezione di viaggi.
         </div>
         
