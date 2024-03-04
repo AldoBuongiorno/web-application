@@ -59,8 +59,6 @@
             return false; 
             }
             else{
-                $_SESSION['duplicate'] = false;
-                $_SESSION['maxReached'] = false;
                 return true;
             }     
         }          
