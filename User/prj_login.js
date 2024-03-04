@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+    generateBackground(); 
+});
+
 function generateBackground() {
 
     const backgrounds = [];
