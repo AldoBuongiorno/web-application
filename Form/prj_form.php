@@ -140,9 +140,10 @@
             if(isset($_SESSION['authorized'])){
                 $username = $_SESSION['username'];
                 insertID($id, $username); 
+            }else{
+                $_SESSION['duplicate'] = false;
+                $_SESSION['maxReached'] = false;
             }
-            $_SESSION['duplicate'] = false;
-            $_SESSION['maxReached'] = false;
 
             echo ("<script LANGUAGE='JavaScript'>
                         window.location.href = '../Summary/prj_summary.php';
