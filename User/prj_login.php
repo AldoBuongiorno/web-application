@@ -22,8 +22,8 @@
             <div class="containerLogin form-container" id="container">
                 <form  name="loginForm" method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>" onsubmit="return validateFormLogin()">
                     <h1>Login</h1>
-                    <input type="text" id="usernameLogin" name="usernameLogin" placeholder="username" <?php if (array_key_exists('UsernameLogin',$_POST)) { echo "value='", htmlspecialchars($_POST['usernameLogin']), "'"; } ?> />
-                    <input type="password" id="passwordLogin" name="passwordLogin" placeholder="password" <?php if (array_key_exists('PasswordLogin',$_POST)) { echo "value='", htmlspecialchars($_POST['passwordLogin']), "'"; } ?>/>
+                    <input type="text" id="usernameLogin" name="usernameLogin" placeholder="Username" <?php if (array_key_exists('usernameLogin',$_POST)) { echo "value='", htmlspecialchars($_POST['usernameLogin']), "'"; } ?> />
+                    <input type="password" id="passwordLogin" name="passwordLogin" placeholder="Password" <?php if (array_key_exists('passwordLogin',$_POST)) { echo "value='", htmlspecialchars($_POST['passwordLogin']), "'"; } ?>/>
                     <span id="loginErrorSpan"></span>
                     <button type="submit"  name="loginBtn">ACCEDI</button>  
                     <p id="switchLogin"> Non hai ancora un account?<button type="button" id="switchBtn" onclick="window.location.href = 'prj_signup.php';">Registrati</button> </p>
