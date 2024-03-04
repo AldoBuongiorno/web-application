@@ -166,8 +166,8 @@ a {
 .slideshows-container {
     position: relative;
     margin: auto;
-    width: 90vw;
-    height: 70hv;           /*************************************************************************************************/ 
+    width: 95vw;
+    height: 110vh;           /*************************************************************************************************/ 
 }
 
 /* Hide the images by default */
@@ -263,9 +263,10 @@ a {
 }
 
 .diplicateElement{
+    text-align: center;
     display: none;
-    margin-top: 15%;
-    margin-left: 1%;
+    font-size: 20px;
+    margin-top: 8%;
     font-weight: bold;
     color: rgb(208, 69, 69);
 }
