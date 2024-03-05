@@ -15,7 +15,7 @@
 <body>
     <?php require("../Home/prj_header.php");?>
     <?php 
-        var_dump($_SESSION);
+    
         if (isset($_SESSION['id'])) {
 
             //Dovrebbe mostrare il messaggio nel caso di un numero massimo di itinerari raggiunti
