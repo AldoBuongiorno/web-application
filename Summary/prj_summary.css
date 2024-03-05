@@ -29,7 +29,7 @@ hr {
 }
 
 .info{
-    margin-top:5%;
+    margin-top:10%;
     text-align: left;
     display: flex;
     margin-bottom: 0;
@@ -62,15 +62,6 @@ iframe {
     border-radius: 10px; 
 }
 
-.welcome{
-    line-height: 140%;
-    letter-spacing: 0.5px;
-    text-shadow: 0.5px 0.5px 1px #000000;
-    font-size: 15px;
-    margin-top: 40px;
-    margin-left: 10px;
-	display: block; 
-}
 
 a {
     color: inherit;     /*Fa in modo che il link non sia sempre blu*/ 
@@ -162,12 +153,12 @@ a {
 
 * {box-sizing:border-box}
 
-/* Slideshow container */
+
 .slideshows-container {
     position: relative;
     margin: auto;
-    width: 75%;                 /********************/
-    height: 75%;                /********************/
+    width: 75%;                 
+    height: 75%;                
 }
 
 .mySlides {
@@ -177,7 +168,6 @@ a {
     margin-bottom: 5px;     /*margine inferiore tra immagine e dots*/
 }
 
-/* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -205,6 +195,7 @@ a {
 .dotMenu{
     margin-bottom: 100px;
 }
+
 .dot{
     cursor: pointer;
     height: 10px;
@@ -257,7 +248,7 @@ a {
     text-align: center;
     display: none;
     font-size: calc(6px + 1vw);
-    margin-top: 8%;
+    margin-top: 10%;
     font-weight: bold;
     color: rgb(208, 69, 69);
 }

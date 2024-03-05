@@ -100,7 +100,7 @@
     ?>  
         <!-- EMPTY CART -->
         <section id="emptyCart" class="img0">
-            <div class="container right" id="container1">
+            <div class="containerEmpty">
                 <div class="text">
                     <div class="numero_itinerario">
                         <p style="color: red;"><strong>Non hai Itinerari salvati</strong></p>
@@ -278,44 +278,8 @@
 
         <?php
         if(isset($_SESSION['authorized'])){
-
-            //METTERE DENTRO UNA FUNZIONE
-
-            //itinerario 1
-            if (isset($_POST['btnDetails1'])) 
-                redirectToSummary(0);
-
-            if (isset($_POST['btnDelete1'])) 
-                deleteID($journeys, 0, $username, $db);
             
-            //itinerario 2
-            if (isset($_POST['btnDetails2'])) 
-                redirectToSummary(1);
-            
-            if (isset($_POST['btnDelete2'])) 
-                deleteID($journeys, 1, $username, $db);
-
-            //itinerario 3
-            if (isset($_POST['btnDetails3'])) 
-                redirectToSummary(2);
-
-            if (isset($_POST['btnDelete3']))
-                deleteID($journeys, 2, $username, $db);
-            
-            //itinerario 4
-            if (isset($_POST['btnDetails4'])) 
-                redirectToSummary(3);
-
-            if (isset($_POST['btnDelete4'])) 
-                deleteID($journeys, 3, $username, $db);
-                  
-            //itinerario 5
-            if (isset($_POST['btnDetails5'])) 
-                redirectToSummary(4);
-
-            if (isset($_POST['btnDelete5'])) 
-                deleteID($journeys, 4, $username, $db);
-            
+            journeyOptions($journeys, $username, $db);
         }
 
         ?>    

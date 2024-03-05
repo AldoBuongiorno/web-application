@@ -15,9 +15,7 @@
 <body>
     <?php require("../Home/prj_header.php");?>
     <?php 
-        
-        //Connection String
-        
+        var_dump($_SESSION);
         if (isset($_SESSION['id'])) {
 
             //Dovrebbe mostrare il messaggio nel caso di un numero massimo di itinerari raggiunti
@@ -38,6 +36,7 @@
                 <?php
             }
 
+            //connection string
             $connection_string ="host='localhost' dbname='Gruppo27' user='www' password='tw2024'";
             $db = pg_connect($connection_string) or die('Impossibile connettersi al database: ' . pg_last_error());
 
@@ -127,8 +126,7 @@
     ?>
 
     <div class="mainContainer">
-        
-       <!--  <div class="welcome">In base alle tue scelte ti consigliamo questo viaggio attraverso l'Europa</div>    -->
+
         <div class="fullCart" id="full">
             Ti ricordiamo che il tuo carrello ha raggiunto il limite massimo di itinerari disponibili. Il seguente item non verrà salvato. Eliminane prima uno se vuoi salvarlo.
         </div>
@@ -168,17 +166,12 @@
             </div>
         </div>
 
-        
-        <!-- LINK MAPPE DA INCLUDERE https://www.eurail.com/content/dam/pdfs/Eurail_Maps_2024.pdf-->
-        <!-- Slideshow container -->
         <div class="slideshows-container">
             <!-- INSERIRE CAPTION E NUMBER TEXT IN MANIERA DINAMICA -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <br>
-        
-        <!-- The dots/circles -->
         <div class="dotMenu" style="text-align:center">
             <span id= "dot1" class="dot" onclick="currentSlide(1)"></span>
             <span id= "dot2" class="dot" onclick="currentSlide(2)"></span>
@@ -190,8 +183,6 @@
     </div>
 
     <?php require("../Home/prj_footer.php");?>
-  
-
     
 </body>
 </html>

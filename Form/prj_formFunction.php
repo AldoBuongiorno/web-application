@@ -39,7 +39,7 @@
     function insertID($id, $username) {
 
         $_SESSION['maxReached'] = false;
-        $_SESSION['maxReached'] = false;
+        $_SESSION['duplicate'] = false;
 
         $connection_string ="host='localhost' dbname='Gruppo27' user='www' password='tw2024'";
         $db = pg_connect($connection_string) or die('Impossibile connettersi al database: ' . pg_last_error());
