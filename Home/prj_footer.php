@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./prj_home.css">
+<link rel="stylesheet" href="../Home/prj_footer.css">
 
 <footer class="footer">
     <div class="container-footer">

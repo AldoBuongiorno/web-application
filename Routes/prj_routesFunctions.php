@@ -62,7 +62,7 @@
 
 
     function journeyOptions($journeys, $username, $db){
-
+        
         //itinerario 1
         if (isset($_POST['btnDetails1'])) 
         redirectToSummary($journeys, 0);
@@ -136,6 +136,8 @@
     //reindirizza l'utente a prj_summary.php permettensogli di visualizzare i dettagli dell'itinerario selezionato
     function redirectToSummary($journeys, $i){
         $_SESSION['id'] = $journeys[$i];
+        $_SESSION['maxReached'] = false;
+        $_SESSION['dup'] = false;
         echo ("<script LANGUAGE='JavaScript'>
                 window.location.href = '../Summary/prj_summary.php';
             </script>"); 

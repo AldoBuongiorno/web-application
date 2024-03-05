@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="prj_summary.css">
+    <link rel="stylesheet" href="../Home/prj_header.css">
     <script src="prj_summary.js" type="text/javascript"> </script>
     <script src="../Home/prj_home.js" type="text/javascript" defer></script>
     <title>Train Travel Advisor</title>
@@ -15,7 +16,6 @@
 <body>
     <?php require("../Home/prj_header.php");?>
     <?php 
-        var_dump($_SESSION);
         if (isset($_SESSION['id'])) {
 
             //Dovrebbe mostrare il messaggio nel caso di un numero massimo di itinerari raggiunti

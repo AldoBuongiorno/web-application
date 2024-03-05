@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./prj_home.css">
+    <link rel="stylesheet" href="./prj_header.css">
     <link rel="icon" type="image/x-icon" href="../Images/imgHome/LogoSito.png">
     <script src="../Home/prj_home.js" type="text/javascript" defer></script>
+    <script src="../Home/prj_header.js" type="text/javascript" defer></script>
     <title>Train Travel Advisor</title>
 </head>
 <body>
@@ -22,7 +24,7 @@
             <h1>Benvenuto <?php echo($_SESSION['username'])?></h1>
             <h2>Compila subito il form e scopri qual è il viaggio perfetto per te</h2>
             <a href="../Form/prj_form.php" style="text-decoration: none;">
-                <button>COMPILA ORA!</button>
+                <button class="btn">COMPILA ORA!</button>
             </a>
         </div>
         <?php
@@ -31,7 +33,7 @@
             <h1>Benvenuto</h1>
             <h2>Compila subito il form e scopri qual è il viaggio perfetto per te</h2>
             <a href="../Form/prj_form.php" style="text-decoration: none;">
-                <button>COMPILA ORA!</button>
+                <button class="btn">COMPILA ORA!</button>
             </a>
         </div>
             <?php

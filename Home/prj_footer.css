@@ -1,0 +1,173 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Monserrat', sans-serif;
+}
+
+.footer{
+    background-color: #212121;
+  }
+  
+  .container-footer{
+    display:flex;
+  }
+  
+  .copyright{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+  
+  .contact{
+    padding: 10px;
+    padding-left: 20px;
+  }
+  
+  .line{
+    border: 1px solid orangered;
+    margin: 0;
+    margin-top: -10px;
+  }
+  
+  .list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 9px;
+    font-size: 14px;
+    color: #f2f2f2;
+  }
+  
+  .who{
+    padding: 10px;
+    padding-left: 390px;
+  }
+  
+  .listInsta{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 9px;
+    font-size: 14px;
+  }
+  
+  .listInsta a{
+    text-decoration: none;
+    color: #f2f2f2;
+  }
+  
+  .listInsta a:hover{
+    color: #bc2a8d;
+  }
+  
+  .follow{
+    padding-top: 10px;
+    padding-left: 35%;
+    padding-right: 10px;
+  }
+  
+  .listSocial{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 9px;
+  }
+  
+  .listSocial li{
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social{
+    width: 32px;
+    height: 32px;
+    transition: transform .6s;
+  }
+  
+  .social:hover{
+    transform: scale(1.2);
+  }
+  
+  @media screen and (max-width: 1250px) {
+  
+    
+  .footer{
+    background-color: #212121;
+  }
+  
+  .container-footer{
+    display:block;
+  }
+  
+  .copyright{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+  
+  .contact{
+    padding: 10px;
+    padding-left: 20px;
+  }
+  
+  .line{
+    border: 1px solid orangered;
+    margin: 0;
+    margin-top: -10px;
+  }
+  
+  .list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 9px;
+    font-size: 14px;
+  }
+  
+  .who{
+    padding: 10;
+    padding-left: 20px;
+  }
+  
+  .listInsta{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 9px;
+    font-size: 14px;
+  }
+  
+  .listInsta a{
+    text-decoration: none;
+    color: #f2f2f2;
+  }
+  
+  .listInsta a:hover{
+    color: #bc2a8d;
+  }
+  
+  .follow{
+    padding: 10px;
+    padding-left: 20px;
+  }
+  
+  .listSocial{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 9px;
+    display: inline-flex;
+  }
+  
+  .social{
+    width: 50px;
+    height: 50px;
+    transition: transform .6s;
+  }
+  
+  .social:hover{
+    transform: scale(1.2);
+  }
+  
+    
+  }
