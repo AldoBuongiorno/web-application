@@ -148,7 +148,7 @@ body {
   }
 }
 
-@media screen and (max-height: 650px) {
+@media screen and (max-height: 400px) {
 
   .content {
     text-align: center;
