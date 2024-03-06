@@ -46,7 +46,15 @@ hr {
 }
 
 #message{
-    margin-bottom: 5px; 
+    color: 	#2b2828;
+    margin-bottom: 10%;
+    margin-top: 0;
+    text-align: center;
+    font-weight: bold; 
+    text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+	text-transform: uppercase;
+    font-size: calc(27px + 1vw);
+    letter-spacing: 5px;
 }
 
 .outcome{
@@ -54,8 +62,8 @@ hr {
     justify-content: center; 
     align-items: center; 
     display: flex;
-    margin: 20px;
-    padding: 5px; /* Spazio intorno al contenuto all'interno del bordo */
+    /* margin: 20px;
+    padding: 5px; */ /* Spazio intorno al contenuto all'interno del bordo */
 }
 
 .map{
@@ -76,7 +84,7 @@ a {
     padding-right: 20px;
     margin-top: 0px;
     margin-bottom: 0px;
-} 
+    } 
 
 #countriesList li {
     position: relative;
