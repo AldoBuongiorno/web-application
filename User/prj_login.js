@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
-    applyBackground(); 
+document.addEventListener('DOMContentLoaded', function () {
+    applyBackground();
 });
 
 
 function applyBackground() {
-    document.getElementById("main").style.backgroundImage = generateBackground();   
+    document.getElementById("main").style.backgroundImage = generateBackground();
 }
 
 function generateBackground() {
@@ -34,22 +34,22 @@ function generateBackground() {
 }
 
 function getRandomInt(max) {
-    
+
     return Math.floor(Math.random() * max);
-} 
+}
 
 
 function validateFormLogin() {
     let fields = [document.getElementById("usernameLogin"), document.getElementById("passwordLogin")];
-    let allFieldsValid = true; 
+    let allFieldsValid = true;
 
-    for(let i = 0; i < fields.length; i++){
-        if(fields[i].value.trim().length === 0){
+    for (let i = 0; i < fields.length; i++) {
+        if (fields[i].value.trim().length === 0) {
             fields[i].style.border = "1px solid red";
             allFieldsValid = false;
         }
-        else{               
-            fields[i].style.border = "";                    
+        else {
+            fields[i].style.border = "";
         }
     }
     return allFieldsValid;
@@ -72,50 +72,50 @@ function validateFormSignup() {
     let regex1 = /[A-Z]/;
     let regex2 = /[0-9]/;
     let regex3 = /[\W_]/;
-    
-    for(let i = 0; i < fields.length; i++){
-        if(fields[i].value.trim().length === 0){
+
+    for (let i = 0; i < fields.length; i++) {
+        if (fields[i].value.trim().length === 0) {
             fields[i].style.border = "1px solid red";
             allFieldsValid = false;
         }
-        else{                        
-            fields[i].style.border = "";                       
-            allFieldsValid = true;                           
+        else {
+            fields[i].style.border = "";
+            allFieldsValid = true;
         }
     }
-    if(allFieldsValid){
+    if (allFieldsValid) {
 
-        if(password.value !== passwordConfirm.value) {
+        if (password.value !== passwordConfirm.value) {
             password.style.border = "1px solid red";
             passwordConfirm.style.border = "1px solid red";
             message.innerHTML = "Le due password non sono uguali";
             allFieldsValid = false;
         }
-        else if(password.value.length < 8){
+        else if (password.value.length < 8) {
             password.style.border = "1px solid red";
             passwordConfirm.style.border = "1px solid red";
             message.innerHTML = "La password deve avere almeno 8 caratteri";
             allFieldsValid = false;
         }
-        else if(! regex0.test(password.value) ){
+        else if (!regex0.test(password.value)) {
             password.style.border = "1px solid red";
             passwordConfirm.style.border = "1px solid red";
             message.innerHTML = "La password deve contenere almeno una lettera maiuscola";
-            allFieldsValid = false; 
+            allFieldsValid = false;
         }
-        else if(! regex1.test(password.value) ){
+        else if (!regex1.test(password.value)) {
             password.style.border = "1px solid red";
             passwordConfirm.style.border = "1px solid red";
             message.innerHTML = "La apssword deve contenere almeno una lettera minuscola";
             allFieldsValid = false;
         }
-        else if(! regex2.test(password.value) ){
+        else if (!regex2.test(password.value)) {
             password.style.border = "1px solid red";
             passwordConfirm.style.border = "1px solid red";
             message.innerHTML = "La password deve contenere almeno un numero";
             allFieldsValid = false;
         }
-        else if(! regex3.test(password.value) ){
+        else if (!regex3.test(password.value)) {
             password.style.border = "1px solid red";
             passwordConfirm.style.border = "1px solid red";
             message.innerHTML = "La password deve contenere almeno un carattere speciale";
@@ -125,5 +125,5 @@ function validateFormSignup() {
             allFieldsValid = true;
 
     }
-    return  allFieldsValid;
+    return allFieldsValid;
 }

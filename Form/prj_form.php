@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="" itdir="ltr">
-    <head>
-        <link rel="stylesheet" href="./prj_form.css" type= "text/css"/>
-        <script src="prj_form.js" type="text/javascript"></script>
-        <script src="../Home/prj_home.js" type="text/javascript" defer></script>
-        <meta charset="UTF-8"/>
-        <meta title="Form"/>
-        <link rel="icon" type="image/x-icon" href="../Images/imgHome/LogoSito.png">
-        <meta name="description" content="Form di domande che produce il consiglio dell'itinerario"/>
-        <meta name="keywords" content="Itinerario, Viaggio, Meta, Economico"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta author="Gruppo 27"/>
-        <?php require("prj_formFunction.php");?>
 
-        <title>Form</title>
-    </head>
+<head>
+    <link rel="stylesheet" href="./prj_form.css" type="text/css" />
+    <script src="prj_form.js" type="text/javascript"></script>
+    <script src="../Home/prj_home.js" type="text/javascript" defer></script>
+    <meta charset="UTF-8" />
+    <meta title="Form" />
+    <link rel="icon" type="image/x-icon" href="../Images/imgHome/LogoSito.png">
+    <meta name="description" content="Form di domande che produce il consiglio dell'itinerario" />
+    <meta name="keywords" content="Itinerario, Viaggio, Meta, Economico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Gruppo 27" />
+    <?php require("prj_formFunction.php"); ?>
 
-    <body>
-    <?php require("../Home/prj_header.php");?>
-       
+    <title>Form</title>
+</head>
+
+<body>
+    <?php require("../Home/prj_header.php"); ?>
+
     <!--Header del sito-->
-   <!-- CHANGE -->
+    <!-- CHANGE -->
 
     <!-- PRIMO FORM -->
     <form name="form" id="formSelection" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-        <section class = "img1">
+        <section class="img1">
             <div class="container right">
                 <div class="container">
                     <p class="numeroDomanda">DOMANDA 1 di 4</p>
                     <p class="domanda">In che periodo dell'anno vorresti viaggiare?</p>
                 </div>
                 <div class="option">
-                    <input type="radio" id="estate" name="periodo" value="Estate"/>
+                    <input type="radio" id="estate" name="periodo" value="Estate" />
                     <label for="estate">
                         <span class="alphabet">A</span> Estate
                     </label><br>
-                    <input type="radio" id="inverno" name="periodo" value="Inverno"/>
+                    <input type="radio" id="inverno" name="periodo" value="Inverno" />
                     <label for="inverno">
-                        <span class="alphabet">B</span> Inverno          
+                        <span class="alphabet">B</span> Inverno
                     </label><br>
                 </div>
             </div>
@@ -49,7 +50,7 @@
                 <div class="container">
                     <p class="numeroDomanda">DOMANDA 2 di 4</p>
                     <p class="domanda">Qual è il tuo budget?</p>
-                </div>  
+                </div>
                 <div class="option">
                     <input type="radio" id="alto" name="budget" value="Alto">
                     <label for="alto">
@@ -67,13 +68,13 @@
             </div>
         </section>
 
-        
+
         <section class="img3">
             <div class="container right">
                 <div class="container">
                     <p class="numeroDomanda">DOMANDA 3 di 4</p>
                     <p class="domanda">Quanti giorni desideri viaggiare?</p>
-                </div>    
+                </div>
                 <div class="option">
                     <input type="radio" id="5" name="durata" value="5">
                     <label for="5">
@@ -100,7 +101,7 @@
                 <div class="container">
                     <p class="numeroDomanda">DOMANDA 4 di 4</p>
                     <p class="domanda">Quale tipologia di viaggio ti interessa?</p>
-                </div>    
+                </div>
                 <div class="option">
                     <input type="radio" id="cultura" name="tipologia" value="Cultura">
                     <label for="cultura">
@@ -116,38 +117,39 @@
                     </label><br>
                 </div>
             </div>
-            <button type="submit" id="submitButton" disabled>Invia</button>  
-        </section> 
+            <button type="submit" id="submitButton" disabled>Invia</button>
+        </section>
     </form>
 
 
     <?php
 
-        //  Verifico se sono presenti i dati inviati dal form.
-        if (isset($_POST["periodo"]) && isset($_POST["budget"]) && isset($_POST["durata"]) && isset($_POST["tipologia"])) {
-            
-            $selectedPeriod = htmlspecialchars(trim($_POST["periodo"]));
-            $selectedBudget = htmlspecialchars(trim($_POST["budget"]));
-            $selectedDuration = htmlspecialchars(trim($_POST["durata"]));
-            $selectedType = htmlspecialchars(trim($_POST["tipologia"]));
-        
-            $id = pickItinerary($selectedPeriod, $selectedBudget, $selectedDuration, $selectedType);
-            $_SESSION['id']=$id;
-            
-            if(isset($_SESSION['authorized'])){
-                $username = $_SESSION['username'];
-                insertID($id, $username); 
-            }else{
-                $_SESSION['duplicate'] = false;
-                $_SESSION['maxReached'] = false;
-            }
+    //  Verifico se sono presenti i dati inviati dal form.
+    if (isset($_POST["periodo"]) && isset($_POST["budget"]) && isset($_POST["durata"]) && isset($_POST["tipologia"])) {
 
-            echo ("<script LANGUAGE='JavaScript'>
+        $selectedPeriod = htmlspecialchars(trim($_POST["periodo"]));
+        $selectedBudget = htmlspecialchars(trim($_POST["budget"]));
+        $selectedDuration = htmlspecialchars(trim($_POST["durata"]));
+        $selectedType = htmlspecialchars(trim($_POST["tipologia"]));
+
+        $id = pickItinerary($selectedPeriod, $selectedBudget, $selectedDuration, $selectedType);
+        $_SESSION['id'] = $id;
+
+        if (isset($_SESSION['authorized'])) {
+            $username = $_SESSION['username'];
+            insertID($id, $username);
+        } else {
+            $_SESSION['duplicate'] = false;
+            $_SESSION['maxReached'] = false;
+        }
+
+        echo ("<script LANGUAGE='JavaScript'>
                         window.location.href = '../Summary/prj_summary.php';
                     </script>");
-            exit();    
-        }
+        exit();
+    }
     ?>
-    <?php require("../Home/prj_footer.php");?>
+    <?php require("../Home/prj_footer.php"); ?>
 </body>
+
 </html>

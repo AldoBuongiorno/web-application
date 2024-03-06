@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-*{font-family: 'Montserrat', sans-serif;}
+* {
+    font-family: 'Montserrat', sans-serif;
+}
 
 html {
     box-sizing: border-box;
@@ -10,13 +12,13 @@ html,
 body {
     position: relative;
     height: 100%;
-    font-size: calc(4px + 1vw); 
+    font-size: calc(4px + 1vw);
 }
 
 /*nav bar sempre bianca per migliorare leggibilità in caso di sfondi particolari*/
 #navbar {
     background-color: #f2f2f2 !important;
-  }
+}
 
 
 /*Ripristina le proprietà sovrascrite dall'aggiunta dell'header*/
@@ -25,13 +27,13 @@ body {
     padding: initial;
 }
 
-.title{
+.title {
     text-decoration: none;
-	color: rgb(247, 247, 247);
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;			 
+    color: rgb(247, 247, 247);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-size: 25px;
     text-align: center;
-	font-weight: bold;
+    font-weight: bold;
     z-index: 0;
     text-align: center;
     background-color: #007fff;
@@ -39,18 +41,18 @@ body {
     color: white;
 }
 
-p{
+p {
     line-height: 140%;
     text-shadow: 0.2px 0.2px 0.5px #000000;
 }
 
-.container.right{
+.container.right {
     background-color: #F2F2F2;
     border-radius: 30px;
     padding: 3%;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),  0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
-    overflow: hidden;                                                                            
+    overflow: hidden;
     width: 50%;
     height: 17%;
     display: flex;
@@ -58,11 +60,17 @@ p{
     justify-content: space-between;
 }
 
-.img0, .img1, .img2, .img3, .img4, .img5, .img6 {
+.img0,
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6 {
     height: 70%;
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
     justify-content: center;
@@ -72,7 +80,11 @@ p{
     overflow: hidden;
 }
 
-#viaggio1,#viaggio2,#viaggio3,#viaggio4,#viaggio5{
+#viaggio1,
+#viaggio2,
+#viaggio3,
+#viaggio4,
+#viaggio5 {
     display: none;
 }
 
@@ -90,7 +102,7 @@ p{
     padding: initial;
     border-radius: 100px;
     height: 50px;
-    width: 50px;  
+    width: 50px;
     cursor: pointer;
     height: 100%;
     margin: auto;
@@ -100,16 +112,19 @@ p{
     display: flex;
     float: right;
 }
+
 .options button img {
-    width: 4vw; /* Regola la larghezza dell'immagine in base alla larghezza della finestra */
-    height: auto; /* Imposta l'altezza automaticamente per mantenere le proporzioni originali */
+    width: 4vw;
+    /* Regola la larghezza dell'immagine in base alla larghezza della finestra */
+    height: auto;
+    /* Imposta l'altezza automaticamente per mantenere le proporzioni originali */
 }
 
 .options button:hover {
-    transform: perspective(0px) rotateX(0deg) rotateY(0deg) scale(1.06); 
+    transform: perspective(0px) rotateX(0deg) rotateY(0deg) scale(1.06);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
     background-color: initial;
-    color: initial; 
+    color: initial;
 }
 
 .options button:active {
@@ -120,63 +135,64 @@ p{
     outline: none;
 }
 
-.options{
+.options {
     float: right;
 }
 
-.text{
+.text {
     justify-content: center;
     align-items: center;
-    flex-grow: 1; /* Nuova regola */
+    flex-grow: 1;
+    /* Nuova regola */
 }
 
-.numero_itinerario{
+.numero_itinerario {
     text-align: center;
 }
 
-.testo_itinerario{
+.testo_itinerario {
     text-align: center;
 }
 
-.details{
+.details {
     margin-bottom: 85%vh !important;
 }
 
 /*carrello vuoto*/
 
-#emptyCart{
+#emptyCart {
     display: none;
 }
 
-.containerEmpty{
+.containerEmpty {
     background-color: #F2F2F2;
     border-radius: 30px;
     padding: 3%;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),  0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
-    overflow: hidden;  
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 #compile {
-	border-radius: 15px;
-	border: 1px solid rgb(18, 34, 255);
-	background-color: rgb(18, 34, 255);
-	color: #FFFFFF;
-	font-size: 13px;
-	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 1px;
+    border-radius: 15px;
+    border: 1px solid rgb(18, 34, 255);
+    background-color: rgb(18, 34, 255);
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
     cursor: pointer;
     margin-bottom: 0px;
 }
 
 #compile:hover {
-    background-color: rgb(0, 12, 183); 
+    background-color: rgb(0, 12, 183);
 }
 
 #compile:focus {
-	outline: none;
+    outline: none;
 }

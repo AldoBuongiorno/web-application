@@ -25,7 +25,8 @@
         </div>
 
         <div class="containerLogin form-container" id="container">
-            <form name="loginForm" method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>" onsubmit="return validateFormLogin()">
+            <form name="loginForm" method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>"
+                onsubmit="return validateFormLogin()">
                 <h1>Login</h1>
                 <input type="text" id="usernameLogin" name="usernameLogin" placeholder="Username" <?php if (array_key_exists('usernameLogin', $_POST)) {
                     echo "value='", htmlspecialchars($_POST['usernameLogin']), "'";
@@ -44,40 +45,40 @@
 
     <?php require("../Home/prj_footer.php"); ?>
 
-    
-        <?php
-        $usernameLogin = null;
-        $passwordLogin = null;
 
-        if (!empty($_POST)) {
-            $usernameLogin = $_POST['usernameLogin'];
-            $passwordLogin = $_POST['passwordLogin'];
-            $hash = get_pwd($usernameLogin);
+    <?php
+    $usernameLogin = null;
+    $passwordLogin = null;
 
-            if (!usernameExists($usernameLogin)) {
-                echo (" <script LANGUAGE='JavaScript'>  
+    if (!empty($_POST)) {
+        $usernameLogin = $_POST['usernameLogin'];
+        $passwordLogin = $_POST['passwordLogin'];
+        $hash = get_pwd($usernameLogin);
+
+        if (!usernameExists($usernameLogin)) {
+            echo (" <script LANGUAGE='JavaScript'>  
                                 let message = document.getElementById('loginErrorSpan');
                                 message.innerHTML = '$usernameLogin non risulta registrato';
                                 </script>");
-            } else if (password_verify($passwordLogin, $hash)) {
-                session_start();
-                $_SESSION['username'] = $usernameLogin;
-                $_SESSION['authorized'] = true;
-                echo ("<script LANGUAGE='JavaScript'>
+        } else if (password_verify($passwordLogin, $hash)) {
+            session_start();
+            $_SESSION['username'] = $usernameLogin;
+            $_SESSION['authorized'] = true;
+            echo ("<script LANGUAGE='JavaScript'>
                                 window.location.href = '../Form/prj_form.php';
                                 </script>");
-            } else {
-                echo (" <script LANGUAGE='JavaScript'>
+        } else {
+            echo (" <script LANGUAGE='JavaScript'>
                                 let message = document.getElementById('loginErrorSpan');
                                 message.innerHTML = 'Password errata. Riprovare';
                                 </script>");
-            }
         }
-        ?>
+    }
+    ?>
 
-    
 
-    
+
+
 
 </body>
 
