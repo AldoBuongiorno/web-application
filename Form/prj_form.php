@@ -13,7 +13,7 @@
         <meta author="Gruppo 27"/>
         <?php require("prj_formFunction.php");?>
 
-        <title>Compila il Form!</title>
+        <title>Form</title>
     </head>
 
     <body>
@@ -126,9 +126,6 @@
         //  Verifico se sono presenti i dati inviati dal form.
         if (isset($_POST["periodo"]) && isset($_POST["budget"]) && isset($_POST["durata"]) && isset($_POST["tipologia"])) {
             
-            //  Salvo i valori dei campi del form in variabili PHP, 
-            //  eseguendo l'escaping dei caratteri riservati di HTML
-            //  ed eliminando gli spazi a destra e a sinistra della stringa.
             $selectedPeriod = htmlspecialchars(trim($_POST["periodo"]));
             $selectedBudget = htmlspecialchars(trim($_POST["budget"]));
             $selectedDuration = htmlspecialchars(trim($_POST["durata"]));

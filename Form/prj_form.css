@@ -8,6 +8,8 @@
 } 
 
 
+
+
 .img1, .img2, .img3, .img4 {
     height:100%;
     display: flex;
@@ -44,7 +46,7 @@
 }
 
 .container.right{
-    background-color: #fff;
+    background-color:#FFFFFF;
     border-radius: 30px;
     padding: 50px 20px 50px;
     margin: 10% auto 10%;
@@ -69,35 +71,41 @@ label {
     align-items: center;
     width: 80%;
     border-radius: 15px;
-    border: 1px solid rgb(18, 34, 255);
-    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(18, 34, 255);
+    /* background-color: rgb(0, 0, 0); */
+    background-color: #f2f2f2   ;
     margin-left: 10%;
     margin-bottom: 15px;
     padding: 6px 0;
     font-weight: bold;
     position: relative;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    color: rgb(18, 34, 255);
     letter-spacing: 1px;
     transition: transform ease-in;
     cursor: pointer;
 }
 
 input:checked + label {
-    background: rgb(255, 149, 0);
+    background: rgb(18, 34, 255);
     font-weight: bold;
     text-transform: uppercase;
     transform: scale(1.15);
     -webkit-text-stroke: .6px #fff;
+    color: #f2f2f2  ;
 }
 
 input:checked + label .alphabet{
-    background: #000000;
-    color: #fff;
+    background: #f2f2f2 ;
+    color: rgb(18, 34, 255);
+    font-weight: bolder;
 }
 
 label:hover .alphabet {
-    background: #000;
-    color: #fff;
+    background: #f2f2f2 ;
+    color: rgb(18, 34, 255);
+    border-width: 2px;
+    border-color: black; 
 }
 
 label .alphabet {
@@ -108,7 +116,7 @@ label .alphabet {
     margin: 0 1.3rem 0 .7rem;
     display: flex;
     justify-content: center;
-    background-color: rgb(255, 149, 0);
+    background-color: rgb(18, 34, 255);
     color: #FFFFFF;
 }
 
@@ -129,9 +137,9 @@ label:active{
 button {
     text-decoration: none;
 	border-radius: 15px;
-	border: 3px solid white;
+	border: 3px solid #f2f2f2   ;
 	background-color: var(--light-1);
-	color: white;
+	color: #f2f2f2  ;
 	font-size: 25px;
 	font-weight: bold;
 	letter-spacing: 1px;

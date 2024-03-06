@@ -8,12 +8,12 @@ html {
 
 html,
 body {
-    /* overflow-x: hidden; */
-    /* overflow-y: auto;  */
     position: relative;
     height: 100%;
-    font-size: calc(3px + 1vw);
+    font-size: calc(4px + 1vw); 
 }
+
+
 
 /*Ripristina le proprietà sovrascrite dall'aggiunta dell'header*/
 body {

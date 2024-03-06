@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    generateBackground(); 
+    applyBackground(); 
 });
+
+
+function applyBackground() {
+    document.getElementById("main").style.backgroundImage = generateBackground();   
+}
 
 function generateBackground() {
 
