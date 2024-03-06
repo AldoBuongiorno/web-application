@@ -27,7 +27,7 @@
                         <a href="../Home/prj_home.php">HOME</a>
                         <a href="../Form/prj_form.php">NUOVO VIAGGIO</a>
                         <a href="../Routes/prj_routes.php">I MIEI VIAGGI</a>
-                        <a href="./prj_logout.php">LOG OUT</a>
+                        <a href="../Home/prj_logout.php">LOG OUT</a>
                     </div> 
                 </div>
                 <?php
