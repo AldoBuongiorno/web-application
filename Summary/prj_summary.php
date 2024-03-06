@@ -139,7 +139,7 @@
         <div class="info">
             <div class="outcome">
                 <ul id="countriesList">
-                <span id="message">Le mete del tuo viaggio sono:</span>
+                    <span id="message">Le mete del tuo viaggio sono:</span>
                     <li id="meta1"><a id="link1" href="" target="_blank" style="text-decoration: none;"></a></li>
                     <li id="meta2"><a id="link2" href="" target="_blank" style="text-decoration: none;"></a></li>
                     <li id="meta3"><a id="link3" href="" target="_blank" style="text-decoration: none;"></a></li>
