@@ -146,6 +146,72 @@ body{
   }
 }
 
+@media screen and (max-height: 650px){
+
+  .content{
+    text-align: center;
+    padding: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  .content h1{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin: 5px;
+    color: white;
+    text-shadow: -1.2px -1.2px 0 #000, 1.2px -1.2px 0 #000, -1.2px 1.2px 0 #000, 1.2px 1.2px 0 #000;
+  }
+  
+  .content h2{
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin: 5px;
+    color: white;
+    text-shadow: -1.2px -1.2px 0 #000, 1.2px -1.2px 0 #000, -1.2px 1.2px 0 #000, 1.2px 1.2px 0 #000;
+  }
+  
+  button {
+    text-decoration: none;
+    border-radius: 15px;
+    border: 3px solid white;
+    background-color: var(--light-1);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform ease-in;
+    cursor: pointer;
+    padding: 8px 16px;
+    width: fit-content;
+    margin: auto;
+    display: block;
+  }
+  
+  button:hover{
+    background-color: #ddd;
+    color: black; 
+  }
+  
+  button:active{
+    transform: scale(0.95);
+  }
+  
+  button:focus{
+    outline: none;
+  }
+}
+
+
 .travel-adv{
   background-color: #f2f2f2;
   margin: 0;
