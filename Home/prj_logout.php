@@ -2,7 +2,7 @@
   session_start();
   session_unset();
   session_destroy();
-  header("location: ./prj_home.php");
-  
+  header("location: ../Home/prj_home.php");
+  ?>
 
   

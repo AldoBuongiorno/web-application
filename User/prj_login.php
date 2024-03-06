@@ -65,7 +65,7 @@
             $_SESSION['username'] = $usernameLogin;
             $_SESSION['authorized'] = true;
             echo ("<script LANGUAGE='JavaScript'>
-                                window.location.href = '../Form/prj_form.php';
+                                window.location.href = '../Home/prj_home.php';
                                 </script>");
         } else {
             echo (" <script LANGUAGE='JavaScript'>
