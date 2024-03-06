@@ -13,6 +13,10 @@ body {
     font-size: calc(4px + 1vw); 
 }
 
+/*nav bar sempre bianca per migliorare leggibilità in caso di sfondi particolari*/
+#navbar {
+    background-color: #f2f2f2 !important;
+  }
 
 
 /*Ripristina le proprietà sovrascrite dall'aggiunta dell'header*/
