@@ -7,7 +7,10 @@ body {
     font-size: calc(5px + 1vw);
 }
 
-
+#navbar {
+    background-color: #f2f2f2 !important;
+    padding: 0px !important ;
+}
 
 
 .img1,
