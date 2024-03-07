@@ -135,17 +135,18 @@
         <div class="duplicateElement" id="dup">
             Questo itinerario fa già parte della tua collezione di viaggi.
         </div>
-        
+        <div id = "Sup">
+            <div class="titleInfo"> <p id="message">mete</p></div>
+            <div class="geoInfo" id="cityInfo" style="text-align: center;"></div>
+        </div>
         <div class="info">
             <div class="outcome">
-                
                 <ul id="countriesList">
-                    <p id="message">mete</p>
-                        <li id="meta1"><a id="link1" href="" target="_blank" style="text-decoration: none;"></a></li>
-                        <li id="meta2"><a id="link2" href="" target="_blank" style="text-decoration: none;"></a></li>
-                        <li id="meta3"><a id="link3" href="" target="_blank" style="text-decoration: none;"></a></li>
-                        <li id="meta4"><a id="link4" href="" target="_blank" style="text-decoration: none;"></a></li>
-                        <li id="meta5"><a id="link5" href="" target="_blank" style="text-decoration: none;"></a></li>
+                    <li id="meta1"><a id="link1" href="" target="_blank" style="text-decoration: none;"></a></li>
+                    <li id="meta2"><a id="link2" href="" target="_blank" style="text-decoration: none;"></a></li>
+                    <li id="meta3"><a id="link3" href="" target="_blank" style="text-decoration: none;"></a></li>
+                    <li id="meta4"><a id="link4" href="" target="_blank" style="text-decoration: none;"></a></li>
+                    <li id="meta5"><a id="link5" href="" target="_blank" style="text-decoration: none;"></a></li>    
                 </ul>
             </div>
             <div class="map">
@@ -154,7 +155,7 @@
             </div>
         </div>
 
-        <div class="geoInfo" id="cityInfo" style="float: right;"></div>
+        
 
         <div class="journey">
             <div class="flags">

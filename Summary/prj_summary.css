@@ -29,7 +29,6 @@ hr {
 }
 
 .info{
-    margin-top:15%;
     text-align: left;
     display: flex;
     margin-bottom: 0;
@@ -37,6 +36,9 @@ hr {
 } 
 
 .geoInfo{
+    width:55%;
+    justify-content: center; 
+    align-items: center;
     line-height: 140%;
     letter-spacing: 0.5px;
     text-shadow: 0.2px 0.2px 0.5px #000000;
@@ -47,14 +49,26 @@ hr {
 
 #message{
     color: 	#2b2828;
-    margin-bottom: 10%;
-    margin-top: 0;
     text-align: center;
     font-weight: bold; 
     text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
 	text-transform: uppercase;
     font-size: calc(27px + 1vw);
     letter-spacing: 5px;
+    margin: 0;
+}
+
+.titleInfo{
+    width: 45%;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+#Sup{
+    margin-bottom: 0;
+    margin-top:15%;
+    display: flex;
 }
 
 .outcome{
@@ -62,6 +76,7 @@ hr {
     justify-content: center; 
     align-items: center; 
     display: flex;
+    flex-direction: column;
     /* margin: 20px;
     padding: 5px; */ /* Spazio intorno al contenuto all'interno del bordo */
 }
@@ -74,17 +89,16 @@ iframe {
     border-radius: 10px; 
 }
 
-
 a {
     color: inherit;     /*Fa in modo che il link non sia sempre blu*/ 
 }
 
- #countriesList{
+#countriesList{
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 0px;
     margin-bottom: 0px;
-    } 
+} 
 
 #countriesList li {
     position: relative;
