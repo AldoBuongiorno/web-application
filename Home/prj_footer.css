@@ -42,7 +42,23 @@ body {
   color: #f2f2f2;
 }
 
+<<<<<<< HEAD
 #who {
+=======
+.list li{
+  margin-bottom: 1px;
+}
+
+.list a {
+  text-decoration: none; 
+  color: white;
+}
+
+.list a:hover{
+  color: #bc2a8d;
+}
+.who {
+>>>>>>> 2d09aaa8d56919b12b4b95f503dfb439e9b9a646
   padding: 10px;
   padding-left: 390px;
 }

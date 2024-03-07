@@ -298,7 +298,7 @@
                     </div>
                     <div class="contenuti">
                         <div style="text-align: center;">COUPON ZALANDO DA 10€</div>
-                        <div style="text-align: center;">COUPON ZALANDO DA 10€ <br> ESCLUSIVO PER SCARPE DA GINNASTICA</div>
+                        <div style="text-align: center;">COUPON ZALANDO DA 10€ <br> ESCLUSIVO PER SCARPE DA TREKKING</div>
                         <div style="text-align: center;">ZJkpL10</div>
                     </div>
                 </div>

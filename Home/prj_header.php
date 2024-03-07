@@ -22,7 +22,7 @@
         //utente loggato
         ?>
         <div id="navbar">
-            <a href="../Home/prj_home.php" id="logo"><img src="../Images/imgHome/LogoSito.png" alt="logosito"
+            <a href="../Home/prj_home.php" id="logo"><img src="../Images/imgHome/trainIcon.png" alt="logosito"
                     class="logoSito"></a>
             <div id="navbar-dx">
                 <a href="../Home/prj_home.php">HOME</a>

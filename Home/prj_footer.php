@@ -5,11 +5,19 @@
         <div id="contact">
             <h5 class="titoli-footer">CONTATTACI</h5>
             <hr class="line">
+<<<<<<< HEAD
             <ul id="list">
                 <li>C.ROSA10@studenti.unisa.it</li>
                 <li>R.CALABRESE26@studenti.unisa.it</li>
                 <li>S.TARTAGLIONE@studenti.unisa.it</li>
                 <li>A.BUONGIORNO5@studenti.unisa.it</li>
+=======
+            <ul class="list">
+                <li><a href = "mailto:C.ROSA10@studenti.unisa.it" target="_blank">C.ROSA10@studenti.unisa.it</a></li>
+                <li><a href = "mailto:R.CALABRESE26@studenti.unisa.it" target="_blank">R.CALABRESE26@studenti.unisa.it</a></li>
+                <li><a href = "mailto:s.tartaglione@studenti.unisa.it" target="_blank">S.TARTAGLIONE@studenti.unisa.it</a></li>
+                <li><a href = "mailto:A.BUONGIORNO5@studenti.unisa.it" target="_blank">A.BUONGIORNO5@studenti.unisa.it</a></li>
+>>>>>>> 2d09aaa8d56919b12b4b95f503dfb439e9b9a646
             </ul>
         </div>
         <div id="who">
@@ -18,7 +26,7 @@
             <ul id="listInsta">
                 <li><a href="https://www.instagram.com/christian_rosa___?igsh=MTZla3B0YnFvNHdrcQ%3D%3D&utm_source=qr" target="_blank">Christian Rosa</a></li>
                 <li><a href="https://www.instagram.com/raffaele.calabrese_?igsh=bnNpbmlsdHd0N2p0" target="_blank">Raffaele Calabrese</a></li>
-                <li><a href="https://www.instagram.com/salvatore__tartaglione?utm_source=qr&igsh=MXFoNXI4bDQ0bzNwbw==" target="_blank">Salvatore Tartaglione</a></li>
+                <li><a href="https://www.instagram.com/salvatore__tartaglione?utm_source=qr&igsh=MXFoNXI4bDQ0bzNwbw==" target="_blank">Salvatore Francesco Tartaglione</a></li>
                 <li><a href="https://www.instagram.com/aldo_buongiorno?utm_source=qr" target="_blank">Aldo Buongiorno</a></li>
             </ul>
         </div>
