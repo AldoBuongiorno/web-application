@@ -44,7 +44,6 @@ hr {
     text-shadow: 0.2px 0.2px 0.5px #000000;
     font-weight: bold;
     color:#717171;
-    margin-top: 2%;
 }
 
 #message{
@@ -67,8 +66,9 @@ hr {
 
 #Sup{
     margin-bottom: 0;
-    margin-top:15%;
+    margin-top:6%;
     display: flex;
+    align-items: center;
 }
 
 .outcome{
@@ -274,7 +274,7 @@ a {
     text-align: center;
     display: none;
     font-size: calc(6px + 1vw);
-    margin-top: 10%;
+    margin-top: 13%;
     font-weight: bold;
     color: rgb(208, 69, 69);
 }
