@@ -38,6 +38,18 @@ body {
   color: #f2f2f2;
 }
 
+.list li{
+  margin-bottom: 1px;
+}
+
+.list a {
+  text-decoration: none; 
+  color: white;
+}
+
+.list a:hover{
+  color: #bc2a8d;
+}
 .who {
   padding: 10px;
   padding-left: 390px;

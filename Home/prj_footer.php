@@ -6,10 +6,10 @@
             <h5 style="color: #f2f2f2;">CONTATTACI</h5>
             <hr class="line">
             <ul class="list">
-                <li>C.ROSA10@studenti.unisa.it</li>
-                <li>R.CALABRESE26@studenti.unisa.it</li>
-                <li>S.TARTAGLIONE@studenti.unisa.it</li>
-                <li>A.BUONGIORNO5@studenti.unisa.it</li>
+                <li><a href = "mailto:C.ROSA10@studenti.unisa.it" target="_blank">C.ROSA10@studenti.unisa.it</a></li>
+                <li><a href = "mailto:R.CALABRESE26@studenti.unisa.it" target="_blank">R.CALABRESE26@studenti.unisa.it</a></li>
+                <li><a href = "mailto:s.tartaglione@studenti.unisa.it" target="_blank">S.TARTAGLIONE@studenti.unisa.it</a></li>
+                <li><a href = "mailto:A.BUONGIORNO5@studenti.unisa.it" target="_blank">A.BUONGIORNO5@studenti.unisa.it</a></li>
             </ul>
         </div>
         <div class="who">
