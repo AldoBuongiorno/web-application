@@ -18,7 +18,7 @@
             <ul class="listInsta">
                 <li><a href="https://www.instagram.com/christian_rosa___?igsh=MTZla3B0YnFvNHdrcQ%3D%3D&utm_source=qr" target="_blank">Christian Rosa</a></li>
                 <li><a href="https://www.instagram.com/raffaele.calabrese_?igsh=bnNpbmlsdHd0N2p0" target="_blank">Raffaele Calabrese</a></li>
-                <li><a href="https://www.instagram.com/salvatore__tartaglione?utm_source=qr&igsh=MXFoNXI4bDQ0bzNwbw==" target="_blank">Salvatore Tartaglione</a></li>
+                <li><a href="https://www.instagram.com/salvatore__tartaglione?utm_source=qr&igsh=MXFoNXI4bDQ0bzNwbw==" target="_blank">Salvatore Francesco Tartaglione</a></li>
                 <li><a href="https://www.instagram.com/aldo_buongiorno?utm_source=qr" target="_blank">Aldo Buongiorno</a></li>
             </ul>
         </div>
