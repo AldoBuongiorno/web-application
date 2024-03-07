@@ -5,19 +5,11 @@
         <div id="contact">
             <h5 class="titoli-footer">CONTATTACI</h5>
             <hr class="line">
-<<<<<<< HEAD
             <ul id="list">
-                <li>C.ROSA10@studenti.unisa.it</li>
-                <li>R.CALABRESE26@studenti.unisa.it</li>
-                <li>S.TARTAGLIONE@studenti.unisa.it</li>
-                <li>A.BUONGIORNO5@studenti.unisa.it</li>
-=======
-            <ul class="list">
                 <li><a href = "mailto:C.ROSA10@studenti.unisa.it" target="_blank">C.ROSA10@studenti.unisa.it</a></li>
                 <li><a href = "mailto:R.CALABRESE26@studenti.unisa.it" target="_blank">R.CALABRESE26@studenti.unisa.it</a></li>
                 <li><a href = "mailto:s.tartaglione@studenti.unisa.it" target="_blank">S.TARTAGLIONE@studenti.unisa.it</a></li>
                 <li><a href = "mailto:A.BUONGIORNO5@studenti.unisa.it" target="_blank">A.BUONGIORNO5@studenti.unisa.it</a></li>
->>>>>>> 2d09aaa8d56919b12b4b95f503dfb439e9b9a646
             </ul>
         </div>
         <div id="who">
