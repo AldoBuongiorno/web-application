@@ -95,6 +95,15 @@
             }
         }
 
+    } else {
+        ?>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.getElementById("notLogged").style.display = "flex";
+                    document.getElementById("notLogged").style.backgroundImage = "url('../Images/imgRoutes/emptyCart.png')";
+                });
+            </script>
+        <?php
     }
 
 
@@ -108,7 +117,22 @@
                 </div>
                 <div class="testo_itinerario">
                     <p id="p0">Compila il form per scoprire quale itinerario è ideale per te!</p>
-                    <button onclick="window.location.href = '../Form/prj_form.php';" id="compile">FORM </button>
+                    <button onclick="window.location.href = '../Form/prj_form.php';" class = "compile">FORM </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOT LOGGED -->
+    <section id="notLogged" class="img0">
+        <div class="containerEmpty">
+            <div class="text">
+                <div class="numero_itinerario">
+                    <p style="color: red;"><strong>Non puoi visitare questa pagina prima di aver risposto al form.</strong></p>
+                </div>
+                <div class="testo_itinerario">
+                    <p>Scopri come</p>
+                    <button onclick="window.location.href = '../Home/prj_home.php';" class="compile">HOME </button>
                 </div>
             </div>
         </div>

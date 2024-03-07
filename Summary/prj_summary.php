@@ -17,6 +17,7 @@
 <body>
     <?php require("../Home/prj_header.php"); ?>
     <?php
+    
     if (isset($_SESSION['id'])) {
 
         //Dovrebbe mostrare il messaggio nel caso di un numero massimo di itinerari raggiunti
@@ -40,6 +41,15 @@
         //connection string
         $connection_string = "host='localhost' dbname='Gruppo27' user='www' password='tw2024'";
         $db = pg_connect($connection_string) or die('Impossibile connettersi al database: ' . pg_last_error());
+
+        //script per la visualizzazione del main container
+        ?>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.getElementById("main").style.display = "block";
+                });
+            </script>
+            <?php
 
         $id = $_SESSION['id'];
         //Recupero le informazioni dal database
@@ -121,12 +131,34 @@
         </script>
     <?php
 
+    //altrimenti se l'utente va alla pagina solo digitando l'url nella barra di ricerca
     } else {
-        echo "La variabile di sessione 'id' non è stata impostata.";
+        ?>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.getElementById("notLogged").style.display = "flex";
+                    document.getElementById("notLogged").style.backgroundImage = "url('../Images/imgRoutes/emptyCart.png')";
+                });
+            </script>
+        <?php
     }
     ?>
+    <!-- NOT LOGGED -->
+    <section id="notLogged" class="img0">
+        <div class="containerEmpty">
+            <div class="text">
+                <div class="numero_itinerario">
+                    <p style="color: red;"><strong>Non puoi visitare questa pagina prima di aver risposto al form</strong></p>
+                </div>
+                <div class="testo_itinerario">
+                    <p id="p1">Scopri come</p>
+                    <button onclick="window.location.href = '../Home/prj_home.php';" class="compile">HOME </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="mainContainer">
+    <div id = "main" class="mainContainer">
 
         <div class="fullCart" id="full">
             Ti ricordiamo che il tuo carrello ha raggiunto il limite massimo di itinerari disponibili. Il seguente item
