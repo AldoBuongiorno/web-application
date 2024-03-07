@@ -40,11 +40,11 @@ body {
 }
 
 .img3 {
-    background-image: url('../Images/imgForm/img3.jpg');
+    background-image: url('../Images/imgForm/baggage.jpg');
 }
 
 .img4 {
-    background-image: url('../Images/imgForm/img4.jpg');
+    background-image: url('../Images/imgForm/borough.jpg');
 }
 
 .container {
@@ -154,7 +154,6 @@ button {
     padding: 8px 16px;
     width: fit-content;
     display: block;
-    margin-bottom: 10%;
     text-transform: uppercase;
     position: relative;
 }
