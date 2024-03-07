@@ -27,6 +27,8 @@
 
     if (isset($_SESSION['authorized'])) {
 
+        $_SESSION['duplicate'] = false;
+        $_SESSION['maxReached'] = false;
         $username = $_SESSION['username'];
         $journeys = getJourneys($username, $db);
 
