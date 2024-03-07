@@ -8,7 +8,7 @@
         //utente non loggato
         ?>
         <div id="navbar">
-            <a href="../Home/prj_home.php" id="logo"><img src="../Images/imgHome/LogoSito.png" alt="LogoSito" class="logoSito"></a>
+            <a href="../Home/prj_home.php" id="logo"><img src="../Images/imgHome/trainIcon.png" alt="LogoSito" class="logoSito"></a>
             <div id="navbar-dx">
                 <a href="../Home/prj_home.php">HOME</a>
                 <a href="../Form/prj_form.php">NUOVO VIAGGIO</a>
