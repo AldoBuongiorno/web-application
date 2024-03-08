@@ -100,13 +100,13 @@ function validateFormSignup() {
         else if (!regex0.test(password.value)) {
             password.style.border = "1px solid red";
             passwordConfirm.style.border = "1px solid red";
-            message.innerHTML = "La password deve contenere almeno una lettera maiuscola";
+            message.innerHTML = "La password deve contenere almeno una lettera minuscola";
             allFieldsValid = false;
         }
         else if (!regex1.test(password.value)) {
             password.style.border = "1px solid red";
             passwordConfirm.style.border = "1px solid red";
-            message.innerHTML = "La apssword deve contenere almeno una lettera minuscola";
+            message.innerHTML = "La password deve contenere almeno una lettera maiuscola";
             allFieldsValid = false;
         }
         else if (!regex2.test(password.value)) {
