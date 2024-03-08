@@ -104,7 +104,7 @@
         <div class="containerEmpty">
             <div class="text">
                 <div class="numero_itinerario">
-                    <p style="color: red;"><strong>Non hai Itinerari salvati</strong></p>
+                    <p id="p-1"><strong>Non hai Itinerari salvati</strong></p>
                 </div>
                 <div class="testo_itinerario">
                     <p id="p0">Compila il form per scoprire quale itinerario è ideale per te!</p>

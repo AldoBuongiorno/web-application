@@ -44,6 +44,7 @@ hr {
     text-shadow: 0.2px 0.2px 0.5px #000000;
     font-weight: bold;
     color:#717171;
+    text-align: center;
 }
 
 #message{
@@ -220,6 +221,7 @@ a {
 
 .dotMenu{
     margin-bottom: 100px;
+    text-align: center;
 }
 
 .dot{
@@ -254,6 +256,7 @@ a {
 
 #link1, #link2, #link3, #link4, #link5{
     display: none;
+    text-decoration: none;
 }
 
 #flag1, #flag2, #flag3, #flag4, #flag5{

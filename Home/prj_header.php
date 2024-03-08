@@ -22,8 +22,7 @@
         //utente loggato
         ?>
         <div id="navbar">
-            <a href="../Home/prj_home.php" id="logo"><img src="../Images/imgHome/trainIcon.png" alt="logosito"
-                    class="logoSito"></a>
+            <a href="../Home/prj_home.php" id="logo"><img src="../Images/imgHome/trainIcon.png" alt="logosito" class="logoSito"></a>
             <div id="navbar-dx">
                 <a href="../Home/prj_home.php">HOME</a>
                 <a href="../Form/prj_form.php">NUOVO VIAGGIO</a>
@@ -39,13 +38,15 @@
     if (!isset($_SESSION['authorized'])) {
         //utente non loggato
         ?>
-
         <div id="Menu">
-            <div class="logo"><a href="../Home/prj_home.php" id="logo"><img src="../Images/imgHome/LogoSito.png"
-                        alt="logosito" class="logoSito"></a></div>
-            <div class="dropdown">
+            <div class="logo">
+                <a href="../Home/prj_home.php" id="logo">
+                    <img src="../Images/imgHome/LogoSito.png" alt="logosito" class="logoSito">
+                </a>
+            </div>
+            <div id="dropdown">
                 <button class="dropbtn" id="btnMenu" onclick="openMenu();"><img src="../Images/imgHome/menu.png"
-                        style="height: 30px; width: 30px"></button>
+                        ></button>
                 <div class="dropdown-content" id="contenuti-link">
                     <a href="../Home/prj_home.php">HOME</a>
                     <a href="../Form/prj_form.php">NUOVO VIAGGIO</a>
@@ -58,11 +59,15 @@
     } else {
         ?>
         <div id="Menu">
-            <div class="logo"><a href="../Home/prj_home.php" id="logo"><img src="../Images/imgHome/LogoSito.png"
-                        alt="logosito" class="logoSito"></a></div>
-            <div class="dropdown">
-                <button class="dropbtn" id="btnMenu" onclick="openMenu();"><img src="../Images/imgHome/menu.png"
-                        style="height: 30px; width: 30px"></button>
+            <div class="logo">
+                <a href="../Home/prj_home.php" id="logo">
+                    <img src="../Images/imgHome/LogoSito.png" alt="logosito" class="logoSito">
+                </a>
+            </div>
+            <div id="dropdown">
+                <button id="btnMenu" onclick="openMenu();">
+                    <img src="../Images/imgHome/menu.png">
+                </button>
                 <div class="dropdown-content" id="contenuti-link">
                     <a href="../Home/prj_home.php">HOME</a>
                     <a href="../Form/prj_form.php">NUOVO VIAGGIO</a>

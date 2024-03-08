@@ -71,14 +71,14 @@ body {
     float: left;
   }
 
-  .dropdown {
+  #dropdown {
     width: 50%;
     height: 50%;
     position: relative;
     display: inline-block;
   }
 
-  .dropbtn {
+  #btnMenu {
     background-color: transparent;
     color: white;
     padding: 16px;
@@ -86,6 +86,11 @@ body {
     border: none;
     float: right;
     margin: 5px;
+  }
+
+  #btnMenu img{
+    height: 30px; 
+    width: 30px;
   }
 
   .dropdown-content {
@@ -110,7 +115,7 @@ body {
     background-color: #ddd;
   }
 
-  .dropbtn:hover {
+  #btnMenu:hover {
     background-color: gray;
   }
 

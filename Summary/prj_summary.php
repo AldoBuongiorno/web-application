@@ -137,16 +137,16 @@
         </div>
         <div id = "Sup">
             <div class="titleInfo"> <p id="message">mete</p></div>
-            <div class="geoInfo" id="cityInfo" style="text-align: center;"></div>
+            <div class="geoInfo" id="cityInfo"></div>
         </div>
         <div class="info">
             <div class="outcome">
                 <ul id="countriesList">
-                    <li id="meta1"><a id="link1" href="" target="_blank" style="text-decoration: none;"></a></li>
-                    <li id="meta2"><a id="link2" href="" target="_blank" style="text-decoration: none;"></a></li>
-                    <li id="meta3"><a id="link3" href="" target="_blank" style="text-decoration: none;"></a></li>
-                    <li id="meta4"><a id="link4" href="" target="_blank" style="text-decoration: none;"></a></li>
-                    <li id="meta5"><a id="link5" href="" target="_blank" style="text-decoration: none;"></a></li>    
+                    <li id="meta1"><a id="link1" href="" target="_blank"></a></li>
+                    <li id="meta2"><a id="link2" href="" target="_blank"></a></li>
+                    <li id="meta3"><a id="link3" href="" target="_blank"></a></li>
+                    <li id="meta4"><a id="link4" href="" target="_blank"></a></li>
+                    <li id="meta5"><a id="link5" href="" target="_blank"></a></li>    
                 </ul>
             </div>
             <div class="map">
@@ -178,7 +178,7 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <br>
-        <div class="dotMenu" style="text-align:center">
+        <div class="dotMenu">
             <span id="dot1" class="dot" onclick="currentSlide(1)"></span>
             <span id="dot2" class="dot" onclick="currentSlide(2)"></span>
             <span id="dot3" class="dot" onclick="currentSlide(3)"></span>
