@@ -26,6 +26,7 @@ hr {
 .mainContainer{
     text-align:justify;
     overflow-x: hidden;
+    display: none;
 }
 
 .info{
@@ -280,4 +281,69 @@ a {
     margin-top: 13%;
     font-weight: bold;
     color: rgb(208, 69, 69);
+}
+
+#notLogged {
+    display: none;
+}
+
+.text {
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.img0{
+    height: 70%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    overflow: hidden;
+}
+
+.containerEmpty {
+    background-color: #F2F2F2;
+    border-radius: 30px;
+    padding: 3%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.numero_itinerario {
+    text-align: center;
+}
+
+.testo_itinerario {
+    text-align: center;
+}
+
+.compile {
+    border-radius: 15px;
+    border: 1px solid rgb(18, 34, 255);
+    background-color: rgb(18, 34, 255);
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+.compile:hover {
+    background-color: rgb(0, 12, 183);
+}
+
+.compile:focus {
+    outline: none;
 }
