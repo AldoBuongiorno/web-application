@@ -168,7 +168,7 @@
             Questo itinerario fa già parte della tua collezione di viaggi.
         </div>
         <div id = "Sup">
-            <div class="titleInfo"> <p id="message">mete</p></div>
+            <div class="titleInfo"> <p id="message">Ecco il tuo itinerario:</p></div>
             <div class="geoInfo" id="cityInfo"></div>
         </div>
         <div class="info">
