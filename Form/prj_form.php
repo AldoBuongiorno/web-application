@@ -7,7 +7,7 @@
     <script src="../Home/prj_home.js" type="text/javascript" defer></script>
     <meta charset="UTF-8" />
     <meta title="Form" />
-    <link rel="icon" type="image/x-icon" href="../Images/imgHome/LogoSito.png">
+    <link rel="icon" type="image/x-icon" href="../Images/imgHome/trainIcon.png">
     <meta name="description" content="Form di domande che produce il consiglio dell'itinerario" />
     <meta name="keywords" content="Itinerario, Viaggio, Meta, Economico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

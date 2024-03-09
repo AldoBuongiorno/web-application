@@ -5,7 +5,7 @@
 <header>
     <?php
     if (!isset($_SESSION['authorized'])) {
-        //utente non loggato
+        //utente non loggato 
         ?>
         <div id="navbar">
             <a href="../Home/prj_home.php" id="logo"><img src="../Images/imgHome/trainIcon.png" alt="LogoSito" class="logoSito"></a>

@@ -10,6 +10,7 @@
     <meta name="keywords" content="login" />
     <meta author="Gruppo 27" />
     <meta keywork="login" />
+    <link rel="icon" type="image/x-icon" href="../Images/imgHome/trainIcon.png">
     <title>Login</title>
     <?php require('prj_authFunctions.php'); ?>
 </head>

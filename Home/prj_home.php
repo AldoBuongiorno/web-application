@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./prj_home.css">
     <link rel="stylesheet" href="./prj_header.css">
-    <link rel="icon" type="image/x-icon" href="../Images/imgHome/LogoSito.png">
+    <link rel="icon" type="image/x-icon" href="../Images/imgHome/trainIcon.png">
     <script src="../Home/prj_home.js" type="text/javascript" defer></script>
     <script src="../Home/prj_header.js" type="text/javascript" defer></script>
+    <?php require("prj_homeFunctions.php"); ?>
     <title>Train Travel Advisor</title>
 </head>
 
 <body>
     <?php require("./prj_header.php"); ?>
-    <div class="video">
-        <video src="../Images/imgHome/video_sfondo2.mp4" id="BackgroundVideo" autoplay muted loop></video>
-    </div>
+
+    <?php applyBackroundVideo(); ?>
+
     <div class="content">
         <?php
         if (isset($_SESSION['username'])) {
-            //utente loggato
+            
             ?>
             <h1>Benvenuto
                 <?php echo ($_SESSION['username']) ?>
@@ -48,8 +49,8 @@
             <a href="https://www.decathlon.it/p/zaino-viaggio-travel-100-50-litri-nero/_/R-p-6561?mc=8735043"
                 target="_blank"><img src="../Images/imgHome/zaino2.jpg" class="zoom" alt="zaino50L"></a>
             <p>L'interrail è un viaggio estremamente emozionante e avventuroso, se viene fatto con le giuste
-                attrezzature e il giusto equipagiamento, infatti il nostro team ti consiglia di viaggiare leggeri!<br>
-                Esisto una miriade di attrezzature adatte, e proprio per questo, ci si può ritrovare spaesati dalla
+                attrezzature e il giusto equipagiamento, il nostro team ti consiglia di viaggiare leggeri!<br>
+                Esistono una miriade di attrezzature adatte, e proprio per questo, ci si può ritrovare spaesati dalla
                 moltitudine di scelte che il mercato ci presenta d'avanti.
                 Ma anche <br>in questo caso il nostro team viene in tuo soccorso!!!<br><br><br>Per un viaggio di 3
                 settimane circa, ti consigliamo di visitare
@@ -72,14 +73,14 @@
                 target="_blank"><img src="../Images/imgHome/scarpe.png" class="zoom3" alt="scarpe"></a>
             <p>Altro aspetto da non sottovalutare sono gli indumenti, risulteranno fondamentali per affrontare il
                 viaggio in tutta comodità, qualsiasi sia il periodo in cui viaggerai:
-                <br><br>Di seguito ti forniamo delle ottime scarpe rapporto qualità prezzo per sostenere al meglio le
+                <br><br>Ti consigliamo delle ottime scarpe rapporto qualità prezzo per sostenere al meglio le
                 tue lunghe camminate, senza risentirne a livello muscolare!
             </p>
         </div>
         <div class="giubbotto">
             <a href="https://www.decathlon.it/p/mp/therm-ic/giacca-da-uomo-riscaldata-e-tecnica-con-batteria-powerbank-powerjacket-speed/_/R-p-e75d70a8-9578-48ba-9652-6a86e1d978ff?mc=e75d70a8-9578-48ba-9652-6a86e1d978ff_c1.c61&c=nero_rosso"
                 target="_blank"><img src="../Images/imgHome/giacca.png" class="zoom4" alt="giubbotto"></a>
-            <p>Se deciderai di partire in inverno un indumento che non può mancare sarà il giubbotto, quest'ultimo dovrà
+            <p>Se deciderai di partire in inverno un indumento che non può mancare sarà il giubbotto, che dovrà
                 avere determinate caratteristiche, come la resistenza al freddo. Il nostro team ti propone la seguente
                 scelta:</p>
         </div>
@@ -286,7 +287,7 @@
                     <div class="contenuti">
                         <div class="center">COUPON AMAZON DA 30€</div>
                         <div class="center">COUPON AMAZON DA 30€ <br> SOLO PER GLI INDUMENTI</div>
-                        <div class="center">XcVZN30</div>
+                        <div class="center">XCVZN30</div>
                     </div>
                 </div>
                 <div class="gridContainer">
@@ -296,7 +297,7 @@
                     <div class="contenuti">
                         <div class="center">COUPON ZALANDO DA 10€</div>
                         <div class="center">COUPON ZALANDO DA 10€ <br> ESCLUSIVO PER SCARPE DA TREKKING</div>
-                        <div class="center">ZJkpL10</div>
+                        <div class="center">ZJkPL10</div>
                     </div>
                 </div>
                 <div class="gridContainer">
@@ -307,7 +308,7 @@
                         <div class="center">COUPON AIRBNB DA 5%</div>
                         <div class="center">COUPON AIRBNB DA 5% <br> SCONTO DEL 5% SUL TOTALE, SU UNA SPESA DI
                             ALMENO 50€</div>
-                        <div class="center">PGhIP5</div>
+                        <div class="center">PGHIP5</div>
                     </div>
                 </div>
             </div>

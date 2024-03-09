@@ -10,6 +10,7 @@
     <meta author="Gruppo 27" />
     <?php require("prj_routesFunctions.php"); ?>
     <script src="../Home/prj_home.js" type="text/javascript"></script>
+    <link rel="icon" type="image/x-icon" href="../Images/imgHome/trainIcon.png">
     <title>Routes</title>
 </head>
 

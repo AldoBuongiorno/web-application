@@ -49,10 +49,10 @@ hr {
 }
 
 #message{
-    color: 	#2b2828;
+    color: 	#717171;
     text-align: center;
     font-weight: bold; 
-    text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	text-transform: uppercase;
     font-size: calc(27px + 1vw);
     letter-spacing: 5px;

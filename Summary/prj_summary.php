@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../Home/prj_header.css">
     <script src="prj_summary.js" type="text/javascript"> </script>
     <script src="../Home/prj_home.js" type="text/javascript" defer></script>
+    <link rel="icon" type="image/x-icon" href="../Images/imgHome/trainIcon.png">
     <title>Train Travel Advisor</title>
     <?php require("prj_summaryFunctions.php"); ?>
 </head>
@@ -168,7 +169,7 @@
             Questo itinerario fa già parte della tua collezione di viaggi.
         </div>
         <div id = "Sup">
-            <div class="titleInfo"> <p id="message">Ecco il tuo itinerario:</p></div>
+            <div class="titleInfo"> <p id="message">mete</p></div>
             <div class="geoInfo" id="cityInfo"></div>
         </div>
         <div class="info">
