@@ -10,10 +10,10 @@
         <div id="navbar">
             <a href="../Home/prj_home.php" id="logo"><img src="../Images/imgHome/trainIcon.png" alt="LogoSito" class="logoSito"></a>
             <div id="navbar-dx">
-                <a href="../Home/prj_home.php">HOME</a>
-                <a href="../Form/prj_form.php">NUOVO VIAGGIO</a>
-                <a href="../User/prj_login.php">ACCEDI</a>
-                <a href="../User/prj_signup.php">REGISTRATI</a>
+                <a href="../Home/prj_home.php" class="text-navbar">HOME</a>
+                <a href="../Form/prj_form.php" class="text-navbar">NUOVO VIAGGIO</a>
+                <a href="../User/prj_login.php" class="text-navbar">ACCEDI</a>
+                <a href="../User/prj_signup.php" class="text-navbar">REGISTRATI</a>
             </div>
         </div>
 
@@ -24,10 +24,10 @@
         <div id="navbar">
             <a href="../Home/prj_home.php" id="logo"><img src="../Images/imgHome/trainIcon.png" alt="logosito" class="logoSito"></a>
             <div id="navbar-dx">
-                <a href="../Home/prj_home.php">HOME</a>
-                <a href="../Form/prj_form.php">NUOVO VIAGGIO</a>
-                <a href="../Routes/prj_routes.php">I MIEI VIAGGI</a>
-                <a href="../Home/prj_logout.php">LOG OUT</a>
+                <a href="../Home/prj_home.php" class="text-navbar">HOME</a>
+                <a href="../Form/prj_form.php" class="text-navbar">NUOVO VIAGGIO</a>
+                <a href="../Routes/prj_routes.php" class="text-navbar">I MIEI VIAGGI</a>
+                <a href="../Home/prj_logout.php" class="text-navbar">LOG OUT</a>
             </div>
         </div>
         <?php
@@ -41,7 +41,7 @@
         <div id="Menu">
             <div class="logo">
                 <a href="../Home/prj_home.php" id="logo">
-                    <img src="../Images/imgHome/LogoSito.png" alt="logosito" class="logoSito">
+                    <img src="../Images/imgHome/trainIcon.png" alt="logosito" class="logoSito">
                 </a>
             </div>
             <div id="dropdown">
@@ -61,7 +61,7 @@
         <div id="Menu">
             <div class="logo">
                 <a href="../Home/prj_home.php" id="logo">
-                    <img src="../Images/imgHome/LogoSito.png" alt="logosito" class="logoSito">
+                    <img src="../Images/imgHome/TrainIcon.png" alt="logosito" class="logoSito">
                 </a>
             </div>
             <div id="dropdown">

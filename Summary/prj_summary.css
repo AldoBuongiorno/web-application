@@ -91,9 +91,9 @@ iframe {
     border-radius: 10px; 
 }
 
-a {
-    color: inherit;     /*Fa in modo che il link non sia sempre blu*/ 
-}
+.text-navbar{
+    color: black;
+  }
 
 #countriesList{
     padding-left: 20px;

@@ -16,9 +16,9 @@ body {
   display: block;
 }
 
-#navbar a {
+.text-navbar{
   float: left;
-  color: black;
+  color: white;
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -36,8 +36,9 @@ body {
   padding: 20px 30px 5px 0px;
 }
 
-#navbar-dx a:hover {
-  background-color: whitesmoke;
+#navbar-dx a.text-navbar:hover {
+  background-color: white;
+  color: black;
 }
 
 #Menu {
