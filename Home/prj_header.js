@@ -7,10 +7,23 @@ function scrollFunction() {
         document.getElementById("navbar").style.padding = "1px 0px 0px 0px";
         document.getElementById("navbar").style.backgroundColor = "white";
 
+        let numElements = document.getElementsByClassName("text-navbar");
+
+        for (let i = 0; i < numElements.length; i++) {
+            numElements[i].style.color = "black";
+        }
     } else {
-        document.getElementById("navbar").style.padding = "8px 0px 0px 0px";
+        document.getElementById("navbar").style.padding = "25px 10px";
         document.getElementById("navbar").style.backgroundColor = "transparent";
-        /* document.getElementById("navbar-dx").style.padding = "20px 30px 5px 0px"; */
+
+        let numElements = document.getElementsByClassName("text-navbar");
+
+        for (let i = 0; i < numElements.length; i++) {
+            numElements[i].style.color = "white";
+        }
+
+        /* let styleSheet = document.styleSheets[0];
+        styleSheet.insertRule("#navbar-dx a:hover { background-color: white; color: black; }", styleSheet.cssRules.length); */
     }
 }
 
