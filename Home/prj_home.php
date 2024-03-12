@@ -277,6 +277,17 @@
         <?php
         if (isset($_SESSION['authorized'])) {
             ?>
+            <script>
+                document.addEventListener("DOMContentLoaded", function(event){
+                    let codice1 = document.getElementById("codice1");
+                    let codice2 = document.getElementById("codice2");
+                    let codice3 = document.getElementById("codice3");
+
+                    codice1.innerHTML = generateCoupon();
+                    codice2.innerHTML = generateCoupon();
+                    codice3.innerHTML = generateCoupon();
+                });
+            </script>
             <div class="thanks">
                 <div>PER RINGRAZIARTI DELLA FIDUCIA CHE HAI RIPOSTO NEL NOSTRO TEAM, REGISTRANDOTI AL SITO <br> ECCO A TE
                     DEI COUPN UTILIZZABILI NEI SITI A NOI AFFILIATI:</div>
@@ -287,7 +298,7 @@
                     <div class="contenuti">
                         <div class="center">COUPON AMAZON DA 30€</div>
                         <div class="center">COUPON AMAZON DA 30€ <br> SOLO PER GLI INDUMENTI</div>
-                        <div class="center">XCVZN30</div>
+                        <div class="center" id="codice1"></div>
                     </div>
                 </div>
                 <div class="gridContainer">
@@ -297,7 +308,7 @@
                     <div class="contenuti">
                         <div class="center">COUPON ZALANDO DA 10€</div>
                         <div class="center">COUPON ZALANDO DA 10€ <br> ESCLUSIVO PER SCARPE DA TREKKING</div>
-                        <div class="center">ZJkPL10</div>
+                        <div class="center" id="codice2"></div>
                     </div>
                 </div>
                 <div class="gridContainer">
@@ -308,7 +319,7 @@
                         <div class="center">COUPON AIRBNB DA 5%</div>
                         <div class="center">COUPON AIRBNB DA 5% <br> SCONTO DEL 5% SUL TOTALE, SU UNA SPESA DI
                             ALMENO 50€</div>
-                        <div class="center">PGHIP5</div>
+                        <div class="center" id="codice3"></div>
                     </div>
                 </div>
             </div>
