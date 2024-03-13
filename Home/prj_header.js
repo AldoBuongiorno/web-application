@@ -2,8 +2,10 @@ window.onscroll = function () {
     scrollFunction();
     scrollFunctionMenu();
 };
+
 function scrollFunction() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        //documento allo scroll avvenuto
         document.getElementById("navbar").style.padding = "1px 0px 0px 0px";
         document.getElementById("navbar").style.backgroundColor = "white";
 
@@ -11,15 +13,32 @@ function scrollFunction() {
 
         for (let i = 0; i < numElements.length; i++) {
             numElements[i].style.color = "black";
+            numElements[i].addEventListener('mouseover', function(){
+                this.style.backgroundColor = "black";
+                this.style.color = "white";
+            });
+            numElements[i].addEventListener('mouseout', function(){
+                this.style.backgroundColor = "transparent";
+                this.style.color = "black";
+            });
         }
     } else {
+        //documento alla cima
         document.getElementById("navbar").style.padding = "25px 10px";
         document.getElementById("navbar").style.backgroundColor = "transparent";
 
         let numElements = document.getElementsByClassName("text-navbar");
-
+        
         for (let i = 0; i < numElements.length; i++) {
             numElements[i].style.color = "white";
+            numElements[i].addEventListener('mouseover', function(){
+                this.style.backgroundColor = "white";
+                this.style.color = "black";
+            });
+            numElements[i].addEventListener('mouseout', function(){
+                this.style.backgroundColor = "transparent";
+                this.style.color = "white";
+            });
         }
 
         /* let styleSheet = document.styleSheets[0];
