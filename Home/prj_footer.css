@@ -42,9 +42,18 @@ body {
   color: #f2f2f2;
 }
 
+#list a{
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+#list a:hover{
+  color: blue;
+}
+
 #who {
   padding: 10px;
-  padding-left: 390px;
+  padding-left: 430px;
 }
 
 #listInsta {
@@ -66,7 +75,7 @@ body {
 
 #follow {
   padding-top: 10px;
-  padding-left: 35%;
+  padding-left: 30%;
   padding-right: 10px;
 }
 
