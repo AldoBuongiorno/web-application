@@ -87,6 +87,7 @@ function scrollFunction() {
   } else {
       document.getElementById("navbar").style.padding = "25px 10px";
       document.getElementById("navbar").style.backgroundColor = "transparent";
+      docucumnt.getElementsByClassName("text-navbar")[0].style.color = "black";
       document.getElementById("navbar-dx").style.padding = "20px 30px 5px 0px";
   }
 }
