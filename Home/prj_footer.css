@@ -14,6 +14,7 @@ body {
 
 .titoli-footer{
   color: #f2f2f2;
+  font-size: 17px;
 }
 
 #copyright {
@@ -181,6 +182,11 @@ body {
   .social:hover {
     transform: scale(1.2);
   }
+
+  .titoli-footer{
+    font-size: 14px;
+  }
+  
 
 
 }
