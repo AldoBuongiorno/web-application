@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+    <?php session_start(); ?>
     <div class="mainContainer" id="main">
 
         <div class="title">
