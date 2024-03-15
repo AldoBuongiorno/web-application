@@ -53,7 +53,7 @@
             <?php
 
         $id = $_SESSION['id'];
-        //Recupero le informazioni dal database
+        //Recupero delle informazioni dal database
         $infos = getInfo($id, $db);
 
         $locationsRaw = $infos["locations"];
@@ -70,10 +70,6 @@
         $imagesFiltered = explode("---", $imagesRaw);
         $imagesFiltered = array_filter($imagesFiltered);
         $imagesFiltered = array_map('trim', $imagesFiltered);
-
-        $descriptionFiltered = explode("---", $descriptionRaw);
-        $descriptionFiltered = array_filter($descriptionFiltered);
-        $descriptionFiltered = array_map('trim', $descriptionFiltered);
 
         $geoLocationFiltered = explode("---", $geoLocationRaw);
         $geoLocationFiltered = array_filter($geoLocationFiltered);
@@ -200,7 +196,7 @@
             </div>
             <div class="description">
                 <p id="descriptionText">
-                    <?php echo $descriptionFiltered[0]; ?>
+                    <?php echo $descriptionRaw; ?>
                 </p>
             </div>
         </div>

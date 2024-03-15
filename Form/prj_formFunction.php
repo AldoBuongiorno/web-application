@@ -112,7 +112,7 @@ function insertID($id, $username)
 //Correct
 function getID($username, $db)
 {
-    $sql = "SELECT journeys FROM \"user\" WHERE username=$1";    //sqlInjection da fare
+    $sql = "SELECT journeys FROM \"user\" WHERE username=$1";    
     $prep = pg_prepare($db, "sqlJourneys", $sql);
     $ret = pg_execute($db, "sqlJourneys", array($username));
 
