@@ -11,15 +11,15 @@
     <script src="../Home/prj_home.js" type="text/javascript" defer></script>
     <link rel="icon" type="image/x-icon" href="../Images/imgHome/trainIcon.png">
     <title>Train Travel Advisor</title>
-    <?php require("prj_summaryFunctions.php"); ?>
+    <?php require ("prj_summaryFunctions.php"); ?>
 </head>
 
 
 <body>
-    <?php require("../Home/prj_header.php"); ?>
+    <?php require ("../Home/prj_header.php"); ?>
     <?php
-    
-    if (isset($_SESSION['id'])) {
+
+    if (isset ($_SESSION['id'])) {
 
         //Dovrebbe mostrare il messaggio nel caso di un numero massimo di itinerari raggiunti
         if ($_SESSION['maxReached'] == true) { ?>
@@ -41,16 +41,16 @@
 
         //connection string
         $connection_string = "host='localhost' dbname='Gruppo27' user='www' password='tw2024'";
-        $db = pg_connect($connection_string) or die('Impossibile connettersi al database: ' . pg_last_error());
+        $db = pg_connect($connection_string) or die ('Impossibile connettersi al database: ' . pg_last_error());
 
         //script per la visualizzazione del main container
         ?>
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    document.getElementById("main").style.display = "block";
-                });
-            </script>
-            <?php
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById("main").style.display = "block";
+            });
+        </script>
+        <?php
 
         $id = $_SESSION['id'];
         //Recupero delle informazioni dal database
@@ -117,7 +117,7 @@
 
                 });    
             </script>
-        <?php
+            <?php
         }
 
         ?>
@@ -126,17 +126,17 @@
                 currentSlide(1);
             });
         </script>
-    <?php
+        <?php
 
-    //altrimenti se l'utente va alla pagina solo digitando l'url nella barra di ricerca
+        //altrimenti se l'utente va alla pagina solo digitando l'url nella barra di ricerca
     } else {
         ?>
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    document.getElementById("notLogged").style.display = "flex";
-                    document.getElementById("notLogged").style.backgroundImage = "url('../Images/imgRoutes/emptyCart.png')";
-                });
-            </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById("notLogged").style.display = "flex";
+                document.getElementById("notLogged").style.backgroundImage = "url('../Images/imgRoutes/emptyCart.png')";
+            });
+        </script>
         <?php
     }
     ?>
@@ -145,7 +145,8 @@
         <div class="containerEmpty">
             <div class="text">
                 <div class="numero_itinerario">
-                    <p style="color: red;"><strong>Non puoi visitare questa pagina prima di aver risposto al form</strong></p>
+                    <p style="color: red;"><strong>Non puoi visitare questa pagina prima di aver risposto al
+                            form</strong></p>
                 </div>
                 <div class="testo_itinerario">
                     <p id="p1">Scopri come</p>
@@ -155,7 +156,7 @@
         </div>
     </section>
 
-    <div id = "main" class="mainContainer">
+    <div id="main" class="mainContainer">
 
         <div class="fullCart" id="full">
             Ti ricordiamo che il tuo carrello ha raggiunto il limite massimo di itinerari disponibili. Il seguente item
@@ -164,8 +165,10 @@
         <div class="duplicateElement" id="dup">
             Questo itinerario fa già parte della tua collezione di viaggi.
         </div>
-        <div id = "Sup">
-            <div class="titleInfo"> <p id="message">mete</p></div>
+        <div id="Sup">
+            <div class="titleInfo">
+                <p id="message">mete</p>
+            </div>
             <div class="geoInfo" id="cityInfo"></div>
         </div>
         <div class="info">
@@ -175,7 +178,7 @@
                     <li id="meta2"><a id="link2" href="" target="_blank"></a></li>
                     <li id="meta3"><a id="link3" href="" target="_blank"></a></li>
                     <li id="meta4"><a id="link4" href="" target="_blank"></a></li>
-                    <li id="meta5"><a id="link5" href="" target="_blank"></a></li>    
+                    <li id="meta5"><a id="link5" href="" target="_blank"></a></li>
                 </ul>
             </div>
             <div class="map">
@@ -184,7 +187,7 @@
             </div>
         </div>
 
-        
+
 
         <div class="journey">
             <div class="flags">
@@ -217,7 +220,7 @@
 
     </div>
 
-    <?php require("../Home/prj_footer.php"); ?>
+    <?php require ("../Home/prj_footer.php"); ?>
 
 </body>
 

@@ -1,8 +1,11 @@
 //Funzione dell'header
-window.onscroll = function() {
-  scrollFunction();
-};
+document.addEventListener('DOMContentLoaded', function () {
+  window.onscroll = function () {
+      scrollFunction1();
+  };
+});
 
+ 
 //Chiamata per le geolocalizzazione
 document.addEventListener("DOMContentLoaded", getLocation);
 
@@ -78,16 +81,42 @@ function showPosition(position) {
     }
 	}
 }
-
-function scrollFunction() {
+function scrollFunction1() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-      document.getElementById("navbar").style.padding = "15px 10px";
+      //documento allo scroll avvenuto
+      document.getElementById("navbar").style.padding = "1px 0px 0px 0px"; 
       document.getElementById("navbar").style.backgroundColor = "white";
-      
+
+      let numElements = document.getElementsByClassName("text-navbar");
+
+      for (let i = 0; i < numElements.length; i++) {
+          numElements[i].style.color = "black";
+          numElements[i].addEventListener('mouseover', function () {
+              this.style.backgroundColor = "grey";
+              this.style.color = "white";
+          });
+          numElements[i].addEventListener('mouseout', function () {
+              this.style.backgroundColor = "transparent";
+              this.style.color = "black";
+          });
+      }
   } else {
+      //documento alla cima
       document.getElementById("navbar").style.padding = "25px 10px";
       document.getElementById("navbar").style.backgroundColor = "transparent";
-      docucumnt.getElementsByClassName("text-navbar")[0].style.color = "black";
-      document.getElementById("navbar-dx").style.padding = "20px 30px 5px 0px";
+
+      let numElements = document.getElementsByClassName("text-navbar");
+
+      for (let i = 0; i < numElements.length; i++) {
+          numElements[i].style.color = "white";
+          numElements[i].addEventListener('mouseover', function () {
+              this.style.backgroundColor = "white";
+              this.style.color = "black";
+          });
+          numElements[i].addEventListener('mouseout', function () {
+              this.style.backgroundColor = "transparent";
+              this.style.color = "white";
+          });
+      }
   }
 }

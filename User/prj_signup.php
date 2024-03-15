@@ -91,7 +91,6 @@
         } else {
             if (insertUser($name, $surname, $email, $username, $password)) {
                 echo ("<script LANGUAGE='JavaScript'>
-                                /* window.alert('Utente $username registrato con successo! Effettua il login'); */
                                 window.location.href = 'prj_login.php';
                         </script>");
                 exit();

@@ -9,16 +9,16 @@
     <meta title="Form" />
     <link rel="icon" type="image/x-icon" href="../Images/imgHome/trainIcon.png">
     <meta name="description" content="Form di domande che produce il consiglio dell'itinerario" />
-    <meta name="keywords" content="Itinerario, Viaggio, Meta, Economico" />
+    <meta name="keywords" content="Itinerario, Viaggio, Meta, Budget" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta author="Gruppo 27" />
-    <?php require("prj_formFunction.php"); ?>
+    <?php require ("prj_formFunction.php"); ?>
 
     <title>Form</title>
 </head>
 
 <body>
-    <?php require("../Home/prj_header.php"); ?>
+    <?php require ("../Home/prj_header.php"); ?>
 
     <!--Header del sito-->
     <!-- CHANGE -->
@@ -125,7 +125,7 @@
     <?php
 
     //  Verifico se sono presenti i dati inviati dal form.
-    if (isset($_POST["periodo"]) && isset($_POST["budget"]) && isset($_POST["durata"]) && isset($_POST["tipologia"])) {
+    if (isset ($_POST["periodo"]) && isset ($_POST["budget"]) && isset ($_POST["durata"]) && isset ($_POST["tipologia"])) {
 
         $selectedPeriod = htmlspecialchars(trim($_POST["periodo"]));
         $selectedBudget = htmlspecialchars(trim($_POST["budget"]));
@@ -135,7 +135,7 @@
         $id = pickItinerary($selectedPeriod, $selectedBudget, $selectedDuration, $selectedType);
         $_SESSION['id'] = $id;
 
-        if (isset($_SESSION['authorized'])) {
+        if (isset ($_SESSION['authorized'])) {
             $username = $_SESSION['username'];
             insertID($id, $username);
         } else {
@@ -149,7 +149,7 @@
         exit();
     }
     ?>
-    <?php require("../Home/prj_footer.php"); ?>
+    <?php require ("../Home/prj_footer.php"); ?>
 </body>
 
 </html>
