@@ -81,6 +81,7 @@ function showPosition(position) {
     }
 	}
 }
+
 function scrollFunction1() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
       //documento allo scroll avvenuto

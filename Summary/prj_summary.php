@@ -134,6 +134,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById("notLogged").style.display = "flex";
+                document.getElementById("navbar").style.backgroundColor = "white";
                 document.getElementById("notLogged").style.backgroundImage = "url('../Images/imgRoutes/emptyCart.png')";
             });
         </script>
