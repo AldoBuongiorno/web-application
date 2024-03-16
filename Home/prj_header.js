@@ -40,9 +40,6 @@ function scrollFunction() {
                 this.style.color = "white";
             });
         }
-
-        /* let styleSheet = document.styleSheets[0];
-        styleSheet.insertRule("#navbar-dx a:hover { background-color: white; color: black; }", styleSheet.cssRules.length); */
     }
 }
 

@@ -10,7 +10,6 @@ function scrollFunction() {
     } else {
         //documento alla cima
         document.getElementById("navbar").style.padding = "25px 10px";
-        //aggiungere nel CSS il cambio di colore dell'hover alla navbar
         //tagliare immagine
     }
 }
