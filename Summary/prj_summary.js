@@ -1,5 +1,23 @@
-//Funzione dell'header
 document.addEventListener('DOMContentLoaded', function () {
+
+  document.getElementById("navbar").style.padding = "1px 0px 0px 0px";
+  document.getElementById("navbar").style.backgroundColor = "white";
+  let numElements = document.getElementsByClassName("text-navbar");
+  
+  for (let i = 0; i < numElements.length; i++) {
+    console.log('diocane');
+    numElements[i].style.color = "black";
+    numElements[i].addEventListener('mouseover', function(){
+        this.style.backgroundColor = "black";
+        this.style.color = "white";
+    });
+    numElements[i].addEventListener('mouseout', function(){
+        this.style.backgroundColor = "transparent";
+        this.style.color = "black";
+    });
+}
+
+
   window.onscroll = function () {
       scrollFunction1();
   };
@@ -60,11 +78,7 @@ function showPosition(position) {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
 
-  //Stampa di prova dell'acquisizione precedente
-  console.log(latitude);
-	console.log(longitude);
-
-  //Preparo la query per la decrittazione JNOSN
+  //Preparo la query per la decrittazione JSON
   let query = "latitude=" + latitude + "&longitude=" + longitude + "&localityLanguage=en";
   const  bigdatacloud_api = "https://api.bigdatacloud.net/data/reverse-geocode-client?" + query;
 
@@ -77,47 +91,47 @@ function showPosition(position) {
       var myObj = JSON.parse(this.responseText);
     
       x.innerHTML="POSIZIONE UTENTE: " + myObj.city;
-      /* console.log("Posizione utente : " + myObj.city); */
     }
 	}
 }
 
 function scrollFunction1() {
+  
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-      //documento allo scroll avvenuto
-      document.getElementById("navbar").style.padding = "1px 0px 0px 0px"; 
-      document.getElementById("navbar").style.backgroundColor = "white";
+    //documento allo scroll avvenuto
+    document.getElementById("navbar").style.padding = "1px 0px 0px 0px";
+    document.getElementById("navbar").style.backgroundColor = "white";
 
-      let numElements = document.getElementsByClassName("text-navbar");
+    let numElements = document.getElementsByClassName("text-navbar");
 
-      for (let i = 0; i < numElements.length; i++) {
-          numElements[i].style.color = "black";
-          numElements[i].addEventListener('mouseover', function () {
-              this.style.backgroundColor = "grey";
-              this.style.color = "white";
-          });
-          numElements[i].addEventListener('mouseout', function () {
-              this.style.backgroundColor = "transparent";
-              this.style.color = "black";
-          });
-      }
-  } else {
-      //documento alla cima
-      document.getElementById("navbar").style.padding = "25px 10px";
-      document.getElementById("navbar").style.backgroundColor = "transparent";
+    for (let i = 0; i < numElements.length; i++) {
+        numElements[i].style.color = "black";
+        numElements[i].addEventListener('mouseover', function(){
+            this.style.backgroundColor = "black";
+            this.style.color = "white";
+        });
+        numElements[i].addEventListener('mouseout', function(){
+            this.style.backgroundColor = "transparent";
+            this.style.color = "black";
+        });
+    }
+} else {
+    //documento alla cima
+    document.getElementById("navbar").style.padding = "25px 10px";
+    document.getElementById("navbar").style.backgroundColor = "white";
 
-      let numElements = document.getElementsByClassName("text-navbar");
-
-      for (let i = 0; i < numElements.length; i++) {
-          numElements[i].style.color = "white";
-          numElements[i].addEventListener('mouseover', function () {
-              this.style.backgroundColor = "white";
-              this.style.color = "black";
-          });
-          numElements[i].addEventListener('mouseout', function () {
-              this.style.backgroundColor = "transparent";
-              this.style.color = "white";
-          });
-      }
-  }
+    let numElements = document.getElementsByClassName("text-navbar");
+    
+    for (let i = 0; i < numElements.length; i++) {
+        numElements[i].style.color = "black";
+        numElements[i].addEventListener('mouseover', function(){
+            this.style.backgroundColor = "black";
+            this.style.color = "white";
+        });
+        numElements[i].addEventListener('mouseout', function(){
+            this.style.backgroundColor = "white";
+            this.style.color = "black";
+        });
+    }
+}
 }

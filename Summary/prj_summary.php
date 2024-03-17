@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta title="Summary"/>
+    <meta author="Gruppo 27"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="prj_summary.css">
-    <link rel="stylesheet" href="../Home/prj_header.css">
     <script src="prj_summary.js" type="text/javascript"> </script>
     <script src="../Home/prj_home.js" type="text/javascript" defer></script>
     <link rel="icon" type="image/x-icon" href="../Images/imgHome/trainIcon.png">
-    <title>Train Travel Advisor</title>
+    <title>Summary</title>
     <?php require ("prj_summaryFunctions.php"); ?>
 </head>
 

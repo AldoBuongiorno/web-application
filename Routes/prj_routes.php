@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta title="Routes" />
+    <meta author="Gruppo 27" />
     <meta name="description" content="Area riservata che mostra gli itinerari salvati" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="prj_routes.css">
-    <meta author="Gruppo 27" />
     <?php require("prj_routesFunctions.php"); ?>
+    <script src="prj_routes.js" type="text/javascript"> </script>
     <script src="../Home/prj_home.js" type="text/javascript"></script>
     <link rel="icon" type="image/x-icon" href="../Images/imgHome/trainIcon.png">
     <title>Routes</title>

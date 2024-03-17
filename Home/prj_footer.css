@@ -1,8 +1,13 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Monserrat', sans-serif;
+  /* font-family: 'Monserrat', sans-serif; */
 }
+
 
 #footer {
   background-color: #212121;
@@ -54,7 +59,7 @@ body {
 
 #who {
   padding: 10px;
-  padding-left: 420px;
+  padding-left: 430px;
 }
 
 #listInsta {
@@ -76,7 +81,7 @@ body {
 
 #follow {
   padding-top: 10px;
-  padding-left: 27%;
+  padding-left: 26%;
   padding-right: 10px;
 }
 

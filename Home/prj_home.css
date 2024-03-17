@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Monserrat', sans-serif;
+ /*  font-family: 'Monserrat', sans-serif; */
 }
 
 .video {

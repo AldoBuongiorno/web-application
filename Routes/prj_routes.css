@@ -12,15 +12,7 @@ html,
 body {
     position: relative;
     height: 100%;
-    font-size: calc(4px + 1vw);
-}
-
-.text-navbar{
-    color: black !important;
-}
-
-#navbar{
-    background-color: white !important;
+    font-size: calc(5px + 1vw);
 }
 
 /*Ripristina le proprietà sovrascrite dall'aggiunta dell'header*/
