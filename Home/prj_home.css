@@ -8,7 +8,6 @@
 body {
   margin: 0;
   padding: 0;
- /*  font-family: 'Monserrat', sans-serif; */
 }
 
 .video {
@@ -99,7 +98,7 @@ body {
 }
 
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 820px) {
 
   .content {
     text-align: center;
@@ -164,11 +163,11 @@ body {
   }
 }
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 510px) {
 
   .content {
     text-align: center;
-    padding: 80px;
+    padding: 100px;
     position: absolute;
     top: 0;
     left: 0;
@@ -367,14 +366,14 @@ body {
   padding-bottom: 1px;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1000px) {
 
   .zoom {
     display: block;
     margin-left: auto;
     margin-right: auto;
     transition: transform .6s;
-    width: 225px;
+    width: 275px;
     height: 250px;
     border-radius: 10px;
   }
@@ -397,16 +396,22 @@ body {
 
   .zoom2 {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
     transition: transform .6s;
     width: 200px;
     height: 250px;
     border-radius: 10px;
+    padding-right: 180px;
   }
 
   .zoom2:hover {
     transform: scale(1.2);
+  }
+
+  .linkzaino{
+    display: flex;
+    justify-content: center;
+    align-items: centera;
   }
 
   .zaino30L {

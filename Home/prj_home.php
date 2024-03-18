@@ -61,7 +61,7 @@
         </div>
         <div class="zaino30L">
             <a href="https://www.amazon.it/SKYSPER-Ultraleggero-Ripiegabile-Riflettenti-ISHE30-Grigio/dp/B0BKG7HK4L/ref=sr_1_5?dib=eyJ2IjoiMSJ9.4uSEQ7zdR1yLHdpAc0Cs1uphzz7ckmrQSSKqzLsmGrRk_WqznZj4g9azxmDB77LB1Cl7nHTT2O2rnsBJ3yun_8EMfrWbhBEhW3HXWF6lmQ7QnbqknxCvl5jzAIzH2yTZLDUzNCbBpCVfPWnqy5O0oQ-50Z5KfR5_2stl0e2WM9YSiWepbIGPjXyiV4mMUWqYFEWt8poVNT8OQsLZL3WqwaJbd1ZVZSe81nkvFPgjuWInT8VUOQA3mhQ5oxMI8ajADzIhf8kauXk1HgvTMKtBFPHVVxEV1x0RMiAjYpXuu8k.w2QM8xy0fgUdOTX8PXrp2xVdS2h5JnfRbkLKKBktHoM&dib_tag=se&keywords=zaino%2Bda%2Btrekking%2B30%2Blitri&qid=1708507106&sr=8-5&th=1"
-                target="_blank"><img class="zoom2" src="../Images/imgHome/zaino30L.png" alt="zaino30L"></a>
+                target="_blank" class="linkzaino"><img class="zoom2" src="../Images/imgHome/zaino30L.png" alt="zaino30L"></a>
             <p>Non sempre è necessario uno zaino ultra capiente, in questo caso, visita <a
                     href="https://www.amazon.it/SKYSPER-Ultraleggero-Ripiegabile-Riflettenti-ISHE30-Grigio/dp/B0BKG7HK4L/ref=sr_1_5?dib=eyJ2IjoiMSJ9.4uSEQ7zdR1yLHdpAc0Cs1uphzz7ckmrQSSKqzLsmGrRk_WqznZj4g9azxmDB77LB1Cl7nHTT2O2rnsBJ3yun_8EMfrWbhBEhW3HXWF6lmQ7QnbqknxCvl5jzAIzH2yTZLDUzNCbBpCVfPWnqy5O0oQ-50Z5KfR5_2stl0e2WM9YSiWepbIGPjXyiV4mMUWqYFEWt8poVNT8OQsLZL3WqwaJbd1ZVZSe81nkvFPgjuWInT8VUOQA3mhQ5oxMI8ajADzIhf8kauXk1HgvTMKtBFPHVVxEV1x0RMiAjYpXuu8k.w2QM8xy0fgUdOTX8PXrp2xVdS2h5JnfRbkLKKBktHoM&dib_tag=se&keywords=zaino%2Bda%2Btrekking%2B30%2Blitri&qid=1708507106&sr=8-5&th=1"
                     target="_blank" class="no-decoration">questo link</a>, o clicca comodamente sull'immagine
