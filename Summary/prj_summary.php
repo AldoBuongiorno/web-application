@@ -75,9 +75,9 @@
         $geoLocationFiltered = array_filter($geoLocationFiltered);
         $geoLocationFiltered = array_map('trim', $geoLocationFiltered);
 
-        $flagLocation = explode("---", $flagLocationRaw);
-        $flagLocation = array_filter($flagLocation);
-        $flagLocation = array_map('trim', $flagLocation);
+        $flagLocationFiltered = explode("---", $flagLocationRaw);
+        $flagLocationFiltered = array_filter($flagLocationFiltered);
+        $flagLocationFiltered = array_map('trim', $flagLocationFiltered);
 
 
         for ($i = 0; $i < count($locationsFiltered); $i++) {
@@ -112,7 +112,7 @@
                     meta.style.display = "block";
                     geo.style.display = "block";
 
-                    flag.src = "<?php echo $flagLocation[$i]; ?>";
+                    flag.src = "<?php echo $flagLocationFiltered[$i]; ?>";
                     flag.style.display = "block";
 
                 });    
