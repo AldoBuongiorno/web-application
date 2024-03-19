@@ -20,9 +20,6 @@
 <body>
     <?php require ("../Home/prj_header.php"); ?>
 
-    <!--Header del sito-->
-    <!-- CHANGE -->
-
     <!-- PRIMO FORM -->
     <form name="form" id="formSelection" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
         <section class="img1">
@@ -68,7 +65,7 @@
             </div>
         </section>
 
-
+        <!--TERZO FORM-->
         <section class="img3">
             <div class="container right">
                 <div class="container">
@@ -96,6 +93,7 @@
             </div>
         </section>
 
+        <!--QUARTO FORM-->
         <section class="img4">
             <div class="container right">
                 <div class="container">

@@ -4,7 +4,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-
 body {
   margin: 0;
   padding: 0;
@@ -233,7 +232,6 @@ body {
   background-color: #f2f2f2;
   margin: 0;
   letter-spacing: 0.5px;
-  /* text-shadow: 0.5px 0.5px 1px #000000; */
   margin-top: -50px;
   margin-bottom: 10px;
   padding-bottom: 20px;
