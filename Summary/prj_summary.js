@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let numElements = document.getElementsByClassName("text-navbar");
   
   for (let i = 0; i < numElements.length; i++) {
-    console.log('diocane');
     numElements[i].style.color = "black";
     numElements[i].addEventListener('mouseover', function(){
         this.style.backgroundColor = "black";
@@ -85,7 +84,6 @@ function showPosition(position) {
   //Preparo la richiesta AJAX
   const Http = new XMLHttpRequest();
   Http.open("GET", bigdatacloud_api);
-  Http.send();
 	Http.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
       var myObj = JSON.parse(this.responseText);
@@ -93,6 +91,7 @@ function showPosition(position) {
       x.innerHTML="POSIZIONE UTENTE: " + myObj.city;
     }
 	}
+  Http.send();
 }
 
 function scrollFunction1() {
