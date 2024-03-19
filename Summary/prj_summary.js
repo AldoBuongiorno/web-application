@@ -86,8 +86,8 @@ function showPosition(position) {
   Http.open("GET", bigdatacloud_api);
 	Http.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
+      //parsing della stringa nel formato JSON
       var myObj = JSON.parse(this.responseText);
-    
       x.innerHTML="POSIZIONE UTENTE: " + myObj.city;
     }
 	}
