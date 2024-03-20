@@ -44,3 +44,22 @@ function scrollFunction() {
         document.getElementById("navbar-dx").style.padding = "20px 30px 5px 0px";
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const optionGroups = document.querySelectorAll('.option');
+    const sections = document.querySelectorAll('section');
+    const btn = document.getElementById('submitButton');
+
+    optionGroups.forEach((optionGroup, index) => {
+        optionGroup.addEventListener('change', function() {
+            const nextSection = sections[index + 1];
+            if (nextSection) {
+                nextSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                // Se non ci sono più sezioni, abilita il pulsante di invio
+                btn.scrollIntoView({ behavior: 'smooth',  block: 'center' });
+            }
+        });
+    });
+});
+
