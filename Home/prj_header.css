@@ -55,7 +55,7 @@ body {
 }
 
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 935px) {
   #navbar {
     display: none;
   }
