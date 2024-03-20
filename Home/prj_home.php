@@ -13,7 +13,7 @@
     <title>Train Travel Advisor</title>
 </head>
 
-<body>
+<body id="body">
     <?php require("./prj_header.php"); ?>
 
     <?php applyBackroundVideo(); ?>

@@ -13,7 +13,7 @@
                 <a href="../Home/prj_home.php" class="text-navbar">HOME</a>
                 <a href="../Form/prj_form.php" class="text-navbar">NUOVO VIAGGIO</a>
                 <a href="../User/prj_login.php" class="text-navbar">ACCEDI</a>
-                <a href="../User/prj_signup.php" class="text-navbar">REGISTRATI</a>
+                <a href="../User/prj_signup.php" class="text-navbar">REGISTRATI</a>                
             </div>
         </div>
 
@@ -27,6 +27,7 @@
                 <a href="../Home/prj_home.php" class="text-navbar">HOME</a>
                 <a href="../Form/prj_form.php" class="text-navbar">NUOVO VIAGGIO</a>
                 <a href="../Routes/prj_routes.php" class="text-navbar">I MIEI VIAGGI</a>
+                <a href="#body" class="text-navbar">CIAO <?php  echo strtoupper($_SESSION['username']); ?></a>
                 <a href="../Home/prj_logout.php" class="text-navbar">LOG OUT</a>
             </div>
         </div>
@@ -72,6 +73,7 @@
                     <a href="../Home/prj_home.php">HOME</a>
                     <a href="../Form/prj_form.php">NUOVO VIAGGIO</a>
                     <a href="../Routes/prj_routes.php">I MIEI VIAGGI</a>
+                    <a href="#body">CIAO <?php  echo strtoupper($_SESSION['username']); ?></a>
                     <a href="./prj_logout.php">LOG OUT</a>
                 </div>
             </div>

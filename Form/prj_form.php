@@ -17,7 +17,7 @@
     <title>Form</title>
 </head>
 
-<body>
+<body id="body"> 
     <?php require ("../Home/prj_header.php"); ?>
 
     <!-- PRIMO FORM -->

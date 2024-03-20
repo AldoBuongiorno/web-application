@@ -15,7 +15,7 @@
     <title>Routes</title>
 </head>
 
-<body>
+<body id="body">
     <script type="text/javascript">
         let section, p;      
     </script>

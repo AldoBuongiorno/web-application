@@ -15,7 +15,7 @@
 </head>
 
 
-<body>
+<body id="body">
     <?php require ("../Home/prj_header.php"); ?>
     <?php
 
