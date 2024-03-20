@@ -114,7 +114,7 @@ function deleteID($journeys, $i, $username, $db)
     ?>
     <script>
         //forza il ri-caricamento della pagina per la visualizzazione corretta e aggiornata dei dati
-       // window.location.href = "<?php echo $_SERVER['PHP_SELF']; ?>";
+        window.location.href = "<?php echo $_SERVER['PHP_SELF']; ?>";
     </script>
     <?php
 }
