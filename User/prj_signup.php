@@ -39,7 +39,7 @@
                 <input type="email" name="email" id="email" placeholder="Email" <?php if (array_key_exists('email', $_POST)) {
                     echo "value='", htmlspecialchars($_POST['email']), "'";
                 } ?> />
-                <input type="text" name="usernameSignup" id="usernameSignup" placeholder="Username" <?php if (array_key_exists('usernameSignup', $_POST)) {
+                <input type="text" maxlength="15" name="usernameSignup" id="usernameSignup" placeholder="Username" <?php if (array_key_exists('usernameSignup', $_POST)) {
                     echo "value='", htmlspecialchars($_POST['usernameSignup']), "'";
                 } ?> />
                 <input type="password" name="passwordSignup" id="passwordSignup" placeholder="Password" <?php if (array_key_exists('passwordSignup', $_POST)) {
