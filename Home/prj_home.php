@@ -49,7 +49,7 @@
             <a href="https://www.decathlon.it/p/zaino-viaggio-travel-100-50-litri-nero/_/R-p-6561?mc=8735043"
                 target="_blank"><img src="../Images/imgHome/zaino2.jpg" class="zoom" alt="zaino50L"></a>
             <p>L'interrail è un viaggio estremamente emozionante e avventuroso, se viene fatto con le giuste
-                attrezzature e il giusto equipagiamento, il nostro team ti consiglia di viaggiare leggeri!<br>
+                attrezzature e il giusto equipaggiamento, il nostro team ti consiglia di viaggiare leggeri!<br>
                 Esistono una miriade di attrezzature adatte, e proprio per questo, ci si può ritrovare spaesati dalla
                 moltitudine di scelte che il mercato ci presenta d'avanti.
                 Ma anche <br>in questo caso il nostro team viene in tuo soccorso!!!<br><br><br>Per un viaggio di 3
