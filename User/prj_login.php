@@ -62,7 +62,6 @@
                                 message.innerHTML = '$usernameLogin non risulta registrato';
                                 </script>");
         } else if (password_verify($passwordLogin, $hash)) {
-            session_start();
             $_SESSION['username'] = $usernameLogin;
             $_SESSION['authorized'] = true;
             echo ("<script LANGUAGE='JavaScript'>
