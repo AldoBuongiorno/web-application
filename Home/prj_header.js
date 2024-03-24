@@ -23,7 +23,7 @@ function scrollFunction() {
             });
         }
     } else {
-        //documento alla cima
+        //documento alla cima dopo aver scrollato almeno una volta 
         document.getElementById("navbar").style.padding = "25px 10px";
         document.getElementById("navbar").style.backgroundColor = "transparent";
 

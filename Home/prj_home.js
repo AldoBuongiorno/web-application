@@ -28,14 +28,14 @@ function generateCoupon(){
     let stringa="";
     let num;
 
-    let x=[];
+    let x=[];                   
     let z=65;
     for (i=0;i<26;i++){
         x.push(String.fromCharCode(z));
         z++;
     }
-    for(i=0;i<3;i++){
-        num=Math.floor(Math.random() * 26);
+    for(i=0;i<3;i++){                                           //math.random() * 26 genera un numero float casuale tra 0 e 25
+        num=Math.floor(Math.random() * 26);                     //Math.floor arrotonda per difetto
         stringa += x[num];
     }
     for(i=0;i<2;i++){

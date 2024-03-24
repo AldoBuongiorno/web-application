@@ -17,10 +17,12 @@ body {
 .img4 {
     height: 100%;
     display: flex;
+    /*parallax effect*/
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* */
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -76,14 +78,12 @@ label {
     width: 80%;
     border-radius: 15px;
     border: 2px solid rgb(18, 34, 255);
-    /* background-color: rgb(0, 0, 0); */
     background-color: #f2f2f2;
     margin-left: 10%;
     margin-bottom: 15px;
     padding: 6px 0;
     font-weight: bold;
     position: relative;
-    /* color: #FFFFFF; */
     color: rgb(18, 34, 255);
     letter-spacing: 1px;
     transition: transform ease-in;
@@ -95,7 +95,7 @@ input:checked+label {
     font-weight: bold;
     text-transform: uppercase;
     transform: scale(1.15);
-    -webkit-text-stroke: .6px #fff;
+    -webkit-text-stroke: .6px #fff;                     /*contorno di 0.6px bianco*/
     color: #f2f2f2;
 }
 
@@ -142,7 +142,6 @@ button {
     text-decoration: none;
     border-radius: 15px;
     border: 3px solid #f2f2f2;
-    background-color: var(--light-1);
     color: #f2f2f2;
     font-size: 25px;
     font-weight: bold;
@@ -174,7 +173,7 @@ button:focus {
     outline: none;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 650px) {                     /* <= 650px */
     .container.right {
         padding: 2% 20px 2%;
         margin: 2% auto 2%;

@@ -62,7 +62,7 @@ function insertID($id, $username)
             return true;
         }
     } else {                                                       //sono presenti altri ID 
-        $array = explode("---", $idString);
+        $array = explode("---", $idString);                     //pasoo dalla stringa con la formattazione del db a un array che contiene tuitti gli id senza formattazione
         $array = array_filter($array);                          // rimuove gli elementi vuoti dall'array
 
         foreach ($array as $part) {
@@ -83,7 +83,7 @@ function insertID($id, $username)
                 $_SESSION['maxReached'] = true;
                 return false;
             }
-            if ($i == 0) {
+            if ($i == 0) {                                          //aggiungo il primo ID senza dashes
                 $id = $part;
                 $i++;
             } else {

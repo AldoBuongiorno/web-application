@@ -89,7 +89,7 @@
                     geo = document.getElementById("link" + "<?php echo $i + 1; ?>");
                     flag = document.getElementById("flag" + "<?php echo $i + 1; ?>");
                     dot = document.getElementById("dot" + "<?php echo $i + 1; ?>");
-                    container = document.getElementsByClassName("slideshows-container")[0];
+                    container = document.getElementsByClassName("slideshows-container")[0];             
 
                     slide = document.createElement("div");
                     slide.className = "mySlides fade";

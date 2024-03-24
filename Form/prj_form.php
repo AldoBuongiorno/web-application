@@ -13,7 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta author="Gruppo 27" />
     <?php require ("prj_formFunction.php"); ?>
-
     <title>Form</title>
 </head>
 
@@ -22,6 +21,7 @@
 
     <!-- PRIMO FORM -->
     <form name="form" id="formSelection" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+
         <section class="img1">
             <div class="container right">
                 <div class="container">
@@ -117,6 +117,8 @@
             </div>
             <button type="submit" id="submitButton" disabled>Invia</button>
         </section>
+
+
     </form>
 
 
@@ -125,7 +127,7 @@
     //  Verifico se sono presenti i dati inviati dal form.
     if (isset ($_POST["periodo"]) && isset ($_POST["budget"]) && isset ($_POST["durata"]) && isset ($_POST["tipologia"])) {
 
-        $selectedPeriod = htmlspecialchars(trim($_POST["periodo"]));
+        $selectedPeriod = htmlspecialchars(trim($_POST["periodo"]));                                       // htmlspecialchars converte i caratteri speciali che possono interferire con html nelle sequenze di escape 
         $selectedBudget = htmlspecialchars(trim($_POST["budget"]));
         $selectedDuration = htmlspecialchars(trim($_POST["durata"]));
         $selectedType = htmlspecialchars(trim($_POST["tipologia"]));
