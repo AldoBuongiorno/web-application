@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         this.style.backgroundColor = "transparent";
         this.style.color = "black";
     });
-}
+  }
 
 
   window.onscroll = function () {
