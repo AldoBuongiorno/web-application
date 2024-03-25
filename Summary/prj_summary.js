@@ -63,7 +63,7 @@ function showSlides(n) {
 function getLocation() {
 	if (navigator.geolocation) {
 	  navigator.geolocation.getCurrentPosition(showPosition);
-	} else { 
+	} else {                                                                                        //else il browser non supporta le API di geolocalizzazione
 	  document.getElementById("cityInfo").innerHTML = "Geolocation is not supported by this browser.";
 	}
 }
@@ -71,27 +71,28 @@ function getLocation() {
 function showPosition(position) {
 
   //Definisco la variabile per la scrittura nel div desiderato
-  var x = document.getElementById("cityInfo");
+  let x = document.getElementById("cityInfo");
 
   //Acquisico le coordinate geografiche
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
 
   //Preparo la query per la decrittazione JSON
+  //preparo l'URL
   let query = "latitude=" + latitude + "&longitude=" + longitude + "&localityLanguage=en";
   const  bigdatacloud_api = "https://api.bigdatacloud.net/data/reverse-geocode-client?" + query;
 
   //Preparo la richiesta AJAX
   const Http = new XMLHttpRequest();
   Http.open("GET", bigdatacloud_api);
-	Http.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
+	Http.onreadystatechange = function() {                            //acquisice la risposta 
+		if (this.readyState == 4 && this.status == 200) {               //4 = mandata correttamente, 200 = andata a buon fine sul server
       //parsing della stringa nel formato JSON
       var myObj = JSON.parse(this.responseText);
       x.innerHTML="POSIZIONE UTENTE: " + myObj.city;
     }
 	}
-  Http.send();
+  Http.send();                                                    //send invia la richiesta
 }
 
 function scrollFunction1() {
