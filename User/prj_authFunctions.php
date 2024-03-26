@@ -60,8 +60,9 @@
         $connection_string = "host='localhost' dbname='Gruppo27' user='www' password='tw2024'";
         $db = pg_connect($connection_string) or die('Impossibile connettersi al database: ' . pg_last_error());
         if (pg_connect($connection_string))
-
+            //PASSWORD_DEFAULT ti fornisce sempre l'algoritmo migliore di hashing
             $hash = password_hash($password, PASSWORD_DEFAULT);
+
         $sql = "INSERT INTO \"user\" (name, surname, email, username, password) VALUES($1, $2, $3, $4, $5)";
         $prep = pg_prepare($db, "insertUser", $sql);
         $ret = pg_execute($db, "insertUser", array($name, $surname, $email, $username, $hash));
