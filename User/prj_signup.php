@@ -9,7 +9,7 @@
     <meta name="description" content="signupPage " />
     <meta name="keywords" content="signup" />
     <meta author="Gruppo 27" />
-    <meta keywork="signup" />
+    <meta keyword ="signup" />
     <link rel="icon" type="image/x-icon" href="../Images/imgHome/trainIcon.png">
     <title>Login</title>
     <?php require('prj_authFunctions.php'); ?>
@@ -25,7 +25,7 @@
             </a>
         </div>
 
-        <div class="containerSignup form-container" id="container">
+        <div class="containerSignup" id="container">
             <form name="signupForm" method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>"
                 onsubmit="return validateFormSignup()">
                 <h1>Registrati</h1>
