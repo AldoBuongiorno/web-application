@@ -9,7 +9,7 @@
     <meta name="description" content="loginPage " />
     <meta name="keywords" content="login" />
     <meta author="Gruppo 27" />
-    <meta keywork="login" />
+    <meta keyword ="login" />
     <link rel="icon" type="image/x-icon" href="../Images/imgHome/trainIcon.png">
     <title>Login</title>
     <?php require('prj_authFunctions.php'); ?>
@@ -25,7 +25,7 @@
             </a>
         </div>
 
-        <div class="containerLogin form-container" id="container">
+        <div class="containerLogin" id="container">
             <form name="loginForm" method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>"
                 onsubmit="return validateFormLogin()">
                 <h1>Login</h1>
